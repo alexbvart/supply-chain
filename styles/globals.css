@@ -1,7 +1,7 @@
 :root{
   --txt-active: #FAFAFC;
-  --txt-desactive: #AAABB0;
-  --bg-1: #1A1A1C;
+  --txt-unactive: #AAABB0;
+  --bg-primary: #1A1A1C;
   --bg-2: #25232E;
   --bg-3: #313131 20%;
   --bg-3-form: #555459;
@@ -26,6 +26,8 @@ body {
   padding: 0;
   margin: 0;
   font-family: var(--fontBase);
+  background-color: var(--bg-primary);
+  color: var(--txt-unactive)
 }
 
 a {
@@ -38,3 +40,4 @@ a {
   margin: 0;
   box-sizing: border-box;   
 }
+

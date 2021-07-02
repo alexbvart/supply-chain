@@ -1,0 +1,25 @@
+.sidebar{
+    width: 300px;
+    height: 100vh;
+    background: rgba(37, 35, 46, 0.2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.header{
+
+    width: 100%;
+    padding: 36px 0;
+    display: flex;
+    justify-content: center;
+
+    color: var(--txt-active);
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+}
+.header svg{
+    margin-right: .8rem;
+}
