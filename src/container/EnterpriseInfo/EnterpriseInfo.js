@@ -5,8 +5,6 @@ import {
   enterprise_info,
 	main_section,
 	info_field,
-	grid_info_fields,
-	container,
 	ruc_field,
 	button_container
 } from './enterpriseInfo.module.css';

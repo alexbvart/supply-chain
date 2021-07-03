@@ -20,7 +20,7 @@ const EnterpriseHeader = (props) => {
 				</div>
 			</section>
       <figure className={edit_enterprise_info}>
-					<img src="./assets/icons/edit_icon.png" alt="enterprise logo" /> 
+					<img src="./assets/icons/edit_icon.png" alt="edit icon" /> 
 				</figure>
 		</header>
 	);

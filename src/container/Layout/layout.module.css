@@ -1,11 +1,4 @@
-.awas{
-  width: 300px;
-  background: rgba(37, 35, 46, 0.2);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-}
-
 .layout{
     display: grid;
-    grid-template-columns: 300px 300px 1fr;
+    grid-template-columns: 600px 1fr;
 }
