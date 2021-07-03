@@ -1,0 +1,47 @@
+.enterprise_info{
+  padding: 65px 40px 0 40px;
+  width: 80vw;
+}
+
+.main_section{
+  width: 100%;
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  grid-gap: 32px;
+  border: 1px solid aqua;
+}
+
+.container{
+  /* display: flex;
+  justify-content: space-between; */
+  /* column-gap: 74px; */
+  border: 1px solid red;
+}
+
+
+/* .container > .info_field:nth-child(1){
+  max-width: 320px;
+} */
+
+.ruc_field{
+  /* grid-column: span 2; */
+}
+
+.info_field h2{
+  font: var(--headline3);
+  color: var(--txt-unactive);
+  margin-bottom: 5px;
+  border: 1px solid purple;
+}
+
+.info_field p{
+  font: var(--headline3);
+  color: var(--txt-active);
+}
+
+/* .button_container{
+  display: flex-start;
+  justify-content: center;
+  align-items: center;
+} */

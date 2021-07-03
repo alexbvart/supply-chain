@@ -1,0 +1,19 @@
+.plus_button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background-color: var(--violeta);
+  border-radius: 12px;
+  padding: 18px 30px;
+  gap: 14px;
+}
+
+.plus_button img{
+  width: 1rem;
+  max-width: 24px;
+}
+
+.plus_button p{
+  color: var(--txt-active);
+}
