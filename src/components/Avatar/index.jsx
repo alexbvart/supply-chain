@@ -1,18 +1,18 @@
 import Image from 'next/image'
-import {avatar,profile} from './avatar.module.css'
+import {avatar,profile,info} from './avatar.module.css'
 
 const Avatar = ({src,name,otherInfo}) => {
     return ( 
         <>
             <section className={avatar}>
                 {src?
-                    <Image />    
+                    <Image src={src} alt={name} />    
                     :
                     <div className={profile}/>
                 }
-                <div>
-                    {name}
-                    {otherInfo}
+                <div className={info}>
+                    <span>{name}</span>  
+                    <span>{otherInfo}</span> 
                 </div>
             </section>
         </>

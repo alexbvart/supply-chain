@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import Anchor from '../../components/Anchor';
+import Avatar from '../../components/Avatar';
 import Logo from '../../Icons/logo';
+import Options from '../../Icons/options';
 import sidebar from './sidebar.module.css'
 const SideBar = () => {
     return ( 
@@ -58,8 +60,9 @@ const SideBar = () => {
                 </nav>
             </section>
 
-            <footer>
-                
+            <footer className={sidebar.footer}>
+                <Avatar name="Alexander Briones" otherInfo="EMTRAFESA"/>
+                <Options/>
             </footer>
 
         </aside>
