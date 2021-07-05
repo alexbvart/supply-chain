@@ -11,8 +11,8 @@ const Avatar = ({src,name,otherInfo}) => {
                     <div className={profile}/>
                 }
                 <div className={info}>
-                    <span>{name}</span>  
-                    <span>{otherInfo}</span> 
+                    {name && <span>{name}</span>  }
+                    {otherInfo && <span>{otherInfo}</span> }
                 </div>
             </section>
         </>
