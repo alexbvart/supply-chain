@@ -1,0 +1,36 @@
+.input_container{
+  border-bottom: 2px solid var(--txt-unactive);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px 0px 10px;
+}
+
+.input{
+  width: 90%;
+  border: none;
+  background-color: transparent;
+  color: var(--txt-unactive);
+  font-size: 14px;
+}
+
+.input::placeholder{
+  color: var(--txt-unactive);
+  font-size: 14px;
+}
+
+.input:focus{
+  outline: none;
+}
+
+.characters_remaining{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  margin-bottom: 4px;
+  background-color: var(--bg-3-form);
+  color: var(--txt-active);
+  border-radius: 12px;
+  width: 2.4rem;
+  height: 2rem;
+}
