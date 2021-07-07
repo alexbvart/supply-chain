@@ -1,0 +1,30 @@
+.header{
+  padding: 10px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.enterprise_hero{
+  display: flex;
+}
+
+.enterprise_data h1{
+  font: var(--headline2);
+  color: var(--txt-active);
+}
+.enterprise_data p{
+  font: var(--headline3);
+  color: var(--txt-unactive);
+}
+
+.enterprise_hero figure img{
+  max-width: 52px;
+  margin-right: 30px;
+}
+
+.edit_enterprise_info img{
+  width: 48px;
+  max-width: 48px;
+}

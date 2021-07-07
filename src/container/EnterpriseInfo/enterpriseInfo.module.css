@@ -1,0 +1,42 @@
+.enterprise_info{
+  padding: 65px 40px 0 40px;
+}
+
+.main_section{
+  width: 100%;
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 32px;
+}
+
+.info_field h2{
+  font: var(--headline3);
+  color: var(--txt-unactive);
+  margin-bottom: 5px;
+}
+
+.info_field p{
+  font: var(--headline3);
+  color: var(--txt-active);
+}
+
+.button_container{
+  width: 100%;
+  cursor: pointer;
+}
+
+
+@media screen and (min-width: 560px) {
+  .ruc_field{
+    grid-column: span 2;
+  }
+
+  .main_section{
+    grid-template-columns: 2fr;
+  }
+
+  .button_container{
+    width: 80%;
+  }
+}

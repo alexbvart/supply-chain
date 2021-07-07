@@ -1,3 +1,5 @@
+import EnterpriseInfo from '../src/container/EnterpriseInfo/EnterpriseInfo'
+
 import Head from 'next/head'
 import DetailSideBar from '../src/container/DetailSideBar'
 import styles from '../styles/Home.module.css'
@@ -27,6 +29,8 @@ export default function Home() {
   return (
     <>
       <DetailSideBar title="Clientes" data={data}></DetailSideBar>
+      <EnterpriseInfo />
     </>
+
   )
 }
