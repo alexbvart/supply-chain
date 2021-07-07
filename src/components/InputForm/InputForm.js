@@ -2,7 +2,7 @@ import React from 'react'
 import { input_container, characters_remaining, input } from './inputForm.module.css'
 
 const InputForm = ({ type, name, placeholder, maxLength, pattern, title}) => {
-  function lengthLevels({element, maxLength, currentLength}){
+  function lengthWarns({element, maxLength, currentLength}){
     const secondWarning = Math.ceil(maxLength * .66)
     const firstWarning = Math.ceil(maxLength * .33)
 
@@ -12,15 +12,25 @@ const InputForm = ({ type, name, placeholder, maxLength, pattern, title}) => {
       return
     }
     if(currentLength >= firstWarning && currentLength < secondWarning){
-      element.style.background = 'gold'
+      element.style.background = 'rgba(251, 255, 0, 0.746)'
       element.style.color = 'black' 
       return
     }
-
+    
     if(currentLength >= secondWarning){
-      element.style.background = 'red'
+      element.style.background = 'rgba(255, 0, 0, 0.657)'
       element.style.color = 'white' 
       return
+    }
+  }
+
+  function validateSpecialInput({element, name, maxLength, alert}){
+    if(name === 'ruc' || name === 'phone'){
+          
+    }
+
+    if(name === 'dni'){
+
     }
   }
   return(
@@ -38,7 +48,11 @@ const InputForm = ({ type, name, placeholder, maxLength, pattern, title}) => {
           const inputContainerElement = event.target.parentElement
           const charsRemainingElement = inputContainerElement.querySelector('#charsRemaining')
           charsRemainingElement.textContent = `${(maxLength - currentLength)}`
-            lengthLevels({
+
+          if(name === 'phone' || name === 'dni'){
+            return
+          }
+            lengthWarns({
               element: charsRemainingElement.parentElement,
               maxLength,
               currentLength

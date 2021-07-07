@@ -11,6 +11,7 @@
   background-color: transparent;
   color: var(--txt-unactive);
   font-size: 14px;
+  /* background-color: rgba(251, 255, 0, 0.746); */
 }
 
 .input::placeholder{
