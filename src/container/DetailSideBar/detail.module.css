@@ -1,0 +1,47 @@
+.sidebar{
+    width: 300px;
+    height: 100vh;
+
+    display: grid;
+    grid-gap: 24px;
+
+    background: rgba(37, 35, 46, 0.3);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(20px);
+    grid-template-rows:  inherit 48px auto 48px;
+    padding: 36px 24px;
+}
+
+.sidebar header h1{
+    font: var(--headline1);
+    color: var(--txt-active);
+    height: auto;
+}
+
+.sidebar nav ul{
+    display: grid;
+    grid-gap: 24px;
+    height: calc(100vh - 350px);
+    padding-bottom: 48px;
+    overflow-y: scroll;    
+    scroll-snap-type: x mandatory;
+}
+.sidebar nav ul::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: rgba(250, 244, 240, 0.01);
+    backdrop-filter: blur(100px);
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+
+.sidebar nav ul li{
+    cursor: pointer;
+}
+.btn_float{
+/*     position: fixed;
+    bottom: 0;
+    left: 0; */
+}

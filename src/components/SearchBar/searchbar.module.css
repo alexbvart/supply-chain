@@ -1,0 +1,35 @@
+.form {
+    width: calc(100% ); /* -48px */
+    height: 48px;
+
+    background: var(--bg-card); 
+    display: flex;
+    border-radius: 12px;
+}
+.input {
+    background: transparent;
+    width: calc(100% - 40px) ;
+    height: 48px;
+
+    outline: none;
+    border: 0;
+    padding-left: 16px;
+
+    color: var(--base-color);
+    font-size: var(--font-size);
+    font-weight: bold;
+}
+
+.button{
+    background-color: transparent;
+
+    outline: none;
+    border: 0;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit-user-select: none; /* for button */
+    -webkit-appearance: button; /* for input */
+    -moz-user-select: none;
+    -ms-user-select: none;
+}

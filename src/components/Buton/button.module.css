@@ -1,0 +1,21 @@
+.button {
+    width: 100%;
+    min-width: 248px;
+    max-width: 252px;
+    height: 48px;
+    padding: 12px 22px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 12px;
+    outline: none;
+    border: 0;
+}
+
+.button:hover {
+    background: rgba(104, 71, 71, 0.3);
+}
+
+.button:active {
+    background: rgba(100, 98, 252, 0.4);
+}
