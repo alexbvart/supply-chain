@@ -1,4 +1,3 @@
-
 import Link from 'next/link'
 import {anchor} from './anchor.module.css'
 const Anchor = ({href,children, className=false}) => {
@@ -8,7 +7,7 @@ const Anchor = ({href,children, className=false}) => {
         <>
             <div className={styles}>
                 <Link href={href} >
-                    <a >
+                    <a>
                         {children}
                     </a>
                 </Link>
