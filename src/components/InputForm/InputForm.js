@@ -1,7 +1,7 @@
 import React from 'react'
 import { input_container, characters_remaining, input } from './inputForm.module.css'
 
-const InputForm = ({ type, name, placeholder, maxLength, pattern, title}) => {
+const InputForm = ({ id, cssClass = input_container, type, name, placeholder, maxLength, pattern, title}) => {
   function lengthWarns({element, maxLength, currentLength}){
     const secondWarning = Math.ceil(maxLength * .66)
     const firstWarning = Math.ceil(maxLength * .33)
@@ -34,8 +34,8 @@ const InputForm = ({ type, name, placeholder, maxLength, pattern, title}) => {
     }
   }
   return(
-    <article className={input_container}>
-      <input 
+    <article className={cssClass}>
+      <input
         className={input} 
         type={type}
         name={name} 

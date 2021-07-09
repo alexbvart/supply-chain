@@ -1,0 +1,10 @@
+.form{
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 4rem;
+  row-gap: 2rem;
+}
+
+.firstInput{
+  grid-column: 1 / span 2;
+}

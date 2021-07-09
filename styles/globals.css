@@ -31,6 +31,14 @@ body {
   color: var(--txt-unactive)
 }
 
+html{
+  font-size: 62.5%;
+  /* 1rem = 10px */
+  /* 2rem = 20px */
+  /* 4.3rem = 43px */
+  
+}
+
 a {
   color: inherit;
   text-decoration: none;
