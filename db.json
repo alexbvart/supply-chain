@@ -1,12 +1,386 @@
 {
-    "posts": [
-      { "id": 1, "title": "json-server", "author": "typicode" }
-    ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "profile": { "name": "typicode" },
-    "history":{
-
+  "enterprise": [
+    {
+      "RUC": "20133605291",
+      "COMPANY NAME": "EMPRESA DE TRANSPORTES AVE FENIX S.A.C.",
+      "LEGAL REPRESENTATIVE": "Garcia de la Cruz Juan Helmer",
+      "TELEPHONE": "471521 ",
+      "ADDRESS": "Av. Tupac Amaru Nro. 185",
+      "id": 2
+    },
+    {
+      "RUC": "20438933272",
+      "COMPANY NAME": "TRANSPORTES LINEA S.A.",
+      "LEGAL REPRESENTATIVE": "Garcia de la Cruz Juan Helmer",
+      "TELEPHONE": "235847  ",
+      "ADDRESS": "Av. Daniel A.Carrion Nro. 140",
+      "id": 3
+    },
+    {
+      "RUC": "20100020441",
+      "COMPANY NAME": "DISTRIBUCIONES DIESEL PERU S.A.C.",
+      "LEGAL REPRESENTATIVE": "Salhuana Paredes Carlos Eduardo",
+      "TELEPHONE": "3368102",
+      "ADDRESS": "Av. Encalada Nro. 1257 Int. 803,Lima, Perú",
+      "id": 4
     }
+  ],
+  "business-unit": [
+    {
+      "Nombre": "Pasajes",
+      "enterpriseId": 2,
+      "id": 1
+    },
+    {
+      "Nombre": "Encomiendas",
+      "enterpriseId": 2,
+      "id": 2
+    },
+    {
+      "Nombre": "Delivey",
+      "enterpriseId": 2,
+      "id": 3
+    },
+    {
+      "Nombre": "Fenix minivan",
+      "enterpriseId": 2,
+      "id": 4
+    },
+    {
+      "Nombre": "Linea carguero",
+      "enterpriseId": 3,
+      "id": 5
+    },
+    {
+      "Nombre": "Venta Partes, Piezas, Accesorios.",
+      "enterpriseId": 4,
+      "id": 6
+    },
+    {
+      "Nombre": "Fab. de Productos de Plasticos.",
+      "enterpriseId": 4,
+      "id": 7
+    }
+  ],
+  "supplier": [
+    {
+      "RUC": "20529874155",
+      "COMPANY NAME": "SERVICIOS GENERALES THERMO KING EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA",
+      "LEGAL REPRESENTATIVE": "Sanchez Ordinola Luis Felipe",
+      "TELEPHONE": "235999",
+      "ADDRESS": "Cal. Nestor Martos Mza. a Lote. 30",
+      "enterpriseId": 2,
+      "LEGAL PERSON": true,
+      "id": 1
+    },
+    {
+      "DNI": "71602398",
+      "FULL NAME": "Loayza Hernandez Jose Luis",
+      "TELEPHONE": "932359499",
+      "ADDRESS": "Cal. Nestor Martos Mza. a Lote. 30",
+      "LEGAL PERSON": false,
+      "enterpriseId": 2,
+      "id": 2
+    },
+    {
+      "RUC": "20605774155",
+      "COMPANY NAME": "Kinedyne LLC",
+      "LEGAL REPRESENTATIVE": "Sanchez Ordinola Luis Felipe",
+      "TELEPHONE": "(800) 848-6057",
+      "ADDRESS": "1104 Washington Ferry Road",
+      "enterpriseId": 2,
+      "LEGAL PERSON": true,
+      "id": 3
+    },
+    {
+      "RUC": "20482091904",
+      "COMPANY NAME": "MADIC S.A.C.",
+      "LEGAL REPRESENTATIVE": "Vargas Lopez Maria Irma del Carmen",
+      "TELEPHONE": "452706",
+      "ADDRESS": "Jr. los Condores Nro. 264, Bellavista, Prov. Const. del Callao, Perú",
+      "enterpriseId": 2,
+      "LEGAL PERSON": true,
+      "id": 4
+    },
+    {
+      "RUC": "20100020441",
+      "COMPANY NAME": "DISTRIBUCIONES DIESEL PERU S.A.C.",
+      "LEGAL REPRESENTATIVE": "Salhuana Paredes Carlos Eduardo",
+      "TELEPHONE": "3368102",
+      "ADDRESS": "Av. Encalada Nro. 1257 Int. 803, Santiago de Surco, Lima, Perú",
+      "enterpriseId": 2,
+      "LEGAL PERSON": true,
+      "id": 5
+    },
+    {
+      "RUC": "20392923277",
+      "COMPANY NAME": "SCANIA SERVICES DEL PERU S.A",
+      "LEGAL REPRESENTATIVE": "Salhuana Paredes Carlos Eduardo",
+      "TELEPHONE": "3360230",
+      "ADDRESS": "Km. 7.5 Autopista Ramiro Priale, Lurigancho, Lima, Perú",
+      "enterpriseId": 2,
+      "LEGAL PERSON": true,
+      "id": 6
+    },
+    {
+      "RUC": "20604708169",
+      "COMPANY NAME": "IMPORTACIONES NAKAMINE E.I.R.L.",
+      "LEGAL REPRESENTATIVE": "Baca Nakamine Brian Obdulio",
+      "TELEPHONE": "2199225",
+      "ADDRESS": "Av. Almirante Miguel Grau Nro. 292 Int. 236, La Victoria, Lima, Perú.",
+      "enterpriseId": 2,
+      "LEGAL PERSON": true,
+      "id": 7
+    },
+    {
+      "RUC": "20510673710",
+      "COMPANY NAME": "IMPLEMENTOS PERU S.A.C.",
+      "LEGAL REPRESENTATIVE": "Riquelme Gonzalez Pablo Christian",
+      "TELEPHONE": "4511819",
+      "ADDRESS": "Av. Republica de Argentina Nro. 4090, Tarapaca, Prov. Const. del Callao, Perú",
+      "enterpriseId": 2,
+      "LEGAL PERSON": true,
+      "id": 8
+    },
+    {
+      "RUC": "20503840121",
+      "COMPANY NAME": "REPSOL COMERCIAL SAC",
+      "LEGAL REPRESENTATIVE": "Carbo Conte Orlando Jesus",
+      "TELEPHONE": "2156225 ",
+      "ADDRESS": "Av. Victor Andres Belaunde Nro. 147 Int. 301 Edificio Real 5, San Isidro, Lima, Perú",
+      "enterpriseId": 2,
+      "LEGAL PERSON": true,
+      "id": 9
+    },
+    {
+      "RUC": "20100006538",
+      "COMPANY NAME": "MARCO PERUANA SA",
+      "LEGAL REPRESENTATIVE": "Lozano Garcia Naranjo Fernando Javie",
+      "TELEPHONE": "4294978  ",
+      "ADDRESS": "Av. Saenz Peña Nro. 1439, Prov. Const. del Callao, Perú",
+      "enterpriseId": 2,
+      "LEGAL PERSON": true,
+      "id": 10
+    }
+  ],
+  "customer": [
+    {
+      "DNI": "73693053",
+      "FULL NAME": "FLOR ANALY PURIHUAMAN REYES",
+      "TELEPHONE": "973693053",
+      "ADDRESS": " ",
+      "LEGAL PERSON": false,
+      "enterpriseId": 2,
+      "id": 7
+    },
+    {
+      "DNI": "74693053",
+      "FULL NAME": "BETSY RUBI DIAZ QUISPESIVANA",
+      "TELEPHONE": "974693053",
+      "ADDRESS": " ",
+      "LEGAL PERSON": false,
+      "enterpriseId": 2,
+      "id": 8
+    },
+    {
+      "DNI": "77693053",
+      "FULL NAME": "JOSE JUNIOR ESPINOZA CABEL",
+      "TELEPHONE": "977693053",
+      "ADDRESS": " ",
+      "LEGAL PERSON": false,
+      "enterpriseId": 2,
+      "id": 9
+    },
+    {
+      "DNI": "73693059",
+      "FULL NAME": "CRISTHIAN RICARDO CHANTA SANTOS",
+      "TELEPHONE": "973693059",
+      "ADDRESS": " ",
+      "LEGAL PERSON": false,
+      "enterpriseId": 2,
+      "id": 10
+    },
+    {
+      "DNI": "73693051",
+      "FULL NAME": "CRISTHIAN RICARDO CHANTA SANTOS",
+      "TELEPHONE": "973693059",
+      "ADDRESS": " ",
+      "LEGAL PERSON": false,
+      "enterpriseId": 2,
+      "id": 11
+    },
+    {
+      "DNI": "73693051",
+      "FULL NAME": "EDERSON ELIEL CONTRERAS VENTURA",
+      "TELEPHONE": "973693051",
+      "ADDRESS": " ",
+      "LEGAL PERSON": false,
+      "enterpriseId": 2,
+      "id": 12
+    },
+    {
+      "DNI": "73693052",
+      "FULL NAME": "YENEFFER CARIN DE LA CRUZ MENDOZA",
+      "TELEPHONE": "973693052",
+      "ADDRESS": " ",
+      "LEGAL PERSON": false,
+      "enterpriseId": 2,
+      "id": 13
+    },
+    {
+      "DNI": "73693053",
+      "FULL NAME": "FLOR ANALY PURIHUAMAN REYES",
+      "TELEPHONE": "973693053",
+      "ADDRESS": " ",
+      "LEGAL PERSON": false,
+      "enterpriseId": 2,
+      "id": 14
+    },
+    {
+      "DNI": "73693054",
+      "FULL NAME": "WILMER PURIHUAMAN REYES",
+      "TELEPHONE": "973693054",
+      "ADDRESS": " ",
+      "LEGAL PERSON": false,
+      "enterpriseId": 2,
+      "id": 15
+    },
+    {
+      "DNI": "73693057",
+      "FULL NAME": "JOSEFA SOLANYI HUAMAN CHINGUEL",
+      "TELEPHONE": "973693057",
+      "ADDRESS": " ",
+      "LEGAL PERSON": false,
+      "enterpriseId": 2,
+      "id": 16
+    }
+  ],
+  "supply-chain": [
+    {
+      "business-unitId": 1,
+      "enterpriseId": 2,
+      "relation": [
+        {
+          "from": {
+            "supplierId": 7
+          },
+          "to": {
+            "enterpriseId": 2
+          }
+        },
+        {
+          "from": {
+            "supplierId": 8
+          },
+          "to": {
+            "enterpriseId": 2
+          }
+        },
+        {
+          "from": {
+            "supplierId": 10
+          },
+          "to": {
+            "enterpriseId": 2
+          }
+        },
+        {
+          "from": {
+            "supplierId": 6
+          },
+          "to": {
+            "enterpriseId": 2
+          }
+        },
+        {
+          "from": {
+            "supplierId": 4
+          },
+          "to": {
+            "supplierId": 9
+          }
+        },
+        {
+          "from": {
+            "supplierId": 1
+          },
+          "to": {
+            "supplierId": 10
+          }
+        },
+        {
+          "from": {
+            "supplierId": 3
+          },
+          "to": {
+            "supplierId": 8
+          }
+        },
+        {
+          "from": {
+            "supplierId": 5
+          },
+          "to": {
+            "supplierId": 7
+          }
+        }
+      ],
+      "id": 1
+    },
+    {
+      "business-unitId": 2  ,
+      "enterpriseId": 2,
+      "relation": [
+        {
+          "from": {
+            "supplierId": 7
+          },
+          "to": {
+            "enterpriseId": 2
+          }
+        },
+        {
+          "from": {
+            "supplierId": 7
+          },
+          "to": {
+            "enterpriseId": 2
+          }
+        },
+        {
+          "from": {
+            "supplierId": 8
+          },
+          "to": {
+            "enterpriseId": 2
+          }
+        },
+        {
+          "from": {
+            "supplierId": 10
+          },
+          "to": {
+            "enterpriseId": 2
+          }
+        },
+        {
+          "from": {
+            "supplierId": 6
+          },
+          "to": {
+            "enterpriseId": 2
+          }
+        },
+        {
+          "from": {
+            "supplierId": 4
+          },
+          "to": {
+            "supplierId": 9
+          }
+        }
+      ],
+      "id": 2
+    }
+  ]
 }
