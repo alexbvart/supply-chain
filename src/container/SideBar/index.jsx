@@ -23,18 +23,18 @@ const SideBar = () => {
                             </Anchor>
                         </li>
                         <li>
-                            <Anchor href="/suppliers">
+                            <Anchor href="/supplier">
                                 Suppliers
                             </Anchor>
                         </li>
                         <li>
-                            <Anchor href="/distributors">
+                            <Anchor href="/distributor">
                                 Distributors
                             </Anchor>
                         </li>
                         <li>
                             <Anchor href="/customer">
-                                Customer
+                                Customers
                             </Anchor>
                         </li>
                     </ul>
