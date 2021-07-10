@@ -11,17 +11,19 @@ const EnterpriseHeader = (props) => {
 	return (
 		<header className={header}>
 			<section className={enterprise_hero}>
-				<figure>
-					<img src="./assets/images/logo.png" alt="enterprise logo" /> 
-				</figure>
+				{logo &&
+					<figure>
+						<img src="./assets/images/logo.png" alt="enterprise logo" /> 
+					</figure>
+				}
 				<div className={enterprise_data}>
-					<h1>REPSOL COMERCIAL SAC</h1>
-					<p>20503840121</p>
+					<h1>{name}</h1>
+					<p>{ruc||dni}</p>
 				</div>
 			</section>
-      <figure className={edit_enterprise_info}>
-					<img src="./assets/icons/edit_icon.png" alt="edit icon" /> 
-				</figure>
+			<figure className={edit_enterprise_info}>
+				<img src="./assets/icons/edit_icon.png" alt="edit icon" /> 
+			</figure>
 		</header>
 	);
 }
