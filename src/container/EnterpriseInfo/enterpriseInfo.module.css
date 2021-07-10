@@ -1,4 +1,5 @@
 .enterprise_info{
+  width: 100%;
   padding: 65px 40px 0 40px;
 }
 
@@ -33,7 +34,7 @@
   }
 
   .main_section{
-    grid-template-columns: 2fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .button_container{
