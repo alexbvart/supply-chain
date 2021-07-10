@@ -55,13 +55,13 @@ const InputForm = ({ id, cssClass = input_container, type, name, placeholder, ma
           return
         }
         if(currentLength >= firstWarning && currentLength < secondWarning){
-          element.style.background = 'yellow'
+          element.style.background = 'rgba(251, 255, 0, 0.746)'
           element.style.color = 'black' 
           return
         }
         
         if(currentLength === maxLength){
-          element.style.background = '#20CB31'
+          element.style.background = 'rgba(32, 203, 49, 0.4)'
           element.style.color = 'white' 
           return
         }
