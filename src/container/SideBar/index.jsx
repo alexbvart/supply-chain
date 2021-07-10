@@ -1,11 +1,16 @@
 import React, {useState} from 'react';
+import Anchor from '../../components/Anchor';
+import Avatar from '../../components/Avatar';
 import Logo from '../../Icons/logo';
+import Options from '../../Icons/options';
 import sidebar from './sidebar.module.css'
 const SideBar = () => {
     return ( 
         <aside className={sidebar.sidebar}>
             <header className={sidebar.header}>
-                <Logo/> Cadena de suministros
+                <Anchor href="/">
+                    <Logo/> Suplply Chain
+                </Anchor>
             </header>
 
             <section className={sidebar.wrapper_nav}>

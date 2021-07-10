@@ -63,7 +63,7 @@ const RegisterForm = ({ type, title }) => {
                   cssClass={`${input_container} ${firstInput}`}
                   type={'text'}
                   name={'name'} 
-                  placeholder={'Business name'} 
+                  placeholder={'Full name'} 
                   maxLength={80}
                   pattern={'[a-z]'}
                   title={'Must only contain letters'}
@@ -101,8 +101,7 @@ const RegisterForm = ({ type, title }) => {
                 />
               </form>
           </section>
-          { type === 'employee' || type === 'administrator'
-              &&
+          { type === 'employee' || type === 'administrator' ?
               <section className={user_data}>
                 <p className={headline2}>User data</p>
                 <div className={`${toggle} ${user_email}`}>
@@ -121,6 +120,7 @@ const RegisterForm = ({ type, title }) => {
                     pattern={'[a-z]'}   
                   />
               </section>
+              : ''  
           }
         </div>
         <footer className={footer}>
