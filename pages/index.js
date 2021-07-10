@@ -1,5 +1,6 @@
 import EnterpriseInfo from '../src/container/EnterpriseInfo/EnterpriseInfo'
 import InputForm from '../src/components/InputForm/InputForm'
+import RegisterForm from '../src/components/RegisterForm/RegisterForm'
 
 import Head from 'next/head'
 import DetailSideBar from '../src/container/DetailSideBar'
@@ -29,8 +30,8 @@ export default function Home() {
 
   return (
     <>
-      <DetailSideBar title="Clientes" data={data}></DetailSideBar>
-      <EnterpriseInfo />
+      {/* <DetailSideBar title="Clientes" data={data}></DetailSideBar> */}
+       <RegisterForm />
     </>
 
   )

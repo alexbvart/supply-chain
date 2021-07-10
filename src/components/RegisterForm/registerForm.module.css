@@ -1,0 +1,174 @@
+.wrapper{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 8rem;
+}
+
+.register_form{
+  background-color: var(--bg-card);
+  padding: 3.2rem;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.headline2{
+  font-style: normal;
+  font-size: 1.4rem;
+  padding-block-start: 3.5rem;
+  padding-block-end: 1.5rem;
+}
+
+.toggle{
+  font-size: 1.4rem;
+  color: var(--txt-active);
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  background-color: var(--bg-dark-2);
+  border-radius: 12px;
+  height: 4.8rem;
+}
+
+.toggle_person{
+  max-width: 238px;
+}
+
+.person{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  max-width: 131px;
+  width: 40%;
+  height: 38px;
+  cursor: pointer;
+}
+
+.selected_person{
+  width: 60%;
+  background-color: var(--bg-card);
+}
+
+.headline{
+  font: var(--headline2);
+  color: var(--txt-active);
+}
+
+.form{
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 4rem;
+  row-gap: 2rem;
+}
+
+.firstInput{
+  grid-column: 1 / span 2;
+}
+
+.user_email{
+  width: 100%;
+  min-width: 200px;
+  padding: 0 10px;
+}
+
+.full_name, .email_domain{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  /* max-width: 254px; */
+  padding: 0 1rem;
+  height: 38px;
+}
+
+.full_name{
+  width: 40%;
+}
+
+.email_domain{
+  width: 60%;
+  background-color: var(--bg-card);
+}
+
+.name_input, .domain_input{
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  font-size: 14px;
+}
+
+.name_input{
+  color: var(--txt-unactive);
+}
+
+.domain_input{
+  color: var(--txt-active);
+}
+
+.name_input::placeholder{
+  color: var(--txt-unactive);
+}
+
+.domain_input::placeholder{
+  color: var(--txt-active);
+}
+
+.name_input:focus, .domain_input:focus{
+  outline: none;
+}
+
+.footer{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--bg-dark-2);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  height: 10rem;
+}
+
+.footer_buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1.2rem;
+  padding-inline-end: 3.8rem;
+}
+
+.footer_buttons > button{
+  border: none;
+  color: inherit;
+  font-size: 1.4rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.cancel_button{
+  background-color: var(--bg-card);
+}
+
+.cancel_button:hover{
+  color: var(--txt-active);
+}
+
+.register_button{
+  background-color: rgba(100, 98, 252, 0.4);
+}
+
+.register_button:hover{
+  background-color: var(--primary);
+  color: var(--txt-active);
+}
+
+
+
