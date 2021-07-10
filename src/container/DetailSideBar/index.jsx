@@ -2,7 +2,17 @@ import Avatar from "../../components/Avatar"
 import Anchor from "../../components/Anchor"
 import SearchBar from "../../components/SearchBar"
 import detail from './detail.module.css'
+import Link from "next/link"
+
+import { useContext } from "react"
+import KeywordContext from "../../../context/Keyword/KeywordContext"
+
+
 const DetailSideBar = ({title, data}) => {
+    const {keyword} = useContext(KeywordContext)
+    const buttonText = title.slice(0, -1)
+    const urlLocation = buttonText.toLowerCase()
+
     return ( 
         <>
             <aside className={detail.sidebar}>
@@ -12,20 +22,30 @@ const DetailSideBar = ({title, data}) => {
                 <SearchBar/>
                 <nav>
                     <ul>
-                        { data &&
-                            data.map((item)=>(
+                        { (data && data.length > 0) &&
+                            data
+                            .filter(item => String(item.COMPANY_NAME).toUpperCase().includes(keyword.toUpperCase()) || String(item.FULL_NAME).toUpperCase().includes(keyword.toUpperCase()) )
+                            .map((item)=>(
                             <li>
-                                <Avatar 
-                                    key={item.id} name={item.name} otherInfo={item.contact}/>
+                                <Link href={`/${urlLocation}/${item.id}`}>
+                                    <a>
+                                        <Avatar 
+                                            key={item.id} 
+                                            name={item.COMPANY_NAME||item.FULL_NAME} 
+                                            telephone={item.TELEPHONE}
+                                        />
+                                    </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>
                 </nav>
                 <Anchor href={title} className={detail.btn_float}>
-                    Nuevo {title}
+                    New {buttonText}
                 </Anchor>
             </aside>
         </>
     );
 }
 export default DetailSideBar;
+

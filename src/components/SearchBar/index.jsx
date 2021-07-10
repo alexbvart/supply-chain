@@ -1,31 +1,21 @@
-import React, {useRef, useState} from 'react';
+import React, {useContext} from 'react';
+import KeywordContext from '../../../context/Keyword/KeywordContext';
 import Search from '../../Icons/search';
 import searchBar from './searchbar.module.css'
+
 const SearchBar = () => {
 
+    const {keyword, setKeyword} = useContext(KeywordContext)
 
-    const [keyword, setKeyword] = useState('')
-
-    const [counterTimer, setCounterTimer] = useState(0)
-    const countRef = useRef(counterTimer);
-    countRef.current = counterTimer;
 
     /* Funciunes para manejar el input y realizar la busqueda  {kewyword} */
     const handleSubmit = (event) => {
         event.preventDefault()
-        /* router.push(`/search/${keyword}`) */
     }
     const handleChange = (event) => {
         setKeyword(event.target.value)
     }
-    const handleKeyUp = () => {
-        setTimeout(()=>{
-            if (keyword!=="") {
-                /* router.push(`/search/${keyword}`) */
-                clearTimeout(countRef.current);
-            }
-        }, 250);
-    }
+
 
     return ( 
         <>
@@ -33,7 +23,6 @@ const SearchBar = () => {
                 <input 
                     autoFocus  
                     onChange={handleChange} 
-                    onKeyUp={handleKeyUp}
                     type="search" 
                     value={keyword} 
                     className={searchBar.input}

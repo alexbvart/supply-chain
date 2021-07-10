@@ -7,7 +7,7 @@ import {
 } from './enterpriseInfo.module.css';
 
 const EnterpriseInfo = (props) => {
-	const { name, dni, ruc, salesman, phone, address, logo } = props;
+	const { name, dni, doc, salesman, phone, address, logo } = props;
 	return (
 		<header className={header}>
 			<section className={enterpriseHero}>
