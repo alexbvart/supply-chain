@@ -23,7 +23,12 @@
   outline: none;
 }
 
-.characters_remaining{
+.right_side{
+  display: flex;
+  align-items: center;
+}
+
+.characters_remaining, .toggle_visibility_pass{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,6 +37,23 @@
   background-color: var(--bg-3-form);
   color: var(--txt-active);
   border-radius: 12px;
-  width: 2.4rem;
-  height: 2rem;
+  width: 2.8rem;
+  height: 2.2rem;
+}
+
+.toggle_visibility_pass{
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.toggle_visibility_pass img{
+  width: 2rem;
+}
+
+.visible{
+  display: block;
+}
+
+.hidden{
+  display: none;
 }
