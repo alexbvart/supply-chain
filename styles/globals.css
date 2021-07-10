@@ -15,17 +15,18 @@
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
   /* typography */
-  --headline1: bold 28px / 33.89px var(--fontBase);
-  --headline2: bold 24px / 29.05px var(--fontBase);
-  --headline3: 20px / 24.2px var(--fontBase);
-  --headline4: 16px / 19.36px var(--fontBase);
-  --headline5: 18px / 21.78px var(--fontBase);
+  --headline1: bold 2.8rem / 3.3rem var(--fontBase);
+  --headline2: bold 2.4rem / 2.9rem var(--fontBase);
+  --headline3: 2.0rem / 2.4rem var(--fontBase);
+  --headline4: 1.6rem / 1.9rem var(--fontBase);
+  --headline5: 1.8rem / 2.1rem var(--fontBase);
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
+  font-size: 1.4rem;
   font-family: var(--fontBase);
   background-color: var(--bg-primary);
   color: var(--txt-unactive)
@@ -33,10 +34,6 @@ body {
 
 html{
   font-size: 62.5%;
-  /* 1rem = 10px */
-  /* 2rem = 20px */
-  /* 4.3rem = 43px */
-  
 }
 
 a {
