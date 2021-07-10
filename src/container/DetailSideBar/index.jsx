@@ -3,9 +3,16 @@ import Anchor from "../../components/Anchor"
 import SearchBar from "../../components/SearchBar"
 import detail from './detail.module.css'
 import Link from "next/link"
+
+import { useContext } from "react"
+import KeywordContext from "../../../context/Keyword/KeywordContext"
+
+
 const DetailSideBar = ({title, data}) => {
-    
-    console.log({data});
+    const {keyword} = useContext(KeywordContext)
+    const buttonText = title.slice(0, -1)
+    const urlLocation = buttonText.toLowerCase()
+
     return ( 
         <>
             <aside className={detail.sidebar}>
@@ -16,19 +23,25 @@ const DetailSideBar = ({title, data}) => {
                 <nav>
                     <ul>
                         { (data && data.length > 0) &&
-                            data.map((item)=>(
+                            data
+                            .filter(item => String(item.COMPANY_NAME).toUpperCase().includes(keyword.toUpperCase()) || String(item.FULL_NAME).toUpperCase().includes(keyword.toUpperCase()) )
+                            .map((item)=>(
                             <li>
-                                <Avatar 
-                                    key={item.id} 
-                                    name={item["COMPANY NAME"]||item["FULL NAME"]} 
-                                    telephone={item.TELEPHONE}
-                                />
+                                <Link href={`/${urlLocation}/${item.id}`}>
+                                    <a>
+                                        <Avatar 
+                                            key={item.id} 
+                                            name={item.COMPANY_NAME||item.FULL_NAME} 
+                                            telephone={item.TELEPHONE}
+                                        />
+                                    </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>
                 </nav>
                 <Anchor href={title} className={detail.btn_float}>
-                    New {title.slice(0, -1)}
+                    New {buttonText}
                 </Anchor>
             </aside>
         </>
@@ -36,11 +49,3 @@ const DetailSideBar = ({title, data}) => {
 }
 export default DetailSideBar;
 
-/* 
-    <Link href={`supplier/${item.id}`}>
-        <a>
-            <Avatar 
-                key={item.id} name={item["COMPANY NAME"]} telephone={item.TELEPHONE}/>
-        </a>
-    </Link>
-*/
