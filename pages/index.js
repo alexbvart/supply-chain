@@ -1,4 +1,5 @@
 import EnterpriseInfo from '../src/container/EnterpriseInfo/EnterpriseInfo'
+import RegisterForm from '../src/components/RegisterForm/RegisterForm'
 
 import Head from 'next/head'
 import DetailSideBar from '../src/container/DetailSideBar'
@@ -30,6 +31,7 @@ export default function Home() {
     <>
       <DetailSideBar title="Clientes" data={data}></DetailSideBar>
       <EnterpriseInfo />
+      {/* <RegisterForm type={'enterprise'} title={'Register basic enterprise information'} /> */}
     </>
 
   )
