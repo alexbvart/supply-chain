@@ -1,20 +1,20 @@
 
+import { useState } from 'react';
 import DetailSideBar from '../../src/container/DetailSideBar';
 import EnterpriseInfo from '../../src/container/EnterpriseInfo/EnterpriseInfo';
 import {supply_chain} from './businnes.module.css'
 
 const businessunit = ({businessunit,businessunits, supplychain}) => {
 
-    console.log(supplychain);
+
     const regex = / /ig;
-    const relationuu = supplychain.relation.map((relation)=>(
+    const relationshipList = supplychain.relation.map((relation)=>(
                     
         `${Object.values(relation)[0].name.replace(regex, '-')} --> ${Object.values(relation)[1].name.replace(regex, '-')}`
     ))
-
-    const rela2= ["IMPLEMENTOS_PERU_S.A.C. --> EMPRESA_DE_TRANSPORTE_AVE_FENIX-S.A.C.", "KinedyneLLC --> IMPLEMENTOS-PERU-S.A.C."]
-
-    console.log(relationuu);
+    
+    const regex_coma = /,/ig;
+    const relationshipList_plainText = relationshipList.join(',').replace(regex_coma,'\n')
 
     return ( 
         <>
@@ -22,17 +22,10 @@ const businessunit = ({businessunit,businessunits, supplychain}) => {
 
             <div className={`mermaid ${supply_chain}`}>
                 {`
+                
                     graph LR
                     
-                    IMPORTACIONES-NAKAMINE-E.I.R.L. --> EMPRESA-DE-TRANSPORTES-AVE-FENIX-S.A.C.
-                    IMPLEMENTOS-PERU-S.A.C. --> EMPRESA-DE-TRANSPORTES-AVE-FENIX-S.A.C.
-                    MARCO-PERUANA-SA --> EMPRESA-DE-TRANSPORTES-AVE-FENIX-S.A.C.
-                    SCANIA-SERVICES-DEL-PERU-S.A --> EMPRESA-DE-TRANSPORTES-AVE-FENIX-S.A.C.
-                    MADIC-S.A.C. --> REPSOL-COMERCIAL-SAC
-                    SERVICIOS-GENERALES-THERMO-KING-EMPRESA-INDIVIDUAL-DE-RESPONSABILIDAD-LIMITADA --> MARCO-PERUANA-SA
-                    Kinedyne-LLC --> IMPLEMENTOS-PERU-S.A.C.
-                    DISTRIBUCIONES-DIESEL-PERU-S.A.C. --> IMPORTACIONES-NAKAMINE-E.I.R.L
-
+                    ${relationshipList_plainText}
                     
                 `}
             </div>
