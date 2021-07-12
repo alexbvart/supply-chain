@@ -18,7 +18,17 @@ class MyDocument extends Document {
                     <Main />
                     <NextScript />
                     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-                    <script>{`mermaid.initialize({startOnLoad:true})`}</script>
+                    <script>{`
+                        const config = {
+                            startOnLoad:true,
+                            flowchart:{
+                                useMaxWidth:false,
+                                htmlLabels:true
+                            },
+                            
+                        };
+                        mermaid.initialize(config);
+                    `}</script>
 
                 </body>
             </Html>
