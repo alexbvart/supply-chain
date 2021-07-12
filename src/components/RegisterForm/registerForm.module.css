@@ -46,11 +46,13 @@
   width: 40%;
   height: 38px;
   cursor: pointer;
+  transition: width ease-in 1s;
 }
 
 .selected_person{
   width: 60%;
   background-color: var(--bg-card);
+  transition: width ease-in 1s;
 }
 
 .headline{

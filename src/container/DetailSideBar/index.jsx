@@ -11,7 +11,7 @@ import KeywordContext from "../../../context/Keyword/KeywordContext"
 const DetailSideBar = ({title, data}) => {
     const {keyword} = useContext(KeywordContext)
     const buttonText = title.slice(0, -1)
-    const urlLocation = buttonText.toLowerCase()
+    const urlLocation = buttonText.toLowerCase().replace(' ', '-')
 
     return ( 
         <>
@@ -31,7 +31,7 @@ const DetailSideBar = ({title, data}) => {
                                     <a>
                                         <Avatar 
                                             key={item.id} 
-                                            name={item.COMPANY_NAME||item.FULL_NAME} 
+                                            name={item.COMPANY_NAME||item.FULL_NAME||item.Nombre} 
                                             telephone={item.TELEPHONE}
                                         />
                                     </a>

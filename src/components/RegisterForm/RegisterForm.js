@@ -28,7 +28,7 @@ import {
 import { input_container } from '../InputForm/inputForm.module.css'
 
 const RegisterForm = ({ type, title }) => {
-  const [personType , setPersonType ] = useState('natural');
+  const [personType , setPersonType ] = useState(false);
 
 	return (
     <div className={wrapper}>
@@ -40,14 +40,14 @@ const RegisterForm = ({ type, title }) => {
                 <p className={headline2}>Type of person</p>
                 <div className={`${toggle} ${toggle_person}`}>
                   <article 
-                    className={`${person} ${personType === 'natural' ? selected_person : ''}`} 
-                    onClick={() => setPersonType('natural')}
+                    className={`${person} ${personType === false ? selected_person : ''}`} 
+                    onClick={() => setPersonType(!personType)}
                   >
                     <p>Natural</p>
                   </article>
                   <article 
-                    className={`${person} ${personType === 'legal' ? selected_person : ''}`} 
-                    onClick={() => setPersonType('legal')}
+                    className={`${person} ${personType === true ? selected_person : ''}`} 
+                    onClick={() => setPersonType(!personType)}
                   >
                     <p>Legal</p>
                   </article> 
@@ -70,9 +70,9 @@ const RegisterForm = ({ type, title }) => {
                 />
                 <InputForm 
                   type={'tel'}
-                  name={personType === 'natural' ? 'dni' : 'ruc'} 
-                  placeholder={personType === 'natural' ? 'DNI' : 'RUC'}   
-                  maxLength={personType === 'natural' ? 8 : 10}
+                  name={personType === false ? 'dni' : 'ruc'} 
+                  placeholder={personType === false ? 'DNI' : 'RUC'}   
+                  maxLength={personType === false ? 8 : 10}
                   pattern={'[0-9]'}
                   title={'Must only contain numbers from 9 to 0'}
                 />
@@ -86,11 +86,11 @@ const RegisterForm = ({ type, title }) => {
                 />
                 <InputForm 
                   type={'text'}
-                  name={personType === 'natural' ? 'email' : 'businessName'} 
-                  placeholder={personType === 'natural' ? 'e-mail' : 'Business name'}   
+                  name={personType === false ? 'email' : 'businessName'} 
+                  placeholder={personType === false ? 'e-mail' : 'Business name'}   
                   maxLength={40}
                   pattern={''}
-                  title={personType === 'natural' ? 'Must contain one special character and one capital letter' : ''}
+                  title={personType === false ? 'Must contain one special character and one capital letter' : ''}
                 />
                 <InputForm 
                   type={'text'}
@@ -106,10 +106,10 @@ const RegisterForm = ({ type, title }) => {
                 <p className={headline2}>User data</p>
                 <div className={`${toggle} ${user_email}`}>
                   <article className={full_name}>
-                    <input className={name_input} type="text" name="name" placeholder="name_secondname"/>
+                    <input className={name_input} type="text" name="name" placeholder="secondname" disabled/>
                   </article>
                   <article className={email_domain}>
-                    <input className={domain_input} type="text" name="domain" placeholder="@domain.com" />
+                    <input className={domain_input} type="text" name="domain" placeholder="@domain.com" disabled/>
                   </article>
                 </div>
                   <InputForm 
