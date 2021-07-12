@@ -106,10 +106,10 @@ const RegisterForm = ({ formType, title }) => {
                 <p className={headline2}>User data</p>
                 <div className={`${toggle} ${user_email}`}>
                   <article className={full_name}>
-                    <input className={name_input} type="text" name="name" placeholder="name_secondname"/>
+                    <input className={name_input} type="text" name="name" placeholder="secondname" disabled/>
                   </article>
                   <article className={email_domain}>
-                    <input className={domain_input} type="text" name="domain" placeholder="@domain.com" />
+                    <input className={domain_input} type="text" name="domain" placeholder="@domain.com" disabled/>
                   </article>
                 </div>
                   <InputForm 

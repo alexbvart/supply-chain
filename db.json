@@ -262,125 +262,87 @@
       "relation": [
         {
           "from": {
-            "supplierId": 7
+            "supplierId": 7,
+            "name": "IMPORTACIONES NAKAMINE E.I.R.L."
           },
           "to": {
-            "enterpriseId": 2
+            "enterpriseId": 2,
+            "name": "EMPRESA DE TRANSPORTES AVE FENIX S.A.C."
           }
         },
         {
           "from": {
-            "supplierId": 8
+            "supplierId": 8,
+            "name": "IMPLEMENTOS PERU S.A.C."
           },
           "to": {
-            "enterpriseId": 2
+            "enterpriseId": 2,
+            "name": "EMPRESA DE TRANSPORTES AVE FENIX S.A.C."
           }
         },
         {
           "from": {
-            "supplierId": 10
+            "supplierId": 10,
+            "name": "MARCO PERUANA SA"
           },
           "to": {
-            "enterpriseId": 2
+            "enterpriseId": 2,
+            "name": "EMPRESA DE TRANSPORTES AVE FENIX S.A.C."
           }
         },
         {
           "from": {
-            "supplierId": 6
+            "supplierId": 6,
+            "name": "SCANIA SERVICES DEL PERU S.A"
           },
           "to": {
-            "enterpriseId": 2
+            "enterpriseId": 2,
+            "name": "EMPRESA DE TRANSPORTES AVE FENIX S.A.C."
           }
         },
         {
           "from": {
-            "supplierId": 4
+            "supplierId": 4,
+            "name": "MADIC S.A.C."
           },
           "to": {
-            "supplierId": 9
+            "supplierId": 9,
+            "name": "REPSOL COMERCIAL SAC"
           }
         },
         {
           "from": {
-            "supplierId": 1
+            "supplierId": 1,
+            "name": "SERVICIOS GENERALES THERMO KING EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA"
           },
           "to": {
-            "supplierId": 10
+            "supplierId": 10,
+            "name": "MARCO PERUANA SA"
           }
         },
         {
           "from": {
-            "supplierId": 3
+            "supplierId": 3,
+            "name": "Kinedyne LLC"
           },
           "to": {
-            "supplierId": 8
+            "supplierId": 8,
+            "name": "IMPLEMENTOS PERU S.A.C."
           }
         },
         {
           "from": {
-            "supplierId": 5
+            "supplierId": 5,
+            "name": "DISTRIBUCIONES DIESEL PERU S.A.C."
           },
           "to": {
-            "supplierId": 7
+            "supplierId": 7,
+            "name": "IMPORTACIONES NAKAMINE E.I.R.L."
           }
         }
       ],
       "id": 1
-    },
-    {
-      "business-unitId": 2  ,
-      "enterpriseId": 2,
-      "relation": [
-        {
-          "from": {
-            "supplierId": 7
-          },
-          "to": {
-            "enterpriseId": 2
-          }
-        },
-        {
-          "from": {
-            "supplierId": 7
-          },
-          "to": {
-            "enterpriseId": 2
-          }
-        },
-        {
-          "from": {
-            "supplierId": 8
-          },
-          "to": {
-            "enterpriseId": 2
-          }
-        },
-        {
-          "from": {
-            "supplierId": 10
-          },
-          "to": {
-            "enterpriseId": 2
-          }
-        },
-        {
-          "from": {
-            "supplierId": 6
-          },
-          "to": {
-            "enterpriseId": 2
-          }
-        },
-        {
-          "from": {
-            "supplierId": 4
-          },
-          "to": {
-            "supplierId": 9
-          }
-        }
-      ],
-      "id": 2
     }
+
   ]
 }
