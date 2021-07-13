@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const updateById = async (src,id) => {
-    const response = await axios.put(`${src}/${id}`)
-    return console.log(response);
+const updateById = async (src,id,up) => {
+    const response = await axios.patch(`${src}/${id}`,up)
+    return response
 }
 export default updateById;
