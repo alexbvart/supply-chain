@@ -18,22 +18,22 @@ const SideBar = () => {
                 <nav>
                     <ul>
                         <li>
-                            <Anchor href="/business-unit">
+                            <Anchor href="/business-unit/">
                                 Business unit
                             </Anchor>
                         </li>
                         <li>
-                            <Anchor href="/supplier">
+                            <Anchor href="/supplier/">
                                 Suppliers
                             </Anchor>
                         </li>
                         <li>
-                            <Anchor href="/distributor">
+                            <Anchor href="/distributor/">
                                 Distributors
                             </Anchor>
                         </li>
                         <li>
-                            <Anchor href="/customer">
+                            <Anchor href="/customer/">
                                 Customers
                             </Anchor>
                         </li>
