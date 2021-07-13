@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import InputForm from '../InputForm/InputForm'
+import Footer from '../Footer/Footer'
 import {
   form_container,
   wrapper,
@@ -19,11 +20,7 @@ import {
   full_name,
   name_input,
   email_domain,
-  domain_input,
-  footer,
-  footer_buttons,
-  cancel_button,
-  register_button
+  domain_input  
 } from './registerForm.module.css';
 import { input_container } from '../InputForm/inputForm.module.css'
 
@@ -123,12 +120,7 @@ const RegisterForm = ({ formType, title }) => {
               : ''  
           }
         </div>
-        <footer className={footer}>
-          <div className={footer_buttons}>
-            <button className={cancel_button}><p>Cancel</p></button>
-            <button type="button" form="registerForm" className={register_button}><p>Register {formType}</p></button>
-          </div>
-        </footer>
+        <Footer textContent={`Register ${formType ? 'new ' + formType : ''}`}/>  
       </div>
     </div>
 	);
