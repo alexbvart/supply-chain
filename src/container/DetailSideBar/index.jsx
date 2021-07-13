@@ -40,7 +40,7 @@ const DetailSideBar = ({title, data}) => {
                         ))}
                     </ul>
                 </nav>
-                <Anchor href={title} className={detail.btn_float}>
+                <Anchor href={title} className={detail.btn_float} href={`/${urlLocation}/new`}>
                     New {buttonText}
                 </Anchor>
             </aside>

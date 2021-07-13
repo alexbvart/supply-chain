@@ -2,14 +2,33 @@
 import { useState } from 'react';
 import DetailSideBar from '../../src/container/DetailSideBar';
 import EnterpriseInfo from '../../src/container/EnterpriseInfo/EnterpriseInfo';
+import updateById from '../../utils/updateById';
 import {supply_chain} from './businnes.module.css'
 
 const businessunit = ({businessunit,businessunits, supplychain}) => {
 
+    const newRelation = 
+            {
+                "from": {
+                    "name": "MADIC S.A.C."
+                },
+                "to": {
+                    "name": "SCANIA SERVICES DEL PERU S.A"
+                }
+            }
+    const allRelations = {
+        "relation": [...supplychain.relation, newRelation]
+    }         
 
+    const handleClick =()=>{
+        const upSuplltChain = updateById("http://localhost:3001/supply-chain",supplychain.id, allRelations)
+        console.log(upSuplltChain);
+    }
+
+
+    
     const regex = / /ig;
     const relationshipList = supplychain.relation.map((relation)=>(
-                    
         `${Object.values(relation)[0].name.replace(regex, '-')} --> ${Object.values(relation)[1].name.replace(regex, '-')}`
     ))
     
@@ -19,6 +38,8 @@ const businessunit = ({businessunit,businessunits, supplychain}) => {
     return ( 
         <>
             <DetailSideBar title="Business units" data={businessunits}></DetailSideBar>
+
+            <buton onClick={handleClick}> presioname</buton>
 
             <div className={`mermaid ${supply_chain}`}>
                 {`
@@ -58,7 +79,4 @@ export async function getServerSideProps(context) {
             supplychain: supplychain[0]
         }
     };
-
-
-
 }
