@@ -26,9 +26,13 @@ import {
   register_button
 } from './registerForm.module.css';
 import { input_container } from '../InputForm/inputForm.module.css'
+import { useRouter } from 'next/router'
+
 
 const RegisterForm = ({ type, title }) => {
   const [personType , setPersonType ] = useState(false);
+  const router = useRouter()
+
 
 	return (
     <div className={wrapper}>
@@ -125,7 +129,7 @@ const RegisterForm = ({ type, title }) => {
         </div>
         <footer className={footer}>
           <div className={footer_buttons}>
-            <button className={cancel_button}><p>Cancel</p></button>
+            <button className={cancel_button} onClick={() => router.back()} ><p>Cancel</p></button>
             <button type="button" form="registerForm" className={register_button}><p>Register {type}</p></button>
           </div>
         </footer>

@@ -1,9 +1,18 @@
-import React, {useState} from 'react';
+import React from 'react';
 import DetailSideBar from '../../src/container/DetailSideBar';
-const distributor = ({distributors}) => {
+import EnterpriseInfo from '../../src/container/EnterpriseInfo/EnterpriseInfo';
+const distributor = ({distributors,distributor}) => {
     return ( 
         <>
             <DetailSideBar title="Distributors" data={distributors}></DetailSideBar>
+            <EnterpriseInfo 
+                address={distributor.ADDRESS} 
+                name={distributor.COMPANY_NAME||distributor.FULL_NAME} 
+                phone={distributor.TELEPHONE} 
+                ruc={distributor.RUC}
+                dni={distributor.DNI} 
+                salesman={distributor.LEGAL_REPRESENTATIVE}
+                />
         </>
     );
 }
@@ -11,8 +20,7 @@ export default distributor;
 
 export async function getServerSideProps(context) {
     const { params } = context;
-    console.log(context);
-    /* const { query } = params; */
+
     const SERVER_HOST = "http://localhost:3001";
     const ENTERPRISE_ID = 2;
 
@@ -22,6 +30,7 @@ export async function getServerSideProps(context) {
     return {
         props: {
             distributors: distributors,
+            distributor: distributors[0],
         }
     };
 
