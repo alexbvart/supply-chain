@@ -1,20 +1,14 @@
-
-import axios from 'axios';
-import { useRouter } from 'next/router'
-import { useEffect, useRef, useState } from 'react';
 import ReactToPrint from 'react-to-print';
 import PlainText from '../../Hooks/plainText';
 import Mermaid from '../../src/components/Mermeid';
 
-
 import PlusButton from '../../src/components/PlusButton/PlusButton';
 import DetailSideBar from '../../src/container/DetailSideBar';
-
-import EnterpriseInfo from '../../src/container/EnterpriseInfo/EnterpriseInfo';
 
 import updateById from '../../utils/updateById';
 import getById from '../../utils/getById';
 import { supply_chain, float_tr, float_br, plus_button } from './businnes.module.css'
+import { useEffect, useRef, useState } from 'react';
 
 const businessunit = ({ businessunit, businessunits, supplychain }) => {
 
