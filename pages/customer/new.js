@@ -1,9 +1,14 @@
 import React, {useState} from 'react';
+import RegisterForm from '../../src/components/RegisterForm/RegisterForm';
 import DetailSideBar from '../../src/container/DetailSideBar';
 const customer = ({customers}) => {
     return ( 
         <>
             <DetailSideBar title="Customers" data={customers}></DetailSideBar>
+            <RegisterForm 
+                type="client"
+                title="Register new customer"
+            />
         </>
     );
 }

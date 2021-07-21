@@ -20,6 +20,11 @@ import { useRouter } from 'next/router'
 const BussinesUnitRegisterForm = ({ type, title }) => {
   const router = useRouter()
 
+    /* const input_value = document.getElementById('nameBusinessUnit').value */
+
+
+
+
 	return (
     <div className={wrapper}>
       <div className={form_container}>
@@ -30,6 +35,7 @@ const BussinesUnitRegisterForm = ({ type, title }) => {
             <p className={headline2}>Name of the business unit</p>
               <form className={form} id="registerForm" action="">
                 <InputForm
+                  id="nameBusinessUnit"
                   cssClass={`${input_container} ${firstInput}`}
                   type={'text'}
                   name={'name'} 

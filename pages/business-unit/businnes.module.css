@@ -19,3 +19,46 @@
     stroke-width: 1;
     fill: none;
 }
+
+.float_br{
+    width: 200px;
+    position: absolute;
+    margin: auto;
+    right: 32px;
+
+    bottom: 32px;
+    z-index: 999;
+}
+
+.float_tr{
+    width: 200px;
+    position: absolute;
+    margin: auto;
+    right: 32px;
+
+    top: 32px;
+    z-index: 999;
+}
+
+
+.plus_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color: var(--primary);
+    border-radius: 12px;
+    padding: 18px 30px;
+    gap: 14px;
+    border: none;
+    outline: none;
+  }
+  
+  .plus_button img{
+    width: 1rem;
+    max-width: 24px;
+  }
+  
+  .plus_button p{
+    color: var(--txt-active);
+  }

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const getById = async (src, data) => {
-    const response = await axios.post(src, data)
+const getById = async (src, id) => {
+    const response = await axios.get(`${src}/${id}`)
     return response
 }
 export default getById;

@@ -17,18 +17,7 @@ class MyDocument extends Document {
                 <body>
                     <Main />
                     <NextScript />
-                    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-                    <script>{`
-                        const config = {
-                            startOnLoad:true,
-                            flowchart:{
-                                useMaxWidth:false,
-                                htmlLabels:true
-                            },
-                            
-                        };
-                        mermaid.initialize(config);
-                    `}</script>
+
 
                 </body>
             </Html>
@@ -37,3 +26,4 @@ class MyDocument extends Document {
 }
 
 export default MyDocument
+

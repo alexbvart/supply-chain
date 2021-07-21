@@ -262,6 +262,24 @@
       "relation": [
         {
           "from": {
+            "supplierId": 9,
+            "name": "REPSOL COMERCIAL SAC"
+          },
+          "to": {
+            "enterpriseId": 2,
+            "name": "EMPRESA DE TRANSPORTES AVE FENIX S.A.C."
+          }
+        },
+        {
+          "from": {
+            "name": "EMPRESA DE TRANSPORTES AVE FENIX S.A.C."
+          },
+          "to": {
+            "name": "CLIENTES"
+          }
+        },
+        {
+          "from": {
             "supplierId": 7,
             "name": "IMPORTACIONES NAKAMINE E.I.R.L."
           },
@@ -339,12 +357,141 @@
             "supplierId": 7,
             "name": "IMPORTACIONES NAKAMINE E.I.R.L."
           }
+        },
+        {
+          "from": {
+            "name": "MADIC-S.A.C."
+          },
+          "to": {
+            "name": "EMPRESA-DE-TRANSPORTES-AVE-FENIX-S.A.C."
+          }
         }
       ],
       "id": 1
     },
     {
       "business-unitId": 2,
+      "enterpriseId": 2,
+      "relation": [
+        {
+          "from": {
+            "name": "SERVICIOS-GENERALES-THERMO-KING-EMPRESA-INDIVIDUAL-DE-RESPONSABILIDAD-LIMITADA"
+          },
+          "to": {
+            "name": "IMPLEMENTOS-PERU-S.A.C"
+          }
+        },
+        {
+          "from": {
+            "supplierId": 9,
+            "name": "REPSOL COMERCIAL SAC"
+          },
+          "to": {
+            "enterpriseId": 2,
+            "name": "EMPRESA DE TRANSPORTES AVE FENIX S.A.C."
+          }
+        },
+        {
+          "from": {
+            "name": "EMPRESA DE TRANSPORTES AVE FENIX S.A.C."
+          },
+          "to": {
+            "name": "CLIENTES"
+          }
+        },
+        {
+          "from": {
+            "supplierId": 7,
+            "name": "IMPORTACIONES NAKAMINE E.I.R.L."
+          },
+          "to": {
+            "enterpriseId": 2,
+            "name": "EMPRESA DE TRANSPORTES AVE FENIX S.A.C."
+          }
+        },
+        {
+          "from": {
+            "supplierId": 8,
+            "name": "IMPLEMENTOS PERU S.A.C."
+          },
+          "to": {
+            "enterpriseId": 2,
+            "name": "EMPRESA DE TRANSPORTES AVE FENIX S.A.C."
+          }
+        },
+        {
+          "from": {
+            "supplierId": 10,
+            "name": "MARCO PERUANA SA"
+          },
+          "to": {
+            "enterpriseId": 2,
+            "name": "EMPRESA DE TRANSPORTES AVE FENIX S.A.C."
+          }
+        },
+        {
+          "from": {
+            "supplierId": 6,
+            "name": "SCANIA SERVICES DEL PERU S.A"
+          },
+          "to": {
+            "enterpriseId": 2,
+            "name": "EMPRESA DE TRANSPORTES AVE FENIX S.A.C."
+          }
+        },
+        {
+          "from": {
+            "supplierId": 4,
+            "name": "MADIC S.A.C."
+          },
+          "to": {
+            "supplierId": 9,
+            "name": "REPSOL COMERCIAL SAC"
+          }
+        },
+        {
+          "from": {
+            "supplierId": 1,
+            "name": "SERVICIOS GENERALES THERMO KING EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA"
+          },
+          "to": {
+            "supplierId": 10,
+            "name": "MARCO PERUANA SA"
+          }
+        },
+        {
+          "from": {
+            "supplierId": 3,
+            "name": "Kinedyne LLC"
+          },
+          "to": {
+            "supplierId": 8,
+            "name": "IMPLEMENTOS PERU S.A.C."
+          }
+        },
+        {
+          "from": {
+            "supplierId": 5,
+            "name": "DISTRIBUCIONES DIESEL PERU S.A.C."
+          },
+          "to": {
+            "supplierId": 7,
+            "name": "IMPORTACIONES NAKAMINE E.I.R.L."
+          }
+        },
+        {
+          "from": {
+            "name": "Kinedyne-LLC"
+          },
+          "to": {
+            "name": "SERVICIOS-GENERALES-THERMO-KING-EMPRESA-INDIVIDUAL-DE-RESPONSABILIDAD-LIMITADA"
+          }
+        }
+      ],
+      "id": 2
+    },
+    {
+      "business-unitId": 3,
       "enterpriseId": 2,
       "relation": [
         {
@@ -369,8 +516,8 @@
         },
         {
           "from": {
-            "supplierId": 10,
-            "name": "MARCO PERUANA SA"
+            "supplierId": 9,
+            "name": "REPSOL COMERCIAL SAC"
           },
           "to": {
             "enterpriseId": 2,
@@ -379,12 +526,10 @@
         },
         {
           "from": {
-            "supplierId": 6,
-            "name": "SCANIA SERVICES DEL PERU S.A"
+            "name": "EMPRESA DE TRANSPORTES AVE FENIX S.A.C."
           },
           "to": {
-            "enterpriseId": 2,
-            "name": "EMPRESA DE TRANSPORTES AVE FENIX S.A.C."
+            "name": "CLIENTES"
           }
         },
         {
@@ -399,46 +544,107 @@
         },
         {
           "from": {
-            "supplierId": 1,
-            "name": "SERVICIOS GENERALES THERMO KING EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA"
-          },
-          "to": {
-            "supplierId": 10,
-            "name": "MARCO PERUANA SA"
-          }
-        },
-        {
-          "from": {
-            "supplierId": 3,
-            "name": "Kinedyne LLC"
-          },
-          "to": {
-            "supplierId": 8,
-            "name": "IMPLEMENTOS PERU S.A.C."
-          }
-        },
-        {
-          "from": {
-            "supplierId": 5,
-            "name": "DISTRIBUCIONES DIESEL PERU S.A.C."
-          },
-          "to": {
-            "supplierId": 7,
-            "name": "IMPORTACIONES NAKAMINE E.I.R.L."
-          }
-        },
-        {
-          "from": {
-            "supplierId": 4,
             "name": "MADIC S.A.C."
           },
           "to": {
-            "enterpriseId": 6,
-            "name": "SCANIA SERVICES DEL PERU S.A"
+            "name": "IMPORTACIONES-NAKAMINE-E.I.R.L"
+          }
+        },
+        {
+          "from": {
+            "name": "MADIC S.A.C."
+          },
+          "to": {
+            "name": "IMPORTACIONES-NAKAMINE-E.I.R.L."
+          }
+        },
+        {
+          "from": {
+            "name": "IMPLEMENTOS-PERU-S.A.C."
+          },
+          "to": {
+            "name": "IMPORTACIONES-NAKAMINE-E.I.R.L."
+          }
+        },
+        {
+          "from": {
+            "name": "MADIC-S.A.C."
+          },
+          "to": {
+            "name": "IMPLEMENTOS-PERU-S.A.C."
           }
         }
       ],
-      "id": 2
+      "id": 3
+    },
+    {
+      "business-unitId": 4,
+      "enterpriseId": 2,
+      "relation": [
+        {
+          "from": {
+            "supplierId": 7,
+            "name": "IMPORTACIONES NAKAMINE E.I.R.L."
+          },
+          "to": {
+            "enterpriseId": 2,
+            "name": "EMPRESA DE TRANSPORTES AVE FENIX S.A.C."
+          }
+        },
+        {
+          "from": {
+            "supplierId": 8,
+            "name": "IMPLEMENTOS PERU S.A.C."
+          },
+          "to": {
+            "enterpriseId": 2,
+            "name": "EMPRESA DE TRANSPORTES AVE FENIX S.A.C."
+          }
+        },
+        {
+          "from": {
+            "supplierId": 9,
+            "name": "REPSOL COMERCIAL SAC"
+          },
+          "to": {
+            "enterpriseId": 2,
+            "name": "EMPRESA DE TRANSPORTES AVE FENIX S.A.C."
+          }
+        },
+        {
+          "from": {
+            "name": "EMPRESA DE TRANSPORTES AVE FENIX S.A.C."
+          },
+          "to": {
+            "name": "CLIENTES"
+          }
+        },
+        {
+          "from": {
+            "name": "IMPLEMENTOS-PERU-S.A.C."
+          },
+          "to": {
+            "name": "IMPORTACIONES-NAKAMINE-E.I.R.L."
+          }
+        },
+        {
+          "from": {
+            "name": "MADIC-S.A.C."
+          },
+          "to": {
+            "name": "IMPLEMENTOS-PERU-S.A.C."
+          }
+        },
+        {
+          "from": {
+            "name": "MADIC-S.A.C."
+          },
+          "to": {
+            "name": "REPSOL-COMERCIAL-SAC"
+          }
+        }
+      ],
+      "id": 4
     }
   ]
 }

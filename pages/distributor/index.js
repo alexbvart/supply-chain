@@ -5,14 +5,17 @@ const distributor = ({distributors,distributor}) => {
     return ( 
         <>
             <DetailSideBar title="Distributors" data={distributors}></DetailSideBar>
-            <EnterpriseInfo 
-                address={distributor.ADDRESS} 
-                name={distributor.COMPANY_NAME||distributor.FULL_NAME} 
-                phone={distributor.TELEPHONE} 
-                ruc={distributor.RUC}
-                dni={distributor.DNI} 
-                salesman={distributor.LEGAL_REPRESENTATIVE}
-                />
+            {distributor&&
+                <EnterpriseInfo 
+                    address={distributor.ADDRESS} 
+                    name={distributor.COMPANY_NAME||distributor.FULL_NAME} 
+                    phone={distributor.TELEPHONE} 
+                    ruc={distributor.RUC}
+                    dni={distributor.DNI} 
+                    salesman={distributor.LEGAL_REPRESENTATIVE}
+                    />
+            }
+            
         </>
     );
 }
@@ -30,7 +33,7 @@ export async function getServerSideProps(context) {
     return {
         props: {
             distributors: distributors,
-            distributor: distributors[0],
+            distributor: distributors[0]||false,
         }
     };
 

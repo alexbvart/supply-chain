@@ -1,9 +1,14 @@
 import React, {useState} from 'react';
+import RegisterForm from '../../src/components/RegisterForm/RegisterForm';
 import DetailSideBar from '../../src/container/DetailSideBar';
 const newDistributor = ({distributors}) => {
     return ( 
         <>
             <DetailSideBar title="Distributors" data={distributors}></DetailSideBar>
+            <RegisterForm 
+                type="provider"
+                title="Register new distributor"
+            />
         </>
     );
 }

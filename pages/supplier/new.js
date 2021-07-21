@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import RegisterForm from '../../src/components/RegisterForm/RegisterForm';
 
 import DetailSideBar from '../../src/container/DetailSideBar';
 
@@ -8,6 +9,10 @@ const newSupplier = ({suppliers}) => {
     return ( 
         <>
             <DetailSideBar title="Suppliers" data={suppliers}></DetailSideBar>
+            <RegisterForm 
+                type="provider"
+                title="Register new suppliers"
+            />
 
         </>
     );
