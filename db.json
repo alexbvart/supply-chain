@@ -642,9 +642,159 @@
           "to": {
             "name": "REPSOL-COMERCIAL-SAC"
           }
+        },
+        {
+          "from": {
+            "name": "MADIC-S.A.C."
+          },
+          "to": {
+            "name": "REPSOL-COMERCIAL-SAC"
+          }
+        },
+        {
+          "from": {
+            "name": "MADIC-S.A.C."
+          },
+          "to": {
+            "name": "REPSOL-COMERCIAL-SAC"
+          }
+        },
+        {
+          "from": {
+            "name": "MADIC-S.A.C."
+          },
+          "to": {
+            "name": "REPSOL-COMERCIAL-SAC"
+          }
+        },
+        {
+          "from": {
+            "name": "MADIC-S.A.C."
+          },
+          "to": {
+            "name": "REPSOL-COMERCIAL-SAC"
+          }
+        },
+        {
+          "from": {
+            "name": "MADIC-S.A.C."
+          },
+          "to": {
+            "name": "REPSOL-COMERCIAL-SAC"
+          }
+        },
+        {
+          "from": {
+            "name": "MADIC-S.A.C."
+          },
+          "to": {
+            "name": "REPSOL-COMERCIAL-SAC"
+          }
+        },
+        {
+          "from": {
+            "name": "MADIC-S.A.C."
+          },
+          "to": {
+            "name": "REPSOL-COMERCIAL-SAC"
+          }
+        },
+        {
+          "from": {
+            "name": "MADIC-S.A.C."
+          },
+          "to": {
+            "name": "REPSOL-COMERCIAL-SAC"
+          }
+        },
+        {
+          "from": {
+            "name": "MADIC-S.A.C."
+          },
+          "to": {
+            "name": "REPSOL-COMERCIAL-SAC"
+          }
+        },
+        {
+          "from": {
+            "name": "MADIC-S.A.C."
+          },
+          "to": {
+            "name": "REPSOL-COMERCIAL-SAC"
+          }
+        },
+        {
+          "from": {
+            "name": "MADIC-S.A.C."
+          },
+          "to": {
+            "name": "REPSOL-COMERCIAL-SAC"
+          }
+        },
+        {
+          "from": {
+            "name": "MADIC-S.A.C."
+          },
+          "to": {
+            "name": "REPSOL-COMERCIAL-SAC"
+          }
+        },
+        {
+          "from": {
+            "name": "MADIC-S.A.C."
+          },
+          "to": {
+            "name": "REPSOL-COMERCIAL-SAC"
+          }
+        },
+        {
+          "from": {
+            "name": "MADIC-S.A.C."
+          },
+          "to": {
+            "name": "REPSOL-COMERCIAL-SAC"
+          }
+        },
+        {
+          "from": {
+            "name": "MADIC-S.A.C."
+          },
+          "to": {
+            "name": "REPSOL-COMERCIAL-SAC"
+          }
         }
       ],
       "id": 4
+    }
+  ],
+  "process-map":
+  [
+    {
+      "business-unitId": 1,
+      "id":1,
+      "strategic":{
+        "data":[
+          {"name":"Gestion de dirección"},
+          {"name":"Gestion de financiera"},
+          {"name":"Gestion de legal"},
+          {"name":"Gestion de marketing"},
+          {"name":"Gestion de control de calidad"}
+        ],
+        "relations":[]
+      },
+      "primary":{
+
+      },
+      "support":{
+        "data":[
+          {"name":"Gestion de personal"},
+          {"name":"Gestion de técnologia"},
+          {"name":"Gestion de reclamos"},
+          {"name":"Gestion de manteniemiento"},
+          {"name":"Gestion de servicios auxiliares"}
+        ],
+        "relations":[]
+      }
     }
   ]
 }

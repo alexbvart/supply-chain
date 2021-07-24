@@ -1,64 +1,18 @@
-import ReactToPrint from 'react-to-print';
-import PlainText from '../../Hooks/plainText';
-import Mermaid from '../../src/components/Mermeid';
 
-import PlusButton from '../../src/components/PlusButton/PlusButton';
+
+
 import DetailSideBar from '../../src/container/DetailSideBar';
+import SupplyChain from '../../src/container/SupplyChain';
 
-import updateById from '../../utils/updateById';
-import getById from '../../utils/getById';
-import { supply_chain, float_tr, float_br, plus_button } from './businnes.module.css'
-import { useEffect, useRef, useState } from 'react';
+
 
 const businessunit = ({ businessunit, businessunits, supplychain }) => {
 
-    const [chain, setChain] = useState(supplychain)
-    useEffect(() => {
-        setChain(supplychain)
-    }, [supplychain])
 
-    const printRef = useRef(null)
-    const plainText = PlainText(chain.relation)
-
-
-    const newRelation =
-    {
-        "from": {
-            "name": "MADIC-S.A.C."
-        },
-        "to": {
-            "name": "REPSOL-COMERCIAL-SAC"
-        }
-    }
-    const allRelations = {
-        "relation": [...chain.relation, newRelation]
-    }
-
-    const handleClick = async () => {
-        await updateById("http://localhost:3001/supply-chain", chain.id, allRelations)
-        const newgetChain = await getById("http://localhost:3001/supply-chain", chain.id)
-        await setChain(newgetChain.data)
-    }
     return (
         <>
             <DetailSideBar title="Business units" data={businessunits}></DetailSideBar>
-            <div className={float_br} >
-                <button onClick={e => { handleClick() }}>++++</button>
-                <ReactToPrint
-                    trigger={() => <button className={plus_button}><p> Export</p></button>}
-                    content={() => printRef.current}
-                />
-            </div>
-            <div className={float_tr} >
-                <PlusButton text="New Relation" />
-            </div>
-
-            <Mermaid chart={
-                `graph LR 
-                    ${plainText}`
-            } ref={printRef}
-                className={` ${supply_chain}`}
-            />
+            <SupplyChain supplychain={supplychain} />
         </>
     );
 }
