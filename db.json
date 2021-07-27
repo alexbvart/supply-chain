@@ -202,15 +202,6 @@
     },
     {
       "DNI": "73693051",
-      "FULL_NAME": "CRISTHIAN RICARDO CHANTA SANTOS",
-      "TELEPHONE": "973693059",
-      "ADDRESS": " ",
-      "LEGAL_PERSON": false,
-      "enterpriseId": 2,
-      "id": 11
-    },
-    {
-      "DNI": "73693051",
       "FULL_NAME": "EDERSON ELIEL CONTRERAS VENTURA",
       "TELEPHONE": "973693051",
       "ADDRESS": " ",
@@ -226,15 +217,6 @@
       "LEGAL_PERSON": false,
       "enterpriseId": 2,
       "id": 13
-    },
-    {
-      "DNI": "73693053",
-      "FULL_NAME": "FLOR ANALY PURIHUAMAN REYES",
-      "TELEPHONE": "973693053",
-      "ADDRESS": " ",
-      "LEGAL_PERSON": false,
-      "enterpriseId": 2,
-      "id": 14
     },
     {
       "DNI": "73693054",
@@ -766,6 +748,19 @@
       ],
       "id": 4
     }
+  ],
+  "process":[
+    {"id":1,"name":"Ivestigacion y desarrollo"},
+    {"id":2,"name":"Alianzas estratégicas"},
+    {"id":3,"name":"Gestión de calidad"},
+    {"id":4,"name":"Gestión de pedidos"},
+    {"id":5,"name":"Envío de pedidos a empresas aliadas"},
+    {"id":6,"name":"Seguimiento y monitoreo de pedidos"},
+    {"id":7,"name":"Distribución de pedidos segun usuarios"},
+    {"id":8,"name":"Marketing"},
+    {"id":9,"name":"Tecnologías de la información"},
+    {"id":10,"name":"Administracion de finanzas"},
+    {"id":11,"name":"Atención al cliente"}
   ],
   "process-map":
   [
