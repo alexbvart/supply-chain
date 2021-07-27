@@ -347,6 +347,14 @@
           "to": {
             "name": "EMPRESA-DE-TRANSPORTES-AVE-FENIX-S.A.C."
           }
+        },
+        {
+          "from": {
+            "name": "MADIC-S.A.C."
+          },
+          "to": {
+            "name": "REPSOL-COMERCIAL-SAC"
+          }
         }
       ],
       "id": 1
@@ -749,46 +757,157 @@
       "id": 4
     }
   ],
-  "process":[
-    {"id":1,"name":"Ivestigacion y desarrollo"},
-    {"id":2,"name":"Alianzas estratégicas"},
-    {"id":3,"name":"Gestión de calidad"},
-    {"id":4,"name":"Gestión de pedidos"},
-    {"id":5,"name":"Envío de pedidos a empresas aliadas"},
-    {"id":6,"name":"Seguimiento y monitoreo de pedidos"},
-    {"id":7,"name":"Distribución de pedidos segun usuarios"},
-    {"id":8,"name":"Marketing"},
-    {"id":9,"name":"Tecnologías de la información"},
-    {"id":10,"name":"Administracion de finanzas"},
-    {"id":11,"name":"Atención al cliente"}
+  "process": [
+    {
+      "id": 1,
+      "name": "Ivestigacion y desarrollo"
+    },
+    {
+      "id": 2,
+      "name": "Alianzas estratégicas"
+    },
+    {
+      "id": 3,
+      "name": "Gestión de calidad"
+    },
+    {
+      "id": 4,
+      "name": "Gestión de pedidos"
+    },
+    {
+      "id": 5,
+      "name": "Envío de pedidos a empresas aliadas"
+    },
+    {
+      "id": 6,
+      "name": "Seguimiento y monitoreo de pedidos"
+    },
+    {
+      "id": 7,
+      "name": "Distribución de pedidos segun usuarios"
+    },
+    {
+      "id": 8,
+      "name": "Marketing"
+    },
+    {
+      "id": 9,
+      "name": "Tecnologías de la información"
+    },
+    {
+      "id": 10,
+      "name": "Administracion de finanzas"
+    },
+    {
+      "id": 11,
+      "name": "Atención al cliente"
+    }
   ],
-  "process-map":
-  [
+  "process-map": [
     {
       "business-unitId": 1,
-      "id":1,
-      "strategic":{
-        "data":[
-          {"name":"Gestion de dirección"},
-          {"name":"Gestion de financiera"},
-          {"name":"Gestion de legal"},
-          {"name":"Gestion de marketing"},
-          {"name":"Gestion de control de calidad"}
+      "enterpriseId": 2,
+      "id": 1,
+      "strategic": {
+        "data": [
+          {
+            "name": "Ivestigacion y desarrollo"
+          },
+          {
+            "name": "Alianzas estratégicas"
+          },
+          {
+            "name": "Gestión de calidad"
+          }
         ],
-        "relations":[]
+        "relation": []
       },
-      "primary":{
-
-      },
-      "support":{
-        "data":[
-          {"name":"Gestion de personal"},
-          {"name":"Gestion de técnologia"},
-          {"name":"Gestion de reclamos"},
-          {"name":"Gestion de manteniemiento"},
-          {"name":"Gestion de servicios auxiliares"}
+      "primary": {
+        "data": [
+          {
+            "name": "Gestión de pedidos"
+          },
+          {
+            "name": "Envío de pedidos a empresas aliadas"
+          },
+          {
+            "name": "Seguimiento y monitoreo de pedidos"
+          },
+          {
+            "name": "Distribución de pedidos segun usuarios"
+          }
         ],
-        "relations":[]
+        "relation": []
+      },
+      "support": {
+        "data": [
+          {
+            "name": "Marketing"
+          },
+          {
+            "name": "Tecnologías de la información"
+          },
+          {
+            "name": "Administracion de finanzas"
+          },
+          {
+            "name": "Atención al cliente"
+          }
+        ],
+        "relation": []
+      }
+    },
+    {
+      "business-unitId": 2,
+      "enterpriseId": 2,
+      "id": 2,
+      "strategic": {
+        "data": [
+          {
+            "name": "Alianzas estratégicas"
+          },
+          {
+            "name": "Ivestigacion y desarrollo"
+          },
+          {
+            "name": "Gestión de calidad"
+          }
+        ],
+        "relation": []
+      },
+      "primary": {
+        "data": [
+          {
+            "name": "Seguimiento y monitoreo de pedidos"
+          },
+          {
+            "name": "Envío de pedidos a empresas aliadas"
+          },
+          {
+            "name": "Gestión de pedidos"
+          },
+          {
+            "name": "Distribución de pedidos segun usuarios"
+          }
+        ],
+        "relation": []
+      },
+      "support": {
+        "data": [
+          {
+            "name": "Tecnologías de la información"
+          },
+          {
+            "name": "Administracion de finanzas"
+          },
+          {
+            "name": "Marketing"
+          },
+          {
+            "name": "Atención al cliente"
+          }
+        ],
+        "relation": []
       }
     }
   ]

@@ -8,7 +8,7 @@
   --bg-card: #3A393E;
   --bg-dark-2: #313133;
   --primary: #6462FC;
-  --primary-40: #6462FC, 40%;
+  --primary-40: #6562fc83;
 
   /* fonts */
   --fontBase: 'Inter', sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -46,7 +46,11 @@ a {
   margin: 0;
   box-sizing: border-box;   
 }
-
+h2{
+  padding: 0;
+  margin: 0;
+  word-wrap: break-word;
+}
 ul{
   list-style: none;
 
@@ -106,6 +110,15 @@ right: 0;
     animation: spin 2s linear 2;
     
 
+} 
+.mermaid{
+  width: 100%;
+  height: calc(100% - 24px);
+
+}   
+.mermaid>svg{
+  width: 100%;
+  height: calc(100% - 24px);
 }
 
 @keyframes spin {

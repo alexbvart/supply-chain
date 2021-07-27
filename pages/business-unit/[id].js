@@ -68,21 +68,23 @@ const businessunit = ({ businessunit, businessunits, supplychain,processmap }) =
                 >
                     <div className="main">
                     {supplychain&&
-                        <SupplyChain supplychain={supplychain} />
+                        <>
+                            <h1>Supply chain</h1>
+                            <SupplyChain supplychain={supplychain} />
+                        </>
                     }
                     </div>
                 </TabGroup.TabPanel>
 
                 <TabGroup.TabPanel
                     index={1}
-
                     className={`${panel} ${panel_flex}`}
                     activeClassName={panel_active}
                     inactiveClassName={panel_inactive}
                 >
                     <div className="main">
                     {processmap &&
-                        <ProcessMap />
+                        <ProcessMap  processmap={processmap}/>
                     }
                     </div>
                 </TabGroup.TabPanel>

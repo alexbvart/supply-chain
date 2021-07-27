@@ -1,13 +1,14 @@
 .tab_group{
-    display: grid;
-    grid-template-rows: 48px 1fr;
     width: 100%;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
 
 }
 .tab_panel{
     width: 100%;
-    height: 100%;;
+    height: 100%;
 }
 .tab{
     /* h-12 px-12 transition-colors duration-150 */
@@ -16,10 +17,7 @@
     transition-property: background-color, border-color, color, fill, stroke;
     transition-duration: 150ms;
 }
-.tab_active_default{
-    background-color: #000;
-    color: #fff;
-}
+
 .tab_active{
     background-color: var(--primary);
     color: #fff;
@@ -31,13 +29,15 @@
     padding-bottom: 4rem;
     transition-property: all;
     transform-origin: center;
-    height: 16rem;
+
 }
 .panel_flex{
     flex: 1 1 auto;
     flex-direction: column;
 }
 .panel_active{
+    width: 100%;
+    height: 100%;
     /* opacity-100 duration-500 translate-x-0 */
     opacity: 1;
     --transform-translate-x: 0;
