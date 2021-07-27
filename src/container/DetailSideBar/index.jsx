@@ -26,7 +26,7 @@ const DetailSideBar = ({title, data}) => {
                             data
                             .filter(item => String(item.COMPANY_NAME).toUpperCase().includes(keyword.toUpperCase()) || String(item.FULL_NAME).toUpperCase().includes(keyword.toUpperCase()) )
                             .map((item)=>(
-                            <li>
+                            <li key={item.id} >
                                 <Link href={`/${urlLocation}/${item.id}`}>
                                     <a>
                                         <Avatar 

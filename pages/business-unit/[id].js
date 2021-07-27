@@ -147,8 +147,8 @@ export async function getServerSideProps(context) {
         props: {
             businessunits: businessunits,
             businessunit: businessunit[0],
-            supplychain: supplychain[0],
-            processmap: processmap[0]
+            supplychain: supplychain[0]||null,
+            processmap: processmap[0]||null
         }
     };
 }
