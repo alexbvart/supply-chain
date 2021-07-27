@@ -1,25 +1,23 @@
 import React, {useState} from 'react';
+import RegisterForm from '../../src/components/RegisterForm/RegisterForm';
 
 import DetailSideBar from '../../src/container/DetailSideBar';
-import EnterpriseInfo from '../../src/container/EnterpriseInfo/EnterpriseInfo';
 
-const supplier = ({suppliers,supplier}) => {
+const newSupplier = ({suppliers}) => {
+
 
     return ( 
         <>
             <DetailSideBar title="Suppliers" data={suppliers}></DetailSideBar>
-            <EnterpriseInfo 
-                address={supplier.ADDRESS} 
-                name={supplier.COMPANY_NAME||supplier.FULL_NAME} 
-                phone={supplier.TELEPHONE} 
-                ruc={supplier.RUC}
-                dni={supplier.DNI} 
-                salesman={supplier.LEGAL_REPRESENTATIVE}
-                />
+            <RegisterForm 
+                type="provider"
+                title="Register new suppliers"
+            />
+
         </>
     );
 }
-export default supplier;
+export default newSupplier;
 
 export async function getServerSideProps(context) {
     const { params } = context;
@@ -35,7 +33,6 @@ export async function getServerSideProps(context) {
     return {
         props: {
             suppliers: suppliers,
-            supplier: suppliers[0],
         }
     };
 }

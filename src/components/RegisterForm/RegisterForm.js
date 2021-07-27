@@ -23,9 +23,13 @@ import {
   domain_input  
 } from './registerForm.module.css';
 import { input_container } from '../InputForm/inputForm.module.css'
+import { useRouter } from 'next/router'
+
 
 const RegisterForm = ({ formType, title }) => {
-  const [isNaturalPerson , setNaturalPerson ] = useState(true);
+const [isNaturalPerson , setNaturalPerson ] = useState(true);
+const router = useRouter()
+
 
 	return (
     <div className={wrapper}>
@@ -120,7 +124,12 @@ const RegisterForm = ({ formType, title }) => {
               : ''  
           }
         </div>
-        <Footer textContent={`Register ${formType ? 'new ' + formType : ''}`}/>  
+        <footer className={footer}>
+          <div className={footer_buttons}>
+            <button className={cancel_button} onClick={() => router.back()} ><p>Cancel</p></button>
+            <button type="button" form="registerForm" className={register_button}><p>Register {type}</p></button>
+          </div>
+        </footer>
       </div>
     </div>
 	);

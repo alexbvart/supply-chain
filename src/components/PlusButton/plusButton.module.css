@@ -7,12 +7,11 @@
   border-radius: 12px;
   padding: 18px 30px;
   gap: 14px;
+  color: var(--txt-active);
+  border: none;
+  outline: none;
 }
 
-.plus_button img{
-  width: 1rem;
-  max-width: 24px;
-}
 
 .plus_button p{
   color: var(--txt-active);

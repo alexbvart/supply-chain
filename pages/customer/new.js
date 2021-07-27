@@ -1,19 +1,14 @@
 import React, {useState} from 'react';
+import RegisterForm from '../../src/components/RegisterForm/RegisterForm';
 import DetailSideBar from '../../src/container/DetailSideBar';
-import EnterpriseInfo from '../../src/container/EnterpriseInfo/EnterpriseInfo';
-const customer = ({customers, customer}) => {
+const customer = ({customers}) => {
     return ( 
         <>
             <DetailSideBar title="Customers" data={customers}></DetailSideBar>
-            <EnterpriseInfo 
-                address={customer.ADDRESS} 
-                name={customer.COMPANY_NAME||customer.FULL_NAME} 
-                phone={customer.TELEPHONE} 
-                ruc={customer.RUC}
-                dni={customer.DNI} 
-                salesman={customer.LEGAL_REPRESENTATIVE}
-                />
-
+            <RegisterForm 
+                type="client"
+                title="Register new customer"
+            />
         </>
     );
 }
@@ -32,7 +27,6 @@ export async function getServerSideProps(context) {
     return {
         props: {
             customers: customers,
-            customer: customers[0],
         }
     };
 

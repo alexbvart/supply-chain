@@ -1,9 +1,10 @@
 import React from 'react'
+import PlusIcon from '../../Icons/plusIcon'
 import { plus_button } from './plusButton.module.css'
 
 const PlusButton = ({ text }) => (
   <div className={plus_button}>
-    <img src="./assets/icons/plus_icon.png" alt="plus icon" />
+    <PlusIcon />
     <p>{text}</p>
   </div>
 )
