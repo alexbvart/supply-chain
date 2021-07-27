@@ -21,7 +21,6 @@ export default newSupplier;
 
 export async function getServerSideProps(context) {
     const { params } = context;
-    console.log(context);
 
     /* const { query } = params; */
     const SERVER_HOST = "http://localhost:3001";

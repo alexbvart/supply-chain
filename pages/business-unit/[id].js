@@ -68,21 +68,23 @@ const businessunit = ({ businessunit, businessunits, supplychain,processmap }) =
                 >
                     <div className="main">
                     {supplychain&&
-                        <SupplyChain supplychain={supplychain} />
+                        <>
+                            <h1>Supply chain</h1>
+                            <SupplyChain supplychain={supplychain} />
+                        </>
                     }
                     </div>
                 </TabGroup.TabPanel>
 
                 <TabGroup.TabPanel
                     index={1}
-
                     className={`${panel} ${panel_flex}`}
                     activeClassName={panel_active}
                     inactiveClassName={panel_inactive}
                 >
                     <div className="main">
                     {processmap &&
-                        <ProcessMap />
+                        <ProcessMap  processmap={processmap}/>
                     }
                     </div>
                 </TabGroup.TabPanel>
@@ -147,8 +149,8 @@ export async function getServerSideProps(context) {
         props: {
             businessunits: businessunits,
             businessunit: businessunit[0],
-            supplychain: supplychain[0],
-            processmap: processmap[0]
+            supplychain: supplychain[0]||null,
+            processmap: processmap[0]||null
         }
     };
 }

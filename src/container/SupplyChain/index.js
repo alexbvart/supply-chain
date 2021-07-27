@@ -21,7 +21,7 @@ const SupplyChain = ({supplychain}) => {
     }, [supplychain])
 
     const printRef = useRef(null)
-    const plainText = PlainText(chain.relation)
+    const chainPlainText = PlainText(chain)
 
 
     const newRelation =
@@ -59,7 +59,7 @@ const SupplyChain = ({supplychain}) => {
 
             <Mermaid chart={
                     `graph LR 
-                        ${plainText}`
+                        ${chainPlainText}`
                 } 
                 ref={printRef}
                 className={` ${supply_chain}`}
