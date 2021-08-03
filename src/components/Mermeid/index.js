@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState, forwardRef } from 'react';
+import React, { useEffect, forwardRef } from 'react';
 import mermaid from "mermaid";
 
 mermaid.initialize({
@@ -59,7 +59,7 @@ mermaid.initialize({
 
 
 
-const Mermaid = forwardRef(({ chart, className },ref) => {
+const Mermaid = forwardRef(({ chart, className="" },ref) => {
 
     useEffect(() => {
         var output = document.getElementById('output');

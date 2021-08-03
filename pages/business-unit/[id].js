@@ -85,44 +85,71 @@ const businessunit = ({
 							</div>
 						</TabGroup.TabPanel>
 
-						<TabGroup.TabPanel
-							index={1}
-							className={`${panel} ${panel_flex}`}
-							activeClassName={panel_active}
-							inactiveClassName={panel_inactive}
-						>
-							<div className="main">{processmap && <ProcessMap />}</div>
-						</TabGroup.TabPanel>
-						<TabGroup.TabPanel
-							index={2}
-							className={`${panel} ${panel_flex}`}
-							activeClassName={panel_active}
-							inactiveClassName={panel_inactive}
-						>
-							<div className="main">{<ProcessCategorization />}</div>
-						</TabGroup.TabPanel>
-						<TabGroup.TabPanel
-							index={3}
-							className={panel}
-							activeClassName={panel_active}
-							inactiveClassName={panel_inactive}
-						>
-							<div className="main-full">www</div>
-						</TabGroup.TabPanel>
-						<TabGroup.TabPanel
-							index={4}
-							className={panel}
-							activeClassName={panel_active}
-							inactiveClassName={panel_inactive}
-						>
-							<div className="main-full">www</div>
-						</TabGroup.TabPanel>
-					</section>
-				</div>
-			</TabGroup>
-		</>
-	);
-};
+                <TabGroup.TabPanel
+                    index={0}
+                    className={panel}
+                    activeClassName={panel_active}
+                    inactiveClassName={panel_inactive}
+                >
+                    <div className="main">
+                    {supplychain&&
+                        <>
+                            <h1>Supply chain</h1>
+                            <SupplyChain supplychain={supplychain} />
+                        </>
+                    }
+                    </div>
+                </TabGroup.TabPanel>
+
+                <TabGroup.TabPanel
+                    index={1}
+                    className={`${panel} ${panel_flex}`}
+                    activeClassName={panel_active}
+                    inactiveClassName={panel_inactive}
+                >
+                    <div className="main">
+                    {processmap &&
+                        <ProcessMap  processmap={processmap}/>
+                    }
+                    </div>
+                </TabGroup.TabPanel>
+                <TabGroup.TabPanel
+                    index={2}
+                    className={`${panel} ${panel_flex}`}
+                    activeClassName={panel_active}
+                    inactiveClassName={panel_inactive}
+                >
+                    <div className="main">
+                        { <ProcessCategorization /> }
+                    </div>
+                </TabGroup.TabPanel>
+                <TabGroup.TabPanel
+                    index={3}
+                    className={panel}
+                    activeClassName={panel_active}
+                    inactiveClassName={panel_inactive}
+                >
+                    <div className="main-full">
+                        www
+                    </div>
+                </TabGroup.TabPanel>
+                <TabGroup.TabPanel
+                    index={4}
+                    className={panel}
+                    activeClassName={panel_active}
+                    inactiveClassName={panel_inactive}
+                >
+                    <div className="main-full">
+                        www
+                    </div>
+                </TabGroup.TabPanel>
+                </section>
+
+                </div>
+            </TabGroup>
+        </>
+    );
+}
 export default businessunit;
 
 export async function getServerSideProps(context) {
@@ -147,12 +174,12 @@ export async function getServerSideProps(context) {
 		`${SERVER_HOST}/process-map?enterpriseId=${ENTERPRISE_ID}&business-unitId=${id}`
 	).then((res) => res.json());
 
-	return {
-		props: {
-			businessunits: businessunits,
-			businessunit: businessunit[0],
-			supplychain: supplychain[0],
-			processmap: processmap[0],
-		},
-	};
+    return {
+        props: {
+            businessunits: businessunits,
+            businessunit: businessunit[0],
+            supplychain: supplychain[0]||null,
+            processmap: processmap[0]||null
+        }
+    };
 }
