@@ -1,0 +1,25 @@
+.wrapper{
+  padding-block-start: 4.9rem;
+  padding-block-end: 4.9rem;
+  padding-inline-start: 4.9rem;
+  padding-inline-end: 4.9rem;
+}
+
+.wrapper > table > tr > th{
+  padding: 10px;
+  background-color: black;
+}
+
+.wrapper > table > tr > td{
+  padding: 10px;
+  border: 1px solid white;
+}
+
+.table{
+  font-size: 18px;
+  text-align: center;
+}
+
+.table img{
+  width: 52px;
+}

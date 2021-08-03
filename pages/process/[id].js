@@ -1,5 +1,6 @@
 
 import DetailSideBar from '../../src/container/DetailSideBar';
+import ProcessFlowDiagram from '../../src/container/ProcessFlowDiagram';
 import { TabGroup } from '@statikly/funk'
 import {tab_group,
     tab,tab_active,
@@ -60,7 +61,7 @@ const process = ({process,processs}) => {
                     inactiveClassName={panel_inactive}
                 >
                     <div className="main-full">
-                    Diagrama de flujo de procesos
+                    { <ProcessFlowDiagram />}
                     </div>
                 </TabGroup.TabPanel>
                 <TabGroup.TabPanel
