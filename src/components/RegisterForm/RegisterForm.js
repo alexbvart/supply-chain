@@ -20,7 +20,11 @@ import {
   full_name,
   name_input,
   email_domain,
-  domain_input  
+  domain_input,
+  footer,
+  footer_buttons,
+  cancel_button,
+  register_button
 } from './registerForm.module.css';
 import { input_container } from '../InputForm/inputForm.module.css'
 import { useRouter } from 'next/router'
@@ -127,7 +131,7 @@ const router = useRouter()
         <footer className={footer}>
           <div className={footer_buttons}>
             <button className={cancel_button} onClick={() => router.back()} ><p>Cancel</p></button>
-            <button type="button" form="registerForm" className={register_button}><p>Register {type}</p></button>
+            <button type="button" form="registerForm" className={register_button}><p>Register {formType}</p></button>
           </div>
         </footer>
       </div>
