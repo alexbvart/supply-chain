@@ -58,9 +58,9 @@ const router = useRouter()
                   </article> 
                 </div>
               </section>
-              : ''    
+              : ''
           }
-          
+
           <section className={personal_data}>
               <p className={headline2}>{formType !== 'enterprise' ? 'Personal data' : ''}</p>
               <form className={form} id="registerForm" action="">
@@ -75,8 +75,8 @@ const router = useRouter()
                 />
                 <InputForm 
                   type={'tel'}
-                  name={isNaturalPerson && formType !== 'enterprise' ? 'dni' : 'ruc'} 
-                  placeholder={isNaturalPerson && formType !== 'enterprise' ? 'DNI' : 'RUC'}   
+                  name={isNaturalPerson && formType !== 'enterprise' ? 'dni' : 'ruc'}
+                  placeholder={isNaturalPerson && formType !== 'enterprise' ? 'DNI' : 'RUC'}
                   maxLength={isNaturalPerson && formType !== 'enterprise' ? 8 : 10}
                   pattern={'[0-9]'}
                   title={'Must only contain numbers from 9 to 0'}
