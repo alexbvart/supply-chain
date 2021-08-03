@@ -1,0 +1,18 @@
+.cta_button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background-color: var(--primary-40);
+  border-radius: 12px;
+  padding: 18px 30px;
+  gap: 14px;
+  color: var(--txt-active);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.cta_button:hover{
+  background-color: var(--primary);
+}

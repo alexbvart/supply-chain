@@ -1,13 +1,23 @@
 import DetailSideBar from '../../src/container/DetailSideBar';
 import SupplyChain from '../../src/container/SupplyChain';
-import { TabGroup } from '@statikly/funk'
-import {tab_group,
-    tab,tab_active,
-    tab_panel,
-    panel,panel_flex,panel_active,panel_inactive} from '../../styles/tab.module.css'
+import { TabGroup } from '@statikly/funk';
+import {
+	tab_group,
+	tab,
+	tab_active,
+	tab_panel,
+	panel,
+	panel_flex,
+	panel_active,
+	panel_inactive,
+} from '../../styles/tab.module.css';
 import ProcessMap from '../../src/components/ProcessMap';
 
-const businessunit = ({ businessunit, businessunits, supplychain,processmap }) => {
+const businessunit = ({
+	businessunits,
+	supplychain,
+	processmap,
+}) => {
 
     return (
         <>
@@ -22,7 +32,7 @@ const businessunit = ({ businessunit, businessunits, supplychain,processmap }) =
                         activeClassName={tab_active}
                         inactiveClassName=""
                     >
-                            Cadena de Suministro
+                        Cadena de Suministro
                     </TabGroup.Tab>
                     <TabGroup.Tab
                         index={1}
@@ -34,7 +44,17 @@ const businessunit = ({ businessunit, businessunits, supplychain,processmap }) =
                     </TabGroup.Tab>
                 </TabGroup.TabList>
 
-                <section className={tab_panel}>
+					<section className={tab_panel}>
+						<TabGroup.TabPanel
+							index={0}
+							className={panel}
+							activeClassName={panel_active}
+							inactiveClassName={panel_inactive}
+						>
+							<div className="main">
+								{supplychain && <SupplyChain supplychain={supplychain} />}
+							</div>
+						</TabGroup.TabPanel>
 
                 <TabGroup.TabPanel
                     index={0}
@@ -75,22 +95,26 @@ const businessunit = ({ businessunit, businessunits, supplychain,processmap }) =
 export default businessunit;
 
 export async function getServerSideProps(context) {
-    const { params } = context;
-    const { id } = params;
-    const SERVER_HOST = "http://localhost:3001";
-    const ENTERPRISE_ID = 2;
+	const { params } = context;
+	const { id } = params;
+	const SERVER_HOST = 'http://localhost:3001';
+	const ENTERPRISE_ID = 2;
 
-    const businessunits = await fetch(`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/business-unit`)
-        .then(res => res.json())
+	const businessunits = await fetch(
+		`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/business-unit`
+	).then((res) => res.json());
 
-    const businessunit = await fetch(`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/business-unit/?id=${id}`)
-        .then(res => res.json())
+	const businessunit = await fetch(
+		`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/business-unit/?id=${id}`
+	).then((res) => res.json());
 
-    const supplychain = await fetch(`${SERVER_HOST}/supply-chain?enterpriseId=${ENTERPRISE_ID}&business-unitId=${id}`)
-        .then(res => res.json())
+	const supplychain = await fetch(
+		`${SERVER_HOST}/supply-chain?enterpriseId=${ENTERPRISE_ID}&business-unitId=${id}`
+	).then((res) => res.json());
 
-    const processmap= await fetch(`${SERVER_HOST}/process-map?enterpriseId=${ENTERPRISE_ID}&business-unitId=${id}`)
-        .then(res => res.json())
+	const processmap = await fetch(
+		`${SERVER_HOST}/process-map?enterpriseId=${ENTERPRISE_ID}&business-unitId=${id}`
+	).then((res) => res.json());
 
     return {
         props: {
@@ -101,5 +125,3 @@ export async function getServerSideProps(context) {
         }
     };
 }
-
-
