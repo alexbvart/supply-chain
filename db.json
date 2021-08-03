@@ -476,6 +476,38 @@
           "to": {
             "name": "SERVICIOS-GENERALES-THERMO-KING-EMPRESA-INDIVIDUAL-DE-RESPONSABILIDAD-LIMITADA"
           }
+        },
+        {
+          "from": {
+            "name": "MADIC-S.A.C."
+          },
+          "to": {
+            "name": "REPSOL-COMERCIAL-SAC"
+          }
+        },
+        {
+          "from": {
+            "name": "MADIC-S.A.C."
+          },
+          "to": {
+            "name": "REPSOL-COMERCIAL-SAC"
+          }
+        },
+        {
+          "from": {
+            "name": "MADIC-S.A.C."
+          },
+          "to": {
+            "name": "REPSOL-COMERCIAL-SAC"
+          }
+        },
+        {
+          "from": {
+            "name": "MADIC-S.A.C."
+          },
+          "to": {
+            "name": "REPSOL-COMERCIAL-SAC"
+          }
         }
       ],
       "id": 2

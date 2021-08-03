@@ -11,7 +11,7 @@ const Avatar = ({src,name,telephone}) => {
                     <div className={profile}/>
                 }
                 <div className={info}>
-                    {name && <span>{name.substring(0,20)}</span>  }
+                    {name && <span>{name.substring(0,20)}{(name.length>20)?'...':''} </span>  }
                     {telephone && <span>{telephone}</span> }
                 </div>
             </section>

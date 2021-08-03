@@ -23,6 +23,11 @@ const SideBar = () => {
                             </Anchor>
                         </li>
                         <li>
+                            <Anchor href="/process/">
+                                Processes
+                            </Anchor>
+                        </li>
+                        <li>
                             <Anchor href="/supplier/">
                                 Suppliers
                             </Anchor>
