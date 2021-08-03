@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import InputForm from '../InputForm/InputForm'
+import Footer from '../Footer/Footer'
 import {
   form_container,
   wrapper,
@@ -19,19 +20,15 @@ import {
   full_name,
   name_input,
   email_domain,
-  domain_input,
-  footer,
-  footer_buttons,
-  cancel_button,
-  register_button
+  domain_input  
 } from './registerForm.module.css';
 import { input_container } from '../InputForm/inputForm.module.css'
 import { useRouter } from 'next/router'
 
 
-const RegisterForm = ({ type, title }) => {
-  const [personType , setPersonType ] = useState(false);
-  const router = useRouter()
+const RegisterForm = ({ formType, title }) => {
+const [isNaturalPerson , setNaturalPerson ] = useState(true);
+const router = useRouter()
 
 
 	return (
@@ -39,19 +36,19 @@ const RegisterForm = ({ type, title }) => {
       <div className={form_container}>
         <div className={register_form}>
           <h1 className={headline}>{title}</h1>
-          { (type === 'client' || type === 'provider') ? 
+          { (formType === 'client' || formType === 'provider') ? 
               <section className={person_type}>
                 <p className={headline2}>Type of person</p>
                 <div className={`${toggle} ${toggle_person}`}>
                   <article 
-                    className={`${person} ${personType === false ? selected_person : ''}`} 
-                    onClick={() => setPersonType(!personType)}
+                    className={`${person} ${isNaturalPerson ? selected_person : ''}`} 
+                    onClick={() => setNaturalPerson(true)}
                   >
                     <p>Natural</p>
                   </article>
                   <article 
-                    className={`${person} ${personType === true ? selected_person : ''}`} 
-                    onClick={() => setPersonType(!personType)}
+                    className={`${person} ${!isNaturalPerson ? selected_person : ''}`} 
+                    onClick={() => setNaturalPerson(false)}
                   >
                     <p>Legal</p>
                   </article> 
@@ -61,7 +58,7 @@ const RegisterForm = ({ type, title }) => {
           }
           
           <section className={personal_data}>
-            <p className={headline2}>Personal data</p>
+              <p className={headline2}>{formType !== 'enterprise' ? 'Personal data' : ''}</p>
               <form className={form} id="registerForm" action="">
                 <InputForm
                   cssClass={`${input_container} ${firstInput}`}
@@ -74,9 +71,9 @@ const RegisterForm = ({ type, title }) => {
                 />
                 <InputForm 
                   type={'tel'}
-                  name={personType === false ? 'dni' : 'ruc'} 
-                  placeholder={personType === false ? 'DNI' : 'RUC'}   
-                  maxLength={personType === false ? 8 : 10}
+                  name={isNaturalPerson && formType !== 'enterprise' ? 'dni' : 'ruc'} 
+                  placeholder={isNaturalPerson && formType !== 'enterprise' ? 'DNI' : 'RUC'}   
+                  maxLength={isNaturalPerson && formType !== 'enterprise' ? 8 : 10}
                   pattern={'[0-9]'}
                   title={'Must only contain numbers from 9 to 0'}
                 />
@@ -90,11 +87,11 @@ const RegisterForm = ({ type, title }) => {
                 />
                 <InputForm 
                   type={'text'}
-                  name={personType === false ? 'email' : 'businessName'} 
-                  placeholder={personType === false ? 'e-mail' : 'Business name'}   
+                  name={isNaturalPerson ? 'email' : 'businessName'} 
+                  placeholder={isNaturalPerson ? 'e-mail' : 'Business name'}   
                   maxLength={40}
                   pattern={''}
-                  title={personType === false ? 'Must contain one special character and one capital letter' : ''}
+                  title={isNaturalPerson ? 'Must contain one special character and one capital letter' : ''}
                 />
                 <InputForm 
                   type={'text'}
@@ -105,7 +102,7 @@ const RegisterForm = ({ type, title }) => {
                 />
               </form>
           </section>
-          { type === 'employee' || type === 'administrator' ?
+          { formType === 'employee' || formType === 'administrator' ?
               <section className={user_data}>
                 <p className={headline2}>User data</p>
                 <div className={`${toggle} ${user_email}`}>
