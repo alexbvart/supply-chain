@@ -5,6 +5,7 @@ import {tab_group,
     tab,tab_active,
     tab_panel,
     panel,panel_flex,panel_active,panel_inactive} from '../../styles/tab.module.css'
+import ProcessCatigorization from '../../src/container/ProcessCategorization';
 
 const process = ({process,processs}) => {
 
@@ -48,9 +49,9 @@ const process = ({process,processs}) => {
                     activeClassName={panel_active}
                     inactiveClassName={panel_inactive}
                 >
-                    <div className="main">
-                        Caracterización de procesos
-                    </div>
+                    
+                    <ProcessCatigorization />
+                    
                 </TabGroup.TabPanel>
                 <TabGroup.TabPanel
                     index={1}

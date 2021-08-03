@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 // import FilesLogTableRow from '../FilesLogTableRow/index'
 import dynamic from 'next/dynamic';
 import { log, log_table, top_row } from './styles.module.css';
+import getAll from '../../../utils/getAll';
+
 const storage = typeof window !== 'undefined' ? localStorage : null;
 
 const FilesLogTableRow = dynamic(() => import('../FilesLogTableRow/index'), {
@@ -9,16 +11,18 @@ const FilesLogTableRow = dynamic(() => import('../FilesLogTableRow/index'), {
 });
 
 const UploadedFilesLog = () => {
-	const storedFiles = [];
-	const entries = Object.entries(storage);
 
-	for (let file of entries) {
-		storedFiles.push(file);
+	const [Files, setFiles] = useState([])
+	const getFiles = async () =>{
+		const res = await getAll("http://localhost:5000/uploads")
+		await setFiles(res)
 	}
 
-	console.log(storedFiles);
-	const isFile = (file) => file.charAt(0) !== '{';
-
+	useEffect(() => {
+		getFiles()
+		console.log(Files)
+	}, [])
+	
 	return (
 		<section className={log}>
 			<h2>Recorded files</h2>
@@ -27,17 +31,14 @@ const UploadedFilesLog = () => {
 					<p>File name</p>
 					<p>Actions</p>
 				</div>
-				{storedFiles.map((file) =>
-					/* file[0] = key,  file[1] = name*/
-					isFile(file[1]) ? (
+				{Files.map((file) =>
 						<FilesLogTableRow
 							key={file.id}
-							fileName={file[1].split(/,/)[0]}
-							fileId={file[0]}
+							fileName={file.name}
+							fileId={file.id}
+							pathDocument={file.pathDocument}
 						/>
-					) : (
-						''
-					)
+					
 				)}
 			</div>
 		</section>

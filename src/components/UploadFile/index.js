@@ -1,5 +1,7 @@
+import axios from 'axios';
 import React, { useState } from 'react';
-import CtaButton from '../CtaButton';
+import post from '../../../utils/post';
+
 import {
 	upload,
 	upload_container,
@@ -13,10 +15,20 @@ import {
 const UploadFile = () => {
 	const [file, setFile] = useState('');
 
-	const uploadNewFile = (file) => {
-		const id = localStorage.length + 1;
+	const uploadNewFile = async (file) => {
+		
 		try {
-			window.localStorage.setItem(`file-${id}`, file);
+			let formData = new FormData();
+			formData.append('file', file)
+			const res = await axios.post("http://localhost:5000/uploads", formData,
+				{ 
+					headers:{
+						"Authorization": "YOUR_API_AUTHORIZATION_KEY_SHOULD_GOES_HERE_IF_HAVE",
+                        "Content-type": "multipart/form-data",
+					},
+				}
+			)
+			console.log(res);
 		} catch (error) {
 			console.error(error);
 		}
@@ -51,7 +63,7 @@ const UploadFile = () => {
 					className={cta_button}
 					onClick={() =>
 						file !== '' && !checkDuplicated(`${file.name},${file.type}`)
-							? uploadNewFile([file.name, file.type])
+							? uploadNewFile(file)
 							: ''
 					}
 				>

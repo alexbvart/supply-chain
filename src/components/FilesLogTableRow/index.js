@@ -7,8 +7,15 @@ import { row,
   print_button,
   delete_button } from './styles.module.css'
 
-const FilesLogTableRow = ({ fileName, fileId }) => {
-  console.log(`name: ${fileName}, fileId: ${fileId}`);
+const FilesLogTableRow = ({ fileName, fileId, pathDocument }) => {
+
+  const url= process.env.NEXT_PUBLIC_SERVER_HOST_
+  const regex = /\\/
+  const path = pathDocument.replace(regex,"/")
+
+
+
+/*   console.log(`name: ${fileName}, fileId: ${fileId}`); */
   return (
     <article className={row}>
       <div className={file_column}>
@@ -18,11 +25,17 @@ const FilesLogTableRow = ({ fileName, fileId }) => {
         <p id="rowFileName">{ fileName }</p>
       </div>
       <div className={actions_column}>
-        <button className={view_button} >View</button>
+        <button className={view_button} >
+          <a href={`${url}/${path}`} target="_blank" >View</a>       
+        </button>
         <button className={print_button}>Print</button>
         <button className={delete_button} onClick={() => window.localStorage.removeItem(fileId)}>Delete</button>
         {/* <button className={delete_button} onClick={() => console.log('si')}>Delete</button> */}
       </div>
+
+      {/* <div className="">
+        <embed src={`${url}/${path}`} type="application/pdf" width="100%" height="600px" />
+      </div> */}
     </article>
   )
 }
