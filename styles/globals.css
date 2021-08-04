@@ -103,6 +103,9 @@ button{
 .title_section{
   margin: 5rem 0 0 4rem;
 }
+.subtitle_section{
+  margin: -2rem 0 2rem 4rem;
+}
 
 .spiner{
 width: calc(100vw - 600px);

@@ -6,7 +6,9 @@ import {tab_group,
     tab,tab_active,
     tab_panel,
     panel,panel_flex,panel_active,panel_inactive} from '../../styles/tab.module.css'
-import ProcessCatigorization from '../../src/container/ProcessCategorization';
+
+import ActivityTrackingDiagram from '../../src/container/ActivityTrackingDiagram';
+import ProcessCatigorization from '../../src/container/ProcessCategorization'
 
 const process = ({process,processs}) => {
 
@@ -50,19 +52,9 @@ const process = ({process,processs}) => {
                     activeClassName={panel_active}
                     inactiveClassName={panel_inactive}
                 >
-                    
+                    <h3 className="subtitle_section">Caracterización de procesos</h3> 
                     <ProcessCatigorization />
                     
-                </TabGroup.TabPanel>
-                <TabGroup.TabPanel
-                    index={1}
-                    className={panel}
-                    activeClassName={panel_active}
-                    inactiveClassName={panel_inactive}
-                >
-                    <div className="main-full">
-                    { <ProcessFlowDiagram />}
-                    </div>
                 </TabGroup.TabPanel>
                 <TabGroup.TabPanel
                     index={2}
@@ -71,7 +63,19 @@ const process = ({process,processs}) => {
                     inactiveClassName={panel_inactive}
                 >
                     <div className="main-full">
-                    Diagrama de seguimiento de actividades
+                    <h3 className="subtitle_section">Diagrama de seguimiento de actividades</h3>
+                    { <ActivityTrackingDiagram/>}
+                    </div>
+                </TabGroup.TabPanel>
+                <TabGroup.TabPanel
+                    index={1}
+                    className={panel}
+                    activeClassName={panel_active}
+                    inactiveClassName={panel_inactive}
+                >
+                    <div className="main-full">
+                    <h3 className="subtitle_section">Diagrama de flujo de procesos</h3>
+                    <ProcessFlowDiagram />
                     </div>
                 </TabGroup.TabPanel>
                 </section>

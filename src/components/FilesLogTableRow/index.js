@@ -28,7 +28,9 @@ const FilesLogTableRow = ({ fileName, fileId, pathDocument }) => {
         <button className={view_button} >
           <a href={`${url}/${path}`} target="_blank" >View</a>       
         </button>
-        <button className={print_button}>Print</button>
+        <button className={print_button}>
+          <a href={`${url}/${path}`}  download="filename">Download File</a>  
+        </button>
         <button className={delete_button} onClick={() => window.localStorage.removeItem(fileId)}>Delete</button>
         {/* <button className={delete_button} onClick={() => console.log('si')}>Delete</button> */}
       </div>
