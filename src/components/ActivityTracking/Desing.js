@@ -11,11 +11,10 @@ import {
 import { FormRow } from './styles.module.css'
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import post from '../../../utils/post';
+import get from '../../../utils/getAll';
 
 const ActivityTrackingDesing = ({processId}) => {
-
-    /* form */
-
+    
     const emptyValues = {
         nameActivity: '',
         responsible: '',
@@ -26,6 +25,19 @@ const ActivityTrackingDesing = ({processId}) => {
     const [inputFields, setInputFields] = useState([
         emptyValues
     ])
+const getActivityTracking = async () =>{
+    const data= await get(`${process.env.NEXT_PUBLIC_SERVER_HOST}/activity-tracking?processId=${processId}`)
+    if(data[0] === undefined){
+        setInputFields([emptyValues])
+      } else {
+        setInputFields(data[0].data)
+      }
+
+}
+getActivityTracking()
+/* form */
+
+
 
     const handleChangeInput = (index, event) => {
         const values = [...inputFields];
@@ -40,8 +52,9 @@ const ActivityTrackingDesing = ({processId}) => {
             "status": "current",
             "data": inputFields
         }
-        post("http://localhost:3001/activity-tracking",ActivtyForProcess)
+        /* post("http://localhost:3001/activity-tracking",ActivtyForProcess) */
         console.log(ActivtyForProcess);
+        
     }
     const handleAddFields = () => {
         setInputFields([...inputFields, emptyValues])
