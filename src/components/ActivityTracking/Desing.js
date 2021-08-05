@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
 import {
     input_container,
-    right_side, 
-    characters_remaining, 
+    right_side,
+    characters_remaining,
     input,
     toggle_visibility_pass,
     visible,
     hidden,
 } from '../InputForm/inputForm.module.css'
+import { FormRow } from './styles.module.css'
+import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
+const ActivityTrackingDesing = ({processId}) => {
 
-const ActivityTrackingDesing = () => {
+    /* form */
 
     const emptyValues = {
         nameActivity: '',
@@ -31,7 +34,12 @@ const ActivityTrackingDesing = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(inputFields);
+        const ActivtyForProcess = {
+            "processId": processId,
+            "status": "current",
+            "data": inputFields
+        }
+        console.log(ActivtyForProcess);
     }
     const handleAddFields = () => {
         setInputFields([...inputFields, emptyValues])
@@ -42,59 +50,108 @@ const ActivityTrackingDesing = () => {
         values.splice(index, 1);
         setInputFields(values)
     }
-    
+
+    /* D&D */
+    const reorder = (list, startIndex, endIndex) => {
+        const result = [...list];
+        const [removed] = result.splice(startIndex, 1);
+        result.splice(endIndex, 0, removed);
+
+        return result;
+    };
+
+
     return (
         <>
             <h1>Add new Activity</h1>
-            <form onSubmit={handleSubmit}>
-                {inputFields.map((inputField, index) => (
-                    <div key={index}>
-                        <input
-                            type="text"
-                            name="nameActivity"
-                            value={inputField.nameActivity}
-                            onChange={event => handleChangeInput(index, event)} />
+            <DragDropContext
+                onDragEnd={(result) => {
+                    const { source, destination } = result;
+                    if (!destination) {
+                        return;
+                    }
+                    if (
+                        source.index === destination.index &&
+                        source.droppableId === destination.droppableId
+                    ) {
+                        return;
+                    }
 
-                        <input
-                            type="text"
-                            name="responsible"
-                            list="responsible"
-                            value={inputField.responsible}
-                            onChange={event => handleChangeInput(index, event)} />
-                        <datalist id="responsible">
-                            <option value="Gerente general" />
-                            <option value="Jefe TI" />
-                            <option value="Empresas Afiliadas" />
-                            <option value="Cliente" />
-                            <option value="Área de logística " />
-                            <option value="Jefe de logística " />
-                        </datalist>
-                        <input
-                            type="text"
-                            name="time"
-                            value={inputField.time}
-                            onChange={event => handleChangeInput(index, event)} />
+                    setInputFields((prevInputFields) =>
+                        reorder(prevInputFields, source.index, destination.index)
+                    );
+                }} >
+                <form onSubmit={handleSubmit}>
+                    <Droppable droppableId="ActivityForm">
+                        {(droppableProvided) => (
+                            <ul
+                                {...droppableProvided.droppableProps}
+                                ref={droppableProvided.innerRef}
+                            >
+                                {inputFields.map((inputField, index) => (
+                                    <Draggable key={index} draggableId={index.toString()}  index={index}>
+                                        {(draggableProvided) => (
+                                            <li key={index}
+                                                {...draggableProvided.draggableProps}
+                                                ref={draggableProvided.innerRef}
+                                                {...draggableProvided.dragHandleProps}
+                                                className={FormRow}
+                                            >
+                                                <input
+                                                    type="text"
+                                                    name="nameActivity"
+                                                    value={inputField.nameActivity}
+                                                    onChange={event => handleChangeInput(index, event)} />
 
-                        <select
-                            name="activity"
-                            value={inputField.activity}
-                            onChange={event => handleChangeInput(index, event)}
-                        >
-                            <option value="operation">Activity</option>
-                            <option value="operation">operation</option>
-                            <option value="transport">transport</option>
-                            <option value="inspection">inspection</option>
-                            <option value="delay">delay</option>
-                            <option value="storage">storage</option>
-                            <option value="combinedActivity">combinedActivity</option>
-                        </select>
+                                                <input
+                                                    type="text"
+                                                    name="responsible"
+                                                    list="responsible"
+                                                    value={inputField.responsible}
+                                                    onChange={event => handleChangeInput(index, event)} />
+                                                <datalist id="responsible">
+                                                    <option value="Gerente general" />
+                                                    <option value="Jefe TI" />
+                                                    <option value="Empresas Afiliadas" />
+                                                    <option value="Cliente" />
+                                                    <option value="Área de logística " />
+                                                    <option value="Jefe de logística " />
+                                                </datalist>
+                                                <input
+                                                    type="text"
+                                                    name="time"
+                                                    value={inputField.time}
+                                                    onChange={event => handleChangeInput(index, event)} />
 
-                        <button onClick={handleAddFields} >Agregar_</button>
-                        <button onClick={() => handleLessFields(index)} >Quitar</button>
-                    </div>
-                ))}
-                <buton type="submit" onClick={handleSubmit} >Enviar</buton>
-            </form>
+                                                <select
+                                                    name="activity"
+                                                    value={inputField.activity}
+                                                    onChange={event => handleChangeInput(index, event)}
+                                                >
+                                                    <option value="_">Activity</option>
+                                                    <option value="operation">operation</option>
+                                                    <option value="transport">transport</option>
+                                                    <option value="inspection">inspection</option>
+                                                    <option value="delay">delay</option>
+                                                    <option value="storage">storage</option>
+                                                    <option value="combinedActivity">combinedActivity</option>
+                                                </select>
+
+                                                <button onClick={handleAddFields} >Agregar_</button>
+                                                <button onClick={() => handleLessFields(index)} >Quitar</button>
+                                            </li>
+                                        )}
+
+                                    </Draggable>
+                                ))}
+                                {droppableProvided.placeholder}
+                            </ul>
+                        )}
+                    </Droppable>
+                    <buton type="submit" onClick={handleSubmit} >Enviar</buton>
+                </form>
+            </DragDropContext>
+
         </>
     );
 }

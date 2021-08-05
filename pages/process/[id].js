@@ -64,7 +64,7 @@ const process = ({process,processs}) => {
                 >
                     <div className="main-full">
                     <h3 className="subtitle_section">Diagrama de seguimiento de actividades</h3>
-                    { <ActivityTrackingDiagram/>}
+                    { <ActivityTrackingDiagram processId={process.id}/>}
                     </div>
                 </TabGroup.TabPanel>
                 <TabGroup.TabPanel
