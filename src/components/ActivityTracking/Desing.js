@@ -10,6 +10,7 @@ import {
 } from '../InputForm/inputForm.module.css'
 import { FormRow } from './styles.module.css'
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+import post from '../../../utils/post';
 
 const ActivityTrackingDesing = ({processId}) => {
 
@@ -39,6 +40,7 @@ const ActivityTrackingDesing = ({processId}) => {
             "status": "current",
             "data": inputFields
         }
+        post("http://localhost:3001/activity-tracking",ActivtyForProcess)
         console.log(ActivtyForProcess);
     }
     const handleAddFields = () => {
