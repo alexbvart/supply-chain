@@ -14,4 +14,4 @@ const ActivityTrackingDiagram = ({processId}) => {
   )
 }
 
-export default ActivityTrackingDiagram
+export default ActivityTrackingDiagram;

@@ -5,21 +5,48 @@
   padding-inline-end: 4.9rem;
 }
 
-.wrapper > table > tr > th{
+.table > tr > th{
   padding: 10px;
-  background-color: black;
+  background-color: var(--bg-card);
 }
 
-.wrapper > table > tr > td{
+.table > tr > td{
   padding: 10px;
   border: 1px solid white;
 }
+.table > tr > td > p{
+  color: white;
+}
 
 .table{
-  font-size: 18px;
+  font-size: 1.8rem;
   text-align: center;
 }
 
 .table img{
   width: 52px;
+}
+
+.table input[type=text]{
+  width: 28rem;
+  height: 4rem;
+  padding: 1rem;
+  max-width: 280px;
+  color: var(--txt-active);
+  background-color: var(--bg-card);
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 12px;
+}
+
+.table input[type=text]:focus{
+  outline: none;
+}
+
+.table input[type=text]::placeholder{
+  color: rgba(255, 255, 255, 0.609);
+}
+
+.table input[type=checkbox]{
+  width: 2rem;
 }
