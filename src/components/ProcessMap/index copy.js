@@ -4,7 +4,7 @@ import ReactToPrint from 'react-to-print';
 import Mermaid from '../Mermeid';
 import processS from './process.module.css'
 import * as go from 'gojs';
-import { ReactDiagram, ReactPalette } from 'gojs-react';
+import { ReactDiagram } from 'gojs-react';
 
 
 function initDiagram() {
@@ -47,25 +47,9 @@ function handleModelChange(changes) {
     /* alert('GoJS model changed!'); */
 }
 
-function initPalette() {
-    const $ = go.GraphObject.make;
 
-    let myPalette =
-        $(go.Palette,
-          {
-            nodeTemplateMap: myDiagram.nodeTemplateMap,
-            groupTemplateMap: myDiagram.groupTemplateMap
-          });
 
-      myPalette.model = new go.GraphLinksModel([
-        { text: "lightgreen", color: "#ACE600" },
-        { text: "yellow", color: "#FFDD33" },
-        { text: "lightblue", color: "#33D3E5" },
-        { isGroup: true, text: "H Group", horiz: true },
-        { isGroup: true, text: "V Group", horiz: false }
-      ]);
-      return myPalette
- }
+
 
 const ProcessMap = ({ processmap }) => {
 
@@ -104,7 +88,6 @@ const ProcessMap = ({ processmap }) => {
 
                 <div className={processS.first_col}><h2>Requerimiento del Cliente</h2> </div>
                 <div className={processS.process_item}>Procesos de gestion
-
                 <ReactDiagram
                         initDiagram={initDiagram}
                         divClassName={processS.process_item}
@@ -112,9 +95,7 @@ const ProcessMap = ({ processmap }) => {
                             { key: 0, text: 'Alpha', color: 'lightblue', loc: '0 0' },
                             { key: 1, text: 'Beta', color: 'orange', loc: '150 0' },
                             { key: 2, text: 'Gamma', color: 'lightgreen', loc: '0 150' },
-                            { key: 3, text: 'Delta', color: 'pink', loc: '150 150' },
-                            { key: 4,isGroup: true, text: "H Group", horiz: true },
-                            { key: 5,isGroup: true, text: "V Group", horiz: false }
+                            { key: 3, text: 'Delta', color: 'pink', loc: '150 150' }
                         ]}
                         linkDataArray={[
                             { key: -1, from: 0, to: 1 },
@@ -122,11 +103,18 @@ const ProcessMap = ({ processmap }) => {
                             { key: -3, from: 1, to: 1 },
                             { key: -4, from: 2, to: 3 },
                             { key: -5, from: 3, to: 0 }
-                            ]}
+                        ]}
                         onModelChange={handleModelChange}
                     />
                 </div>
                 <div className={processS.process_item}>Procesos productivos
+                    {/* <Mermaid 
+                        chart={
+                    `graph TB 
+                        ${primaryPT}`
+                    } ref={primaryRef}
+                    className={processS.svg_auto}
+                    /> */}
                     <ReactDiagram
                         initDiagram={initDiagram}
                         divClassName={processS.process_item}
@@ -153,15 +141,15 @@ const ProcessMap = ({ processmap }) => {
                         nodeDataArray={[
                             { key: 0, text: 'Alpha', color: 'lightblue', loc: '0 0' },
                             { key: 1, text: 'Beta', color: 'orange', loc: '150 0' },
-                            { key: 2, text: 'Gamma', color: 'lightgreen', loc: '0 150', "group":2 },
-                            { key: 3, text: 'Delta', color: 'pink', loc: '150 150' ,isGroup: true }
+                            { key: 2, text: 'Gamma', color: 'lightgreen', loc: '0 150' },
+                            { key: 3, text: 'Delta', color: 'pink', loc: '150 150' }
                         ]}
                         linkDataArray={[
                             { key: -1, from: 0, to: 1 },
-                            { key: -2, from: 0, to: 3 },
+                            { key: -2, from: 0, to: 2 },
                             { key: -3, from: 1, to: 1 },
                             { key: -4, from: 2, to: 3 },
-                            { key: -5, from: 3, to: 2 }
+                            { key: -5, from: 3, to: 0 }
                         ]}
                         onModelChange={handleModelChange}
                     />

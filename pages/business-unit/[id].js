@@ -45,16 +45,6 @@ const businessunit = ({
                 </TabGroup.TabList>
 
 					<section className={tab_panel}>
-						<TabGroup.TabPanel
-							index={0}
-							className={panel}
-							activeClassName={panel_active}
-							inactiveClassName={panel_inactive}
-						>
-							<div className="main">
-								{supplychain && <SupplyChain supplychain={supplychain} />}
-							</div>
-						</TabGroup.TabPanel>
 
                 <TabGroup.TabPanel
                     index={0}

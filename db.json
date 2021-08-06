@@ -942,5 +942,118 @@
         "relation": []
       }
     }
+  ],
+  "activity-tracking": [
+    {
+      "id": 1,
+      "processId": 1,
+      "status": "current",
+      "data": [
+        {
+          "nameActivity": "Envió de solicitud de implementación ",
+          "responsible": "Gerente general",
+          "time": "5",
+          "activity": "operation"
+        },
+        {
+          "nameActivity": "Recepción de la solicitud",
+          "responsible": "Jefe TI",
+          "time": "3",
+          "activity": "operation"
+        },
+        {
+          "nameActivity": "Evaluación de la solicitud ",
+          "responsible": "Jefe TI",
+          "time": "40",
+          "activity": "transport"
+        },
+        {
+          "nameActivity": "Respuesta de la solicitud.",
+          "responsible": "Jefe TI",
+          "time": "20",
+          "activity": "operation"
+        },
+        {
+          "nameActivity": "Informe de respuestas ",
+          "responsible": "Gerente general",
+          "time": "40",
+          "activity": "operation"
+        }
+      ]
+    },
+    {
+      "processId": 2,
+      "status": "current",
+      "data": [
+        {
+          "nameActivity": "Detección de potenciales asociados",
+          "responsible": "Gerente general",
+          "time": "120",
+          "activity": "inspection"
+        },
+        {
+          "nameActivity": "Elaboración de documento de negociación",
+          "responsible": "Gerente general",
+          "time": "30",
+          "activity": "operation"
+        },
+        {
+          "nameActivity": "Recepción de documento de negociación",
+          "responsible": "Empresas Afiliadas",
+          "time": "10",
+          "activity": "transport"
+        },
+        {
+          "nameActivity": " Informe de respuesta.",
+          "responsible": "Empresas Afiliadas",
+          "time": "120",
+          "activity": "operation"
+        },
+        {
+          "nameActivity": "Elaboración del contracto",
+          "responsible": "Gerente general",
+          "time": "40",
+          "activity": "operation"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "processId": 4,
+      "status": "current",
+      "data": [
+        {
+          "nameActivity": "Solicitud de orden de compra",
+          "responsible": "Cliente",
+          "time": "5",
+          "activity": "operation"
+        },
+        {
+          "nameActivity": "Atención de la solicitud",
+          "responsible": "Área de logística ",
+          "time": "3",
+          "activity": "operation"
+        },
+        {
+          "nameActivity": "Envió de orden a empresa a afiliadas",
+          "responsible": "Área de logística ",
+          "time": "2",
+          "activity": "transport"
+        },
+        {
+          "nameActivity": "Recepción de la orden de compra",
+          "responsible": "Empresas Afiliadas",
+          "time": "2",
+          "activity": "operation"
+        },
+        {
+          "nameActivity": "Verificación de la orden de compra",
+          "responsible": "Empresas Afiliadas",
+          "time": "10",
+          "activity": "inspection"
+        }
+      ],
+      "id": 3
+    }
   ]
 }
