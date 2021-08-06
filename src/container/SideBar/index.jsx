@@ -17,27 +17,27 @@ const SideBar = () => {
                 <header>Overview</header>
                 <nav>
                     <ul>
-                        <li>
+                        <li  key="business-unit" >
                             <Anchor href="/business-unit/">
                                 Business unit
                             </Anchor>
                         </li>
-                        <li>
+                        <li key="process">
                             <Anchor href="/process/">
                                 Processes
                             </Anchor>
                         </li>
-                        <li>
+                        <li key="supplier">
                             <Anchor href="/supplier/">
                                 Suppliers
                             </Anchor>
                         </li>
-                        <li>
+                        <li key="distributor">
                             <Anchor href="/distributor/">
                                 Distributors
                             </Anchor>
                         </li>
-                        <li>
+                        <li key="customer">
                             <Anchor href="/customer/">
                                 Customers
                             </Anchor>
