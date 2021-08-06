@@ -7,14 +7,14 @@ import {
     toggle_visibility_pass,
     visible,
     hidden,
-} from '../InputForm/inputForm.module.css'
-import { FormRow } from './styles.module.css'
+} from '../../components/InputForm/inputForm.module.css'
+import { FormRow } from './desing.module.css'
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import post from '../../../utils/post';
 import get from '../../../utils/getAll';
 
-const ActivityTrackingDesing = ({processId}) => {
-    
+const ActivityTrackingDesing = ({ processId }) => {
+
     const emptyValues = {
         nameActivity: '',
         responsible: '',
@@ -25,19 +25,18 @@ const ActivityTrackingDesing = ({processId}) => {
     const [inputFields, setInputFields] = useState([
         emptyValues
     ])
-const getActivityTracking = async () =>{
-    const data= await get(`${process.env.NEXT_PUBLIC_SERVER_HOST}/activity-tracking?processId=${processId}`)
-    if(data[0] === undefined){
-        setInputFields([emptyValues])
-      } else {
-        setInputFields(data[0].data)
-      }
+    const getActivityTracking = async () => {
+        const data = await get(`${process.env.NEXT_PUBLIC_SERVER_HOST}/activity-tracking?processId=${processId}`)
+        if (data[0] === undefined) {
+            setInputFields([emptyValues])
+        } else {
+            setInputFields(data[0].data)
+        }
 
-}
-getActivityTracking()
-/* form */
-
-
+    }
+    getActivityTracking()
+    
+    /* form */
 
     const handleChangeInput = (index, event) => {
         const values = [...inputFields];
@@ -54,7 +53,7 @@ getActivityTracking()
         }
         /* post("http://localhost:3001/activity-tracking",ActivtyForProcess) */
         console.log(ActivtyForProcess);
-        
+
     }
     const handleAddFields = () => {
         setInputFields([...inputFields, emptyValues])
@@ -104,7 +103,7 @@ getActivityTracking()
                                 ref={droppableProvided.innerRef}
                             >
                                 {inputFields.map((inputField, index) => (
-                                    <Draggable key={index} draggableId={index.toString()}  index={index}>
+                                    <Draggable key={index} draggableId={index.toString()} index={index}>
                                         {(draggableProvided) => (
                                             <li key={index}
                                                 {...draggableProvided.draggableProps}

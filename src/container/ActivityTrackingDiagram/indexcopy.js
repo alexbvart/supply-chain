@@ -1,7 +1,7 @@
 import React from 'react'
 import {wrapper, table, top} from './styles.module.css'
 
-const ActivityTrackingDiagram = () => {
+const ActivityTrackingDiagram2 = () => {
   return (
     <div className={wrapper}>
       <table className={table}>
@@ -47,4 +47,4 @@ const ActivityTrackingDiagram = () => {
   )
 }
 
-export default ActivityTrackingDiagram
+export default ActivityTrackingDiagram2
