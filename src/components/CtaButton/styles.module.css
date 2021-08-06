@@ -2,7 +2,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60px;
+  width: 100%;
+  min-width: 120px;
+  max-width: 252px;
+  height: 48px;
   background-color: var(--primary-40);
   border-radius: 12px;
   padding: 18px 30px;

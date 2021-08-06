@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
     input_container,
     right_side,
@@ -8,10 +8,12 @@ import {
     visible,
     hidden,
 } from '../../components/InputForm/inputForm.module.css'
-import { FormRow } from './desing.module.css'
+import { form,form_padding,FormRow, inputs, inputs__time,footer } from './desing.module.css'
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import post from '../../../utils/post';
 import get from '../../../utils/getAll';
+import Button from '../../components/Buton';
+import CtaButton from '../../components/CtaButton';
 
 const ActivityTrackingDesing = ({ processId }) => {
 
@@ -32,10 +34,13 @@ const ActivityTrackingDesing = ({ processId }) => {
         } else {
             setInputFields(data[0].data)
         }
-
     }
-    getActivityTracking()
-    
+
+    useEffect(() => {
+        getActivityTracking()
+    }, [processId])
+
+
     /* form */
 
     const handleChangeInput = (index, event) => {
@@ -95,74 +100,87 @@ const ActivityTrackingDesing = ({ processId }) => {
                         reorder(prevInputFields, source.index, destination.index)
                     );
                 }} >
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit}
+                    className={form}
+                >
                     <Droppable droppableId="ActivityForm">
                         {(droppableProvided) => (
                             <ul
                                 {...droppableProvided.droppableProps}
                                 ref={droppableProvided.innerRef}
+                                className={form_padding}
                             >
-                                {inputFields.map((inputField, index) => (
-                                    <Draggable key={index} draggableId={index.toString()} index={index}>
-                                        {(draggableProvided) => (
-                                            <li key={index}
-                                                {...draggableProvided.draggableProps}
-                                                ref={draggableProvided.innerRef}
-                                                {...draggableProvided.dragHandleProps}
-                                                className={FormRow}
-                                            >
-                                                <input
-                                                    type="text"
-                                                    name="nameActivity"
-                                                    value={inputField.nameActivity}
-                                                    onChange={event => handleChangeInput(index, event)} />
-
-                                                <input
-                                                    type="text"
-                                                    name="responsible"
-                                                    list="responsible"
-                                                    value={inputField.responsible}
-                                                    onChange={event => handleChangeInput(index, event)} />
-                                                <datalist id="responsible">
-                                                    <option value="Gerente general" />
-                                                    <option value="Jefe TI" />
-                                                    <option value="Empresas Afiliadas" />
-                                                    <option value="Cliente" />
-                                                    <option value="Área de logística " />
-                                                    <option value="Jefe de logística " />
-                                                </datalist>
-                                                <input
-                                                    type="text"
-                                                    name="time"
-                                                    value={inputField.time}
-                                                    onChange={event => handleChangeInput(index, event)} />
-
-                                                <select
-                                                    name="activity"
-                                                    value={inputField.activity}
-                                                    onChange={event => handleChangeInput(index, event)}
+                                {inputFields &&
+                                    inputFields.map((inputField, index) => (
+                                        <Draggable key={index} draggableId={index.toString()} index={index}>
+                                            {(draggableProvided) => (
+                                                <li key={index}
+                                                    {...draggableProvided.draggableProps}
+                                                    ref={draggableProvided.innerRef}
+                                                    {...draggableProvided.dragHandleProps}
+                                                    className={FormRow}
                                                 >
-                                                    <option value="_">Activity</option>
-                                                    <option value="operation">operation</option>
-                                                    <option value="transport">transport</option>
-                                                    <option value="inspection">inspection</option>
-                                                    <option value="delay">delay</option>
-                                                    <option value="storage">storage</option>
-                                                    <option value="combinedActivity">combinedActivity</option>
-                                                </select>
+                                                    <input
+                                                        type="text"
+                                                        name="nameActivity"
+                                                        value={inputField.nameActivity}
+                                                        onChange={event => handleChangeInput(index, event)}
+                                                        className={inputs}
+                                                        placeholder="Name activity"
+                                                    />
+                                                    <input
+                                                        type="text"
+                                                        name="responsible"
+                                                        placeholder="Responsible"
+                                                        list="responsible"
+                                                        value={inputField.responsible}
+                                                        onChange={event => handleChangeInput(index, event)}
+                                                        className={inputs} />
+                                                    <datalist id="responsible">
+                                                        <option value="Gerente general" />
+                                                        <option value="Jefe TI" />
+                                                        <option value="Empresas Afiliadas" />
+                                                        <option value="Cliente" />
+                                                        <option value="Área de logística " />
+                                                        <option value="Jefe de logística " />
+                                                    </datalist>
+                                                    <input
+                                                        type="text"
+                                                        name="time"
+                                                        placeholder="Time"
+                                                        value={inputField.time}
+                                                        onChange={event => handleChangeInput(index, event)}
+                                                        className={`${inputs} ${inputs__time}`} />
+                                                    <select
+                                                        name="activity"
+                                                        value={inputField.activity}
+                                                        onChange={event => handleChangeInput(index, event)}
+                                                        className={inputs}>
+                                                        <option value="_">Select an activity</option>
+                                                        <option value="operation">operation</option>
+                                                        <option value="transport">transport</option>
+                                                        <option value="inspection">inspection</option>
+                                                        <option value="delay">delay</option>
+                                                        <option value="storage">storage</option>
+                                                        <option value="combinedActivity">combinedActivity</option>
+                                                    </select>
 
-                                                <button onClick={handleAddFields} >Agregar_</button>
-                                                <button onClick={() => handleLessFields(index)} >Quitar</button>
-                                            </li>
-                                        )}
+                                                    <Button onClick={handleAddFields} >Agregar</Button>
+                                                    <Button onClick={() => handleLessFields(index)} >Quitar</Button>
+                                                </li>
+                                            )}
 
-                                    </Draggable>
-                                ))}
+                                        </Draggable>
+                                    ))}
                                 {droppableProvided.placeholder}
                             </ul>
                         )}
                     </Droppable>
-                    <buton type="submit" onClick={handleSubmit} >Enviar</buton>
+                    <footer className={footer}>
+                        <CtaButton  onClick={handleSubmit}>Send</CtaButton>
+                        {/* <Button type="submit" onClick={handleSubmit}>Cancel</Button> */}
+                    </footer>
+
                 </form>
             </DragDropContext>
 

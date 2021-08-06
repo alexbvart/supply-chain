@@ -1,6 +1,52 @@
+.form{
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-card);
+    /* padding: 32px 32px 0 32px; */
+    border-radius: 12px;
+    margin-top: 4rem;
+}
+.form_padding{
+    padding: 32px;
+}
 .FormRow{
     margin: 8px 0;
     padding: 4px 0;
     user-select: none;
-    background-color: aqua;
+    display: flex;
+}
+
+.inputs{
+    width: 24rem;
+    height: 48px;
+    padding: 1rem;
+    margin: 0 1rem;
+    max-width: 280px;
+    color: var(--txt-active);
+    background-color: var(--bg-card);
+    font-size: 1.6rem;
+    border: none;
+    border-bottom: 2px solid var(--txt-unactive);
+    
+}
+.inputs__time{
+    width: 8rem;
+}
+.inputs:focus{
+    outline: none;
+}
+.inputs::placeholder{
+    color: rgba(255, 255, 255, 0.609);
+}
+
+.footer{
+    width: 100%;
+    height:98px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--bg-dark-2);
+    padding: 0 32px;
+    border-radius: 0 0 12px 12px;
+
 }

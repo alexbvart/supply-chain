@@ -16,12 +16,12 @@ const UploadedFilesLog = dynamic(
 
 const ProcessCatigorization = () => {
   return (
-    <div className={wrapper}>
       <div className={container}>
+        <h3 className="subtitle_section">Caracterización de procesos</h3> 
+        <br></br>
         <UploadFile />
         <UploadedFilesLog />
       </div>
-    </div>
   )
 }
 

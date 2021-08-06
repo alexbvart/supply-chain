@@ -1,9 +1,11 @@
-import button from './button.module.css '
-const Button = () => {
+import buttons from './button.module.css'
+const Button = ({onClick,children}) => {
     return ( 
         <>
-            <button className={button}>
-
+            <button 
+                className={buttons.button}
+                onClick={onClick}>
+                {children}
             </button>
         </>
     );

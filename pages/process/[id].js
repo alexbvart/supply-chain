@@ -52,7 +52,7 @@ const process = ({process,processs}) => {
                     activeClassName={panel_active}
                     inactiveClassName={panel_inactive}
                 >
-                    <h3 className="subtitle_section">Caracterización de procesos</h3> 
+                    
                     <ProcessCatigorization />
                     
                 </TabGroup.TabPanel>
@@ -63,7 +63,7 @@ const process = ({process,processs}) => {
                     inactiveClassName={panel_inactive}
                 >
                     <div className="main-full">
-                    <h3 className="subtitle_section">Diagrama de seguimiento de actividades</h3>
+                    
                     { <ActivityTrackingDiagram processId={process.id}/>}
                     </div>
                 </TabGroup.TabPanel>
@@ -74,7 +74,7 @@ const process = ({process,processs}) => {
                     inactiveClassName={panel_inactive}
                 >
                     <div className="main-full">
-                    <h3 className="subtitle_section">Diagrama de flujo de procesos</h3>
+                    
                     <ProcessFlowDiagram />
                     </div>
                 </TabGroup.TabPanel>

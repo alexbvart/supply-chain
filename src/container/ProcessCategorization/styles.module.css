@@ -1,8 +1,5 @@
 .wrapper{
-  padding-block-start: 4.9rem;
-  padding-block-end: 4.9rem;
-  padding-inline-start: 4.9rem;
-  padding-inline-end: 4.9rem;
+  padding: 0 0;
 }
 .container{
   width: 100%;

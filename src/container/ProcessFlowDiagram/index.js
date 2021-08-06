@@ -18,7 +18,7 @@ import ProcessCatigorization from '../ProcessCategorization';
 const ProcessFlowDiagram = () => {
     return (
         <>
-
+<h3 className="subtitle_section">Diagrama de flujo de procesos</h3>
 
             <TabGroup numTabs={2} direction={TabGroup.direction.HORIZONTAL}>
                 <div className={tab_group}>
@@ -44,7 +44,7 @@ const ProcessFlowDiagram = () => {
                     </nav>
 
                     <section className={tab_panel}>
-                        <h2 className="title_section">{process.name}</h2>
+                        <h2 className="subtitle_section">{process.name}</h2>
                         <TabGroup.TabPanel
                             index={0}
                             className={`${panel} ${panel_flex}`}

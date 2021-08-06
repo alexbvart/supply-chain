@@ -1,10 +1,13 @@
 import React from 'react'
 import { cta_button } from './styles.module.css'
 
-const CtaButton = ({ text, width, height = 60}) => {
+const CtaButton = ({ children, height = 60, onClick, }) => {
   return (
-    <button className={cta_button} width={width} height={height}>
-      <p>{text}</p>
+    <button
+      onClick={onClick}
+      className={cta_button}
+      height={height}>
+      <p>{children}</p>
     </button>
   )
 }
