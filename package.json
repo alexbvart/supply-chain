@@ -11,6 +11,7 @@
   "dependencies": {
     "@statikly/funk": "^0.3.1",
     "axios": "^0.21.1",
+    "chart.js": "^3.5.0",
     "gojs": "^2.1.47",
     "gojs-react": "^1.0.10",
     "json-server": "^0.16.3",
@@ -19,6 +20,7 @@
     "next-joi": "^2.2.1",
     "react": "17.0.2",
     "react-beautiful-dnd": "^13.1.0",
+    "react-chartjs-2": "^3.0.4",
     "react-dom": "17.0.2",
     "react-mermaid2": "^0.1.4",
     "react-to-print": "^2.12.6",

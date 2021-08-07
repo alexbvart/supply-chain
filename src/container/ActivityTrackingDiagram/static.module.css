@@ -1,0 +1,24 @@
+.grid_container{
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    padding: 4rem 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-gap: 12px;
+
+}
+
+.table_grid{
+    grid-column: 1;
+    grid-row: 1;
+}
+.chart_grid{
+    grid-column: 2;
+    grid-row: 1;
+}
+.summary_grid{
+    grid-column: span 2;
+    grid-row: 2;
+
+}

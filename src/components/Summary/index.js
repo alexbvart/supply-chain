@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
-const Summary = ({title,data,type}) => {
+import React from 'react';
+import {line_height} from './styles.module.css'
+const Summary = ({title,data,type,className}) => {
     return ( 
-        <>
+        <div className={className}>
             <h2 cllasName="subtitle_section">{title}</h2>
             <ariticle>
                 {(type==="activity") ?
@@ -10,7 +11,7 @@ const Summary = ({title,data,type}) => {
                         .filter((s)=>(parseInt(s.time,10)>0 & s.activityName !== "Total"))
                         .map((s,index)=>(
                         <li key={index}>
-                            <p>
+                            <p className={line_height}>
                                 El flujo de 
                                 <strong><em> {s.activityName} </em></strong> abarca el
                                 <strong> {s.percentage} </strong> del tiempo de las actividades del proceso
@@ -24,7 +25,7 @@ const Summary = ({title,data,type}) => {
                         .filter((s)=>(parseInt(s.time,10)>0 & s.rol !== "Total"))
                         .map((s,index)=>(
                         <li key={index}>
-                            <p>
+                            <p className={line_height}>
                                 El rol de 
                                 <strong><em> {s.rol} </em></strong> abarca el
                                 <strong> {s.percentage} </strong> del tiempo de las actividades del proceso
@@ -35,7 +36,7 @@ const Summary = ({title,data,type}) => {
             }
 
             </ariticle>
-        </>
+        </div>
     );
 }
 export default Summary;
