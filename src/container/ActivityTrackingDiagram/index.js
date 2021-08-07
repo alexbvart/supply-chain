@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { wrapper, header,button } from './styles.module.css'
 import ActivityTrackingDesing from './Desing';
 import ActivityTrackingDiagram2 from './indexcopy';
+import Static from './Static';
 
 const ActivityTrackingDiagram = ({ processId }) => {
   const [staticView, setStaticView] = useState(true)
@@ -19,7 +20,7 @@ const ActivityTrackingDiagram = ({ processId }) => {
       <br/>
       {
         (staticView) ?
-          <ActivityTrackingDiagram2></ActivityTrackingDiagram2>
+          <Static processId={processId} />
           :
           <ActivityTrackingDesing processId={processId} />
       }

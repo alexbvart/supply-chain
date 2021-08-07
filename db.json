@@ -994,7 +994,7 @@
         {
           "nameActivity": "Elaboración de documento de negociación",
           "responsible": "Gerente general",
-          "time": "30",
+          "time": "35",
           "activity": "operation"
         },
         {
@@ -1006,13 +1006,13 @@
         {
           "nameActivity": " Informe de respuesta.",
           "responsible": "Empresas Afiliadas",
-          "time": "120",
+          "time": "140",
           "activity": "operation"
         },
         {
           "nameActivity": "Elaboración del contracto",
           "responsible": "Gerente general",
-          "time": "40",
+          "time": "140",
           "activity": "operation"
         }
       ],
@@ -1054,6 +1054,25 @@
         }
       ],
       "id": 3
+    },
+    {
+      "processId": 3,
+      "status": "current",
+      "data": [
+        {
+          "nameActivity": "Revisión de objetivos empresariales",
+          "responsible": "Gerente general",
+          "time": "25",
+          "activity": "operation"
+        },
+        {
+          "nameActivity": "Verificación de estudio de mercado",
+          "responsible": "Gerente general",
+          "time": "20",
+          "activity": "inspection"
+        }
+      ],
+      "id": 4
     }
   ]
 }

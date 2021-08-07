@@ -14,6 +14,7 @@ import post from '../../../utils/post';
 import get from '../../../utils/getAll';
 import Button from '../../components/Buton';
 import CtaButton from '../../components/CtaButton';
+import put from '../../../utils/put';
 
 const ActivityTrackingDesing = ({ processId }) => {
 
@@ -27,12 +28,18 @@ const ActivityTrackingDesing = ({ processId }) => {
     const [inputFields, setInputFields] = useState([
         emptyValues
     ])
+    const [id, setId] = useState(0)
+    const [isEdit, setIsEdit] = useState(false)
+
+
     const getActivityTracking = async () => {
         const data = await get(`${process.env.NEXT_PUBLIC_SERVER_HOST}/activity-tracking?processId=${processId}`)
         if (data[0] === undefined) {
             setInputFields([emptyValues])
         } else {
             setInputFields(data[0].data)
+            setIsEdit(true)
+            setId(data[0].id)
         }
     }
 
@@ -51,12 +58,16 @@ const ActivityTrackingDesing = ({ processId }) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        const ActivtyForProcess = {
+        const ActivityForProcess = {
             "processId": processId,
             "status": "current",
             "data": inputFields
         }
-        /* post("http://localhost:3001/activity-tracking",ActivtyForProcess) */
+        if (isEdit) {
+            put(`${process.env.NEXT_PUBLIC_SERVER_HOST}/activity-tracking`,id,ActivityForProcess)
+        }else{
+            post(`${process.env.NEXT_PUBLIC_SERVER_HOST}/activity-tracking`,ActivityForProcess)
+        }
         console.log(ActivtyForProcess);
 
     }
