@@ -21,7 +21,7 @@ const Table = ({ tableData, headingColumns, title }) => {
     })
 
     return (
-        <>
+        <div className={table}>
             <h2 cllasName="subtitle_section">{title}</h2>
             <table className={table }>
                 <thead>
@@ -40,7 +40,7 @@ const Table = ({ tableData, headingColumns, title }) => {
                 </tbody>
             </table>
 
-        </>
+        </div>
     );
 }
 export default Table;

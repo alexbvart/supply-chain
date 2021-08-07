@@ -1,3 +1,40 @@
-.table{
-    
+.table h2 {
+    margin-bottom: 2rem;
 }
+
+.table table {
+    width: 50%;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+  }
+.table   th,
+.table   td {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+  }
+.table   th {
+    text-align: left;
+  }
+.table   thead th {
+    background-color: var(--bg-dark-2);
+  }
+.table   tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+.table   tbody td {
+    position: relative;
+  }
+.table   tbody td:hover:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -9999px;
+    bottom: -9999px;
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: -1;
+  }
+  

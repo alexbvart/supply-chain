@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Table from '../../components/Table';
 import get from '../../../utils/getAll';
+import Summary from '../../components/Summary';
 
 const Static = ({processId}) => {   
     
@@ -100,15 +101,24 @@ const Static = ({processId}) => {
                 headingColumns={["Actividad","Tiempo","%"]}
                 title="Cuadro por actividades"
             /> 
-{/*             <Summary 
-                tableData={forActivity}
-                title="Cuadro por actividades"
-            /> */} 
+            <br />
+            <Summary 
+                data={forActivity}
+                title="Interpretation"
+                type="activity"
+            /> 
+            <br />
             <br />
             <Table 
                 tableData={forRol}
                 headingColumns={["Rol","Tiempo","%"]}
                 title="Cuadro por roles"
+            /> 
+            <br />
+            <Summary 
+                data={forRol}
+                title="Interpretation"
+                type="rol"
             /> 
         </>
     );
