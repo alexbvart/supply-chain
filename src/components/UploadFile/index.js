@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import swal from 'sweetalert';
 import post from '../../../utils/post';
 
 import {
@@ -12,23 +13,33 @@ import {
 	cta_button,
 } from './styles.module.css';
 
-const UploadFile = () => {
-	const [file, setFile] = useState('');
+const UploadFile = ({ processId, types, status }) => {
+	const [file, setFile] = useState('12');
 
 	const uploadNewFile = async (file) => {
-		
+
 		try {
 			let formData = new FormData();
 			formData.append('file', file)
-			const res = await axios.post("http://localhost:5000/uploads", formData,
-				{ 
-					headers:{
-						"Authorization": "YOUR_API_AUTHORIZATION_KEY_SHOULD_GOES_HERE_IF_HAVE",
-                        "Content-type": "multipart/form-data",
-					},
-				}
-			)
-			console.log(res);
+			formData.append('type', types)
+			formData.append('processId', processId)
+			formData.append('status', status)
+
+			const res = await axios({
+				method: 'post',
+				url: `${process.env.NEXT_PUBLIC_SERVER_HOST_}/uploads`,
+				data: formData,
+				headers: { 'Content-Type': 'multipart/form-data' }
+			})
+			/* .then(function (response) {
+				//handle success
+				console.log(response);
+			})
+			.catch(function (response) {
+				//handle error
+				console.log(response);
+			}); */
+			swal("File sent", `Recorded in the database`, "success")
 		} catch (error) {
 			console.error(error);
 		}
@@ -48,7 +59,8 @@ const UploadFile = () => {
 					<label htmlFor="upload" className={select_button}>
 						Select file
 					</label>
-					<input
+					<input 
+						key={`${types}${status}${processId}`}
 						id="upload"
 						className={input_file}
 						type="file"

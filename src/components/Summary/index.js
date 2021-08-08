@@ -3,7 +3,7 @@ import {line_height} from './styles.module.css'
 const Summary = ({title,data,type,className}) => {
     return ( 
         <div className={className}>
-            <h2 cllasName="subtitle_section">{title}</h2>
+            <h2 className="subtitle_section">{title}</h2>
             <ariticle>
                 {(type==="activity") ?
                 <ul>

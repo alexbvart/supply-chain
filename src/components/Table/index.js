@@ -22,7 +22,7 @@ const Table = ({ tableData, headingColumns, title }) => {
 
     return (
         <div className={table}>
-            <h2 cllasName="subtitle_section">{title}</h2>
+            <h2 className="subtitle_section">{title}</h2>
             <table className={table }>
                 <thead>
                     <tr>

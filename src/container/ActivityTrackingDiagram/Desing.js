@@ -15,6 +15,7 @@ import get from '../../../utils/getAll';
 import Button from '../../components/Buton';
 import CtaButton from '../../components/CtaButton';
 import put from '../../../utils/put';
+import swal from 'sweetalert';
 
 const ActivityTrackingDesing = ({ processId }) => {
 
@@ -65,11 +66,11 @@ const ActivityTrackingDesing = ({ processId }) => {
         }
         if (isEdit) {
             put(`${process.env.NEXT_PUBLIC_SERVER_HOST}/activity-tracking`,id,ActivityForProcess)
+            swal("Updated data", `Activity tracking was updated`, "success")
         }else{
             post(`${process.env.NEXT_PUBLIC_SERVER_HOST}/activity-tracking`,ActivityForProcess)
+            swal("Data recorded", `Activity tracking was recorded`, "success")
         }
-        console.log(ActivtyForProcess);
-
     }
     const handleAddFields = () => {
         setInputFields([...inputFields, emptyValues])

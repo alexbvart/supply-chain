@@ -24,13 +24,13 @@ const DetailSideBar = ({title, data}) => {
                     <ul>
                         { (data && data.length > 0) &&
                             data
-                            .filter(item => String(item.COMPANY_NAME).toUpperCase().includes(keyword.toUpperCase()) || String(item.FULL_NAME).toUpperCase().includes(keyword.toUpperCase()) )
+                            .filter(item => String(item.COMPANY_NAME).toUpperCase().includes(keyword.toUpperCase()) || String(item.FULL_NAME).toUpperCase().includes(keyword.toUpperCase()) || String(item.name).toUpperCase().includes(keyword.toUpperCase())  )
                             .map((item)=>(
-                            <li key={item.id} >
-                                <Link href={`/${urlLocation}/${item.id}`}>
+                            <li key={item.id||item._id} >
+                                <Link href={item.id?`/${urlLocation}/${item.id}`:`/${urlLocation}/${item._id}`}>
                                     <a>
                                         <Avatar 
-                                            key={item.id} 
+                                            key={item.id||item._id} 
                                             name={item.COMPANY_NAME||item.FULL_NAME||item.Nombre||item.name} 
                                             telephone={item.TELEPHONE||""}
                                         />

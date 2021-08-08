@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const updateById = async (src,id) => {
+const deleteById = async (src,id) => {
     return await axios.delete(`${src}/${id}`)
 }
-export default updateById;
+export default deleteById;

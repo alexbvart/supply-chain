@@ -1,28 +1,38 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 // import FilesLogTableRow from '../FilesLogTableRow/index'
 import dynamic from 'next/dynamic';
 import { log, log_table, top_row } from './styles.module.css';
 import getAll from '../../../utils/getAll';
+import FilesLogTableRow from '../FilesLogTableRow';
 
 const storage = typeof window !== 'undefined' ? localStorage : null;
 
-const FilesLogTableRow = dynamic(() => import('../FilesLogTableRow/index'), {
+/* const FilesLogTableRow = dynamic(() => import('../FilesLogTableRow/index'), {
 	ssr: false,
-});
+}); */
 
-const UploadedFilesLog = () => {
+const UploadedFilesLogComponent = ({ processId, types, status }) => {
 
-	const [Files, setFiles] = useState([])
-	const getFiles = async () =>{
-		const res = await getAll("http://localhost:5000/uploads")
-		await setFiles(res)
+	const [filesLogList, setFilesLogList] = useState([])
+
+	const getFiles = async () => {
+		const res = await getAll(`${process.env.NEXT_PUBLIC_SERVER_HOST_}/uploads`)
+		if (res!==undefined) {
+			setFilesLogList(res)
+		}
+		/* await getAll(`${process.env.NEXT_PUBLIC_SERVER_HOST_}/uploads`)
+        .then(respuesta => {
+            setFilesLogList(respuesta)
+        })
+        .catch(error => {
+            console.log(error)
+        }) */
 	}
-
 	useEffect(() => {
 		getFiles()
-		console.log(Files)
-	}, [])
-	
+		console.log("f", filesLogList,processId, types, status)
+	}, [processId, types, status])
+
 	return (
 		<section className={log}>
 			<h2>Recorded files</h2>
@@ -31,18 +41,20 @@ const UploadedFilesLog = () => {
 					<p>File name</p>
 					<p>Actions</p>
 				</div>
-				{Files.map((file) =>
-						<FilesLogTableRow
-							key={file.id}
-							fileName={file.name}
-							fileId={file.id}
-							pathDocument={file.pathDocument}
-						/>
-					
+				{filesLogList.map((file) =>
+					<FilesLogTableRow
+						key={file._id}
+						fileName={file.name}
+						fileId={file._id}
+						pathDocument={file.pathDocument}
+					/>
 				)}
 			</div>
 		</section>
 	);
 };
 
+const UploadedFilesLog = React.memo(UploadedFilesLogComponent, (prevProps,props)=>{
+	return prevProps.id === props.id
+});
 export default UploadedFilesLog;

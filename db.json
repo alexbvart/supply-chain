@@ -791,47 +791,47 @@
   ],
   "process": [
     {
-      "id": 1,
+      "id": "610e55aee91a3d5a64e8104b",
       "name": "Investigacion y desarrollo"
     },
     {
-      "id": 2,
+      "id": "610e55aee91a3d5a64e8104c",
       "name": "Alianzas estratégicas"
     },
     {
-      "id": 3,
+      "id": "610e55aee91a3d5a64e8104d",
       "name": "Gestión de calidad"
     },
     {
-      "id": 4,
+      "id": "610e55aee91a3d5a64e8104e",
       "name": "Gestión de pedidos"
     },
     {
-      "id": 5,
+      "id": "610e55aee91a3d5a64e8104f",
       "name": "Envío de pedidos a empresas aliadas"
     },
     {
-      "id": 6,
+      "id": "610e55aee91a3d5a64e81050",
       "name": "Seguimiento y monitoreo de pedidos"
     },
     {
-      "id": 7,
+      "id": "610e55aee91a3d5a64e81051",
       "name": "Distribución de pedidos segun usuarios"
     },
     {
-      "id": 8,
+      "id": "610e55aee91a3d5a64e81052",
       "name": "Marketing"
     },
     {
-      "id": 9,
+      "id": "610e55aee91a3d5a64e81053",
       "name": "Tecnologías de la información"
     },
     {
-      "id": 10,
+      "id": "610e55aee91a3d5a64e81054",
       "name": "Administracion de finanzas"
     },
     {
-      "id": 11,
+      "id": "610e55aee91a3d5a64e81055",
       "name": "Atención al cliente"
     }
   ],
@@ -945,20 +945,13 @@
   ],
   "activity-tracking": [
     {
-      "id": 1,
-      "processId": 1,
+      "processId": "610e55aee91a3d5a64e8104b",
       "status": "current",
       "data": [
         {
           "nameActivity": "Envió de solicitud de implementación ",
           "responsible": "Gerente general",
-          "time": "5",
-          "activity": "operation"
-        },
-        {
-          "nameActivity": "Recepción de la solicitud",
-          "responsible": "Jefe TI",
-          "time": "3",
+          "time": "8",
           "activity": "operation"
         },
         {
@@ -976,13 +969,14 @@
         {
           "nameActivity": "Informe de respuestas ",
           "responsible": "Gerente general",
-          "time": "40",
+          "time": "45",
           "activity": "operation"
         }
-      ]
+      ],
+      "id": 1
     },
     {
-      "processId": 2,
+      "processId": "610e55aee91a3d5a64e8104c",
       "status": "current",
       "data": [
         {
@@ -1019,7 +1013,7 @@
       "id": 2
     },
     {
-      "processId": 4,
+      "processId": "610e55aee91a3d5a64e8104e",
       "status": "current",
       "data": [
         {
@@ -1056,7 +1050,7 @@
       "id": 3
     },
     {
-      "processId": 3,
+      "processId": "610e55aee91a3d5a64e8104d",
       "status": "current",
       "data": [
         {
