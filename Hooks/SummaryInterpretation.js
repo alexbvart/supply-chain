@@ -26,9 +26,6 @@ const calculatePercentage =  (time) => {
     return ((time / TIME_TOTAL) * 100).toFixed(2)
 }
 
-
-
-    console.log('aaaaaaaaaaaaaaaaaaaaa',{datareq});
     datareq.forEach(d => {
         if (!Number.isNaN(parseInt(Object.values(d)[2], 10))) {
             ROL_FLOW[Object.values(d)[1]] += parseInt(Object.values(d)[2], 10);
@@ -59,7 +56,7 @@ const calculatePercentage =  (time) => {
         }
     });
 
-    console.log({ ROL_FLOW }, { ACTIVITYS_FLOW }, { TIME_TOTAL }, { forRoleRes},{forActivityRes});
+    /* console.log({ ROL_FLOW }, { ACTIVITYS_FLOW }, { TIME_TOTAL }, { forRoleRes},{forActivityRes}); */
     return [forActivityRes,forRoleRes]
 
 }

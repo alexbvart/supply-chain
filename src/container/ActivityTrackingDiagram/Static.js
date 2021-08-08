@@ -39,7 +39,13 @@ const Static = ({ processId }) => {
             const [forActivityRes, forRoleRes] =  SummaryInterpretation(dataTableS)
             setForRole(forRoleRes)
             setForActivity(forActivityRes)
-            console.log("entra datos desde la api", { dataTableS },{forRoleRes},{forActivity});
+            /* console.log("entra datos desde la api", { dataTableS },{forRoleRes},{forActivity});
+            console.log("tu grafico ya no esta vacio") */
+        }else
+        {
+            setForRole([])
+            setForActivity([])
+            /* console.log("tu grafico esta vacio") */
         }
         return () => { }
     }, [dataTableS])
@@ -58,9 +64,9 @@ const Static = ({ processId }) => {
                 <Table
                     tableData={forActivity}
                     headingColumns={["Actividad", "Tiempo", "%"]}
-                    title="Cuadro por actividades"
+                    title="Table by activity"
                 />
-                <ChartRC title="Hours of flows performed" data={forActivity} />
+                <ChartRC title="Donut chart by actrivities" data={forActivity} />
                 <Summary
                     className={summary_grid}
                     data={forActivity}
@@ -74,9 +80,9 @@ const Static = ({ processId }) => {
                 <Table
                     tableData={forRole}
                     headingColumns={["Rol", "Tiempo", "%"]}
-                    title="Cuadro por roles"
+                    title="Table by roles"
                 />
-                <ChartRC title="Hours of rol performed" data={forRole} />
+                <ChartRC title="Donut chart by roles" data={forRole} />
                 <Summary
                     className={summary_grid}
                     data={forRole}

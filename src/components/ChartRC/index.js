@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Bar, Doughnut } from 'react-chartjs-2';
-import { wrapper_chart } from './styles.module.css'
+import { container_chart,wrapper_chart } from './styles.module.css'
 const ChartRC = ({data,title=""}) => {
     let labels = []
     let times = []
@@ -41,11 +41,11 @@ const ChartRC = ({data,title=""}) => {
     const [chartDta, setChartDta] = useState(dataD)
 
     return (
-        <>
-            <div>
-
+        <div className={container_chart}>
+                <h2 className="subtitle_section">{title}</h2>
+            <div className={wrapper_chart}>
                 <Doughnut
-                    data={chartDta}
+                    data={dataD}
                     options={{ 
                         title:{
                             display:true,
@@ -60,7 +60,7 @@ const ChartRC = ({data,title=""}) => {
                     }}
                 />
             </div>
-        </>
+        </div>
     );
 }
 export default ChartRC;
