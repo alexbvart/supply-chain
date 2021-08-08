@@ -30,7 +30,7 @@ const UploadedFilesLogComponent = ({ processId, types, status }) => {
 	}
 	useEffect(() => {
 		getFiles()
-		console.log("f", filesLogList,processId, types, status)
+/* 		console.log("f", filesLogList,processId, types, status) */
 	}, [processId, types, status])
 
 	return (

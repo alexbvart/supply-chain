@@ -13,7 +13,7 @@ const ActivityTrackingDiagram2 = () => {
 						<img src="../assets/images/triangle.png" alt="geometric shape" />
 					</th>
 					<th>
-						<img src="../assets/images/circle.png" alt="geometric shape" />
+						<img src="../assets/images/	.png" alt="geometric shape" />
 					</th>
 					<th>
 						<img src="../assets/images/arrow.png" alt="geometric shape" />

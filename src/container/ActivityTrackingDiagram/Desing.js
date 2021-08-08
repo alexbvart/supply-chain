@@ -153,8 +153,8 @@ const ActivityTrackingDesing = ({ processId }) => {
                                                         <option value="Jefe TI" />
                                                         <option value="Empresas Afiliadas" />
                                                         <option value="Cliente" />
-                                                        <option value="Área de logística " />
-                                                        <option value="Jefe de logística " />
+                                                        <option value="Área de logística" />
+                                                        <option value="Jefe de logística" />
                                                     </datalist>
                                                     <input
                                                         type="text"

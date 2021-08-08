@@ -4,13 +4,14 @@ import { wrapper_chart } from './styles.module.css'
 const ChartRC = ({data,title=""}) => {
     let labels = []
     let times = []
-
-        data
-        .filter((d)=>(parseInt(d.time,10)>0 & d.activityName !== "Total" & d.rol !== "Total"))
-        .map((d)=>{
-            labels.push(d.activityName||d.rol)
-            times.push(parseInt(d.time,10))
-        })
+    /* console.log({data}); */
+    data
+    .filter((d)=>(d.time>0 & d.activityName !== "Total" & d.rol !== "Total"))
+    .map((d)=>{
+        labels.push(d.activityName||d.rol)
+        times.push(parseInt(d.time,10))
+    })
+        /* console.log({labels},{times}); */
 
     const dataD =  {
         labels: labels,

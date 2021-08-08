@@ -1024,13 +1024,13 @@
         },
         {
           "nameActivity": "Atención de la solicitud",
-          "responsible": "Área de logística ",
+          "responsible": "Área de logística",
           "time": "3",
           "activity": "operation"
         },
         {
-          "nameActivity": "Envió de orden a empresa a afiliadas",
-          "responsible": "Área de logística ",
+          "nameActivity": "Envi0 de orden a empresa a afiliadas",
+          "responsible": "Área de logística",
           "time": "2",
           "activity": "transport"
         },
