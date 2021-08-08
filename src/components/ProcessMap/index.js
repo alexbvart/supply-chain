@@ -15,10 +15,24 @@ function initDiagram() {
             {
                 'undoManager.isEnabled': true,  // must be set to allow for model change listening
                 // 'undoManager.maxHistoryLength': 0,  // uncomment disable undo/redo functionality
-                'clickCreatingTool.archetypeNodeData': { text: 'new node', color: 'lightblue' },
+                'clickCreatingTool.archetypeNodeData': { text: 'new node', color: '#6462FC' },
                 model: $(go.GraphLinksModel,
                     {
-                        linkKeyProperty: 'key'  // IMPORTANT! must be defined for merges and data sync when using GraphLinksModel
+                        linkKeyProperty: 'key',  // IMPORTANT! must be defined for merges and data sync when using GraphLinksModel
+                        // positive keys for nodes
+                        /*                         makeUniqueKeyFunction: (go.Model, data) => {
+                                                    let k = data.key || 1;
+                                                    while (m.findNodeDataForKey(k)) k++;
+                                                    data.key = k;
+                                                    return k;
+                                                },
+                                                // negative keys for links
+                                                makeUniqueLinkKeyFunction: (go.GraphLinksModel, data) => {
+                                                    let k = data.key || -1;
+                                                    while (m.findLinkDataForKey(k)) k--;
+                                                    data.key = k;
+                                                    return k;
+                                                } */
                     }),
                 // when a drag-drop occurs in the Diagram's background, make it a top-level node
                 mouseDrop: function (e) { finishDrop(e, null); },
@@ -27,6 +41,17 @@ function initDiagram() {
                         { wrappingWidth: Infinity, alignment: go.GridLayout.Position, cellSize: new go.Size(1, 1) }),
                 "commandHandler.archetypeGroupData": { isGroup: true, text: "Group", horiz: false }
             });
+
+    /* links */
+    // relinking depends on modelData
+    diagram.linkTemplate = $(
+        go.Link,
+        new go.Binding("relinkableFrom", "canRelink").ofModel(),
+        new go.Binding("relinkableTo", "canRelink").ofModel(),
+        new go.Binding("points", "pts").makeTwoWay(),
+        $(go.Shape),
+        $(go.Shape, { toArrow: "Standard" })
+    );
 
     // The one template for Groups can be configured to be either layout out its members
     // horizontally or vertically, each with a different default color.
@@ -48,7 +73,7 @@ function initDiagram() {
     }
 
     function defaultColor(horiz) {  // a Binding conversion function
-        return horiz ? "#FFDD33" : "#33D3E5";
+        return horiz ? "#6462FC" : "#FAFAFC";
     }
 
     function defaultFont(horiz) {  // a Binding conversion function
@@ -103,7 +128,7 @@ function initDiagram() {
             },
             new go.Binding("layout", "horiz", makeLayout),
             new go.Binding("background", "isHighlighted", function (h) {
-                return h ? "rgba(255,0,0,0.2)" : "transparent";
+                return h ? "#6562fc44" : "transparent";
             }).ofObject(),
             $(go.Shape, "Rectangle",
                 { fill: null, stroke: defaultColor(false), strokeWidth: 2 },
@@ -119,11 +144,11 @@ function initDiagram() {
                     $(go.TextBlock,
                         {
                             alignment: go.Spot.Left,
-                            editable: true,
+                            editable: false,
                             margin: 5,
                             font: defaultFont(false),
-                            opacity: 0.75,  // allow some color to show through
-                            stroke: "#404040"
+                            opacity: 1,  // allow some color to show through
+                            stroke: "#1A1A1C"
                         },
                         new go.Binding("font", "horiz", defaultFont),
                         new go.Binding("text", "text").makeTwoWay())
@@ -139,16 +164,23 @@ function initDiagram() {
             { // dropping on a Node is the same as dropping on its containing Group, even if it's top-level
                 mouseDrop: function (e, node) { finishDrop(e, node.containingGroup); }
             },
-            $(go.Shape, "Rectangle",
-                { fill: "#ACE600", stroke: null },
+            { locationSpot: go.Spot.Center },
+            $(go.Shape, "RoundedRectangle",
+                {
+                    fill: "#ACE600", stroke: null,
+                    portId: "", cursor: "pointer",  // the Shape is the port, not the whole Node
+                    // allow all kinds of links from and to this port
+                    fromLinkable: true, fromLinkableSelfNode: true, fromLinkableDuplicates: true,
+                    toLinkable: true, toLinkableSelfNode: true, toLinkableDuplicates: true
+                },
                 new go.Binding("fill", "color")),
             $(go.TextBlock,
                 {
-                    margin: 5,
-                    editable: true,
-                    font: "bold 13px sans-serif",
+                    margin: 8,
+                    editable: false,
+                    font: "bold 14px sans-serif",
                     opacity: 0.75,
-                    stroke: "#404040"
+                    stroke: "#1A1A1C"
                 },
                 new go.Binding("text", "text").makeTwoWay())
         );
@@ -172,6 +204,12 @@ function initDiagram() {
     return diagram;
 }
 
+const initPalette = () => {
+    const $ = go.GraphObject.make;
+    const palette = $(go.Palette);
+    return palette;
+};
+
 /**
  * This function handles any changes to the GoJS model.
  * It is here that you would make any updates to your React state, which is dicussed below.
@@ -180,7 +218,7 @@ function handleModelChange(changes) {
     /* alert('GoJS model changed!'); */
 }
 
-function initPalette() {
+/* function initPalette() {
     const $ = go.GraphObject.make;
 
     let myPalette =
@@ -198,11 +236,12 @@ function initPalette() {
         { isGroup: true, text: "V Group", horiz: false }
     ]);
     return myPalette
-}
+} */
 
-const ProcessMap = ({ processmap }) => {
+const ProcessMap = ({ processmap,processs }) => {
 
-    console.log(processmap);
+    const processToPalette= []
+
     const [process, setProcess] = useState(processmap)
     useEffect(() => {
         setProcess(processmap)
@@ -224,7 +263,17 @@ const ProcessMap = ({ processmap }) => {
         setPrimaryPT(PlainText(process.primary))
         setsupportPT(PlainText(process.support))
     }, [stategicPT, primaryPT, supportPT])
-
+    console.log({processs})
+    if(processs.length>0){
+       processs.map(p => {
+        let onep = {   
+            'key': p._id,
+            'text': p.name
+        }
+        processToPalette.push(onep)
+     })
+    }
+    console.log(processToPalette)
 
     return (
         <>
@@ -234,10 +283,10 @@ const ProcessMap = ({ processmap }) => {
                 content={() => strategicRef.current}
             />
             <section className={processS.process}>
-
+               
                 <div className={processS.first_col}><h2>Requerimiento del Cliente</h2> </div>
-                <div className={processS.process_item}>Procesos de gestion
-
+                <div className={processS.process_item}>
+                <h3 className={processS.title}>Management processes</h3>
                     <ReactDiagram
                         initDiagram={initDiagram}
                         divClassName={processS.process_item}
@@ -259,7 +308,8 @@ const ProcessMap = ({ processmap }) => {
                         onModelChange={handleModelChange}
                     />
                 </div>
-                <div className={processS.process_item}>Procesos productivos
+                <div className={processS.process_item}>
+                <h2 className={processS.title}>Production processes</h2>
                     <ReactDiagram
                         initDiagram={initDiagram}
                         divClassName={processS.process_item}
@@ -279,7 +329,8 @@ const ProcessMap = ({ processmap }) => {
                         onModelChange={handleModelChange}
                     />
                 </div>
-                <div className={processS.process_item}>¨Procesos de apoyo
+                <div className={processS.process_item}>
+                <h2 className={processS.title}>Support processess</h2>
                     <ReactDiagram
                         initDiagram={initDiagram}
                         divClassName={processS.process_item}
@@ -298,6 +349,14 @@ const ProcessMap = ({ processmap }) => {
                         ]}
                         onModelChange={handleModelChange}
                     />
+                </div>
+                <div className={processS.palette}>
+                <ReactPalette
+                    initPalette={initPalette}
+                    divClassName={processS.process_item}
+                    nodeDataArray={processToPalette}
+                   
+                />
                 </div>
                 <div className={processS.third_col}> <h2>Staisfaccion del Cliente</h2> </div>
             </section>

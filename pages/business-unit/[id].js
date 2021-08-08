@@ -17,6 +17,7 @@ const businessunit = ({
 	businessunits,
 	supplychain,
 	processmap,
+    processs
 }) => {
 
     return (
@@ -70,7 +71,7 @@ const businessunit = ({
                 >
                     <div className="main">
                     {processmap &&
-                        <ProcessMap  processmap={processmap}/>
+                        <ProcessMap  processmap={processmap} processs={processs}/>
                     }
                     </div>
                 </TabGroup.TabPanel>
@@ -90,6 +91,20 @@ export async function getServerSideProps(context) {
 	const SERVER_HOST = 'http://localhost:3001';
 	const ENTERPRISE_ID = 2;
 
+    const SERVER_HOST_ = "http://localhost:5000";
+
+    const processs = await fetch(`${SERVER_HOST_}/data`)
+        .then(res => res.json())
+    const processOrder = processs.process.sort(function (a, b) {
+        if (a.priority > b.priority) {
+            return -1;
+        }
+        if (a.priority < b.priority) {
+            return 1;
+        }
+        return 0;
+    });
+
 	const businessunits = await fetch(
 		`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/business-unit`
 	).then((res) => res.json());
@@ -108,6 +123,7 @@ export async function getServerSideProps(context) {
 
     return {
         props: {
+            processs: processOrder,
             businessunits: businessunits,
             businessunit: businessunit[0],
             supplychain: supplychain[0]||null,
