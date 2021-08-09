@@ -836,111 +836,67 @@
     }
   ],
   "process-map": [
+
     {
       "business-unitId": 1,
-      "enterpriseId": 2,
-      "id": 1,
       "strategic": {
-        "data": [
+        "class": "GraphLinksModel",
+        "linkKeyProperty": "key",
+        "nodeDataArray": [
           {
-            "name": "Ivestigacion y desarrollo"
+            "key": "610e55aee91a3d5a64e81055",
+            "text": "Atención al cliente"
           },
           {
-            "name": "Alianzas estratégicas"
-          },
-          {
-            "name": "Gestión de calidad"
+            "key": "610e55aee91a3d5a64e8104d",
+            "text": "Gestión de calidad"
           }
         ],
-        "relation": []
+        "linkDataArray": []
       },
       "primary": {
-        "data": [
+        "class": "GraphLinksModel",
+        "linkKeyProperty": "key",
+        "nodeDataArray": [
           {
-            "name": "Gestión de pedidos"
+            "key": "610e55aee91a3d5a64e8104d",
+            "text": "Gestión de calidad"
           },
           {
-            "name": "Envío de pedidos a empresas aliadas"
+            "key": "610e55aee91a3d5a64e81052",
+            "text": "Marketing"
           },
           {
-            "name": "Seguimiento y monitoreo de pedidos"
+            "key": "610e55aee91a3d5a64e81050",
+            "text": "Seguimiento y monitoreo de pedidos"
           },
           {
-            "name": "Distribución de pedidos segun usuarios"
+            "key": "610e55aee91a3d5a64e81051",
+            "text": "Distribución de pedidos segun usuarios"
           }
         ],
-        "relation": []
+        "linkDataArray": []
       },
       "support": {
-        "data": [
+        "class": "GraphLinksModel",
+        "linkKeyProperty": "key",
+        "nodeDataArray": [
           {
-            "name": "Marketing"
+            "key": "610e55aee91a3d5a64e81055",
+            "text": "Atención al cliente"
           },
           {
-            "name": "Tecnologías de la información"
+            "key": "610e55aee91a3d5a64e81051",
+            "text": "Distribución de pedidos segun usuarios"
           },
           {
-            "name": "Administracion de finanzas"
-          },
-          {
-            "name": "Atención al cliente"
+            "key": "610e55aee91a3d5a64e8104e",
+            "text": "Gestión de pedidos"
           }
         ],
-        "relation": []
-      }
-    },
-    {
-      "business-unitId": 2,
-      "enterpriseId": 2,
-      "id": 2,
-      "strategic": {
-        "data": [
-          {
-            "name": "Alianzas estratégicas"
-          },
-          {
-            "name": "Ivestigacion y desarrollo"
-          },
-          {
-            "name": "Gestión de calidad"
-          }
-        ],
-        "relation": []
+        "linkDataArray": []
       },
-      "primary": {
-        "data": [
-          {
-            "name": "Seguimiento y monitoreo de pedidos"
-          },
-          {
-            "name": "Envío de pedidos a empresas aliadas"
-          },
-          {
-            "name": "Gestión de pedidos"
-          },
-          {
-            "name": "Distribución de pedidos segun usuarios"
-          }
-        ],
-        "relation": []
-      },
-      "support": {
-        "data": [
-          {
-            "name": "Tecnologías de la información"
-          },
-          {
-            "name": "Administracion de finanzas"
-          },
-          {
-            "name": "Marketing"
-          },
-          {
-            "name": "Atención al cliente"
-          }
-        ],
-        "relation": []
-      }
+      "id": 5
     }
   ],
   "activity-tracking": [

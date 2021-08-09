@@ -15,6 +15,7 @@ import ProcessMap from '../../src/components/ProcessMap';
 
 const businessunit = ({
 	businessunits,
+    bu,
 	supplychain,
 	processmap,
     processs
@@ -71,7 +72,7 @@ const businessunit = ({
                 >
                     <div className="main">
                     {processmap &&
-                        <ProcessMap  processmap={processmap} processs={processs}/>
+                        <ProcessMap  processmap={processmap} processs={processs} bu={bu} />
                     }
                     </div>
                 </TabGroup.TabPanel>
@@ -118,14 +119,14 @@ export async function getServerSideProps(context) {
 	).then((res) => res.json());
 
 	const processmap = await fetch(
-		`${SERVER_HOST}/process-map?enterpriseId=${ENTERPRISE_ID}&business-unitId=${id}`
+		`${SERVER_HOST}/process-map?business-unitId=${id}`
 	).then((res) => res.json());
 
     return {
         props: {
             processs: processOrder,
             businessunits: businessunits,
-            businessunit: businessunit[0],
+            bu: businessunit[0],
             supplychain: supplychain[0]||null,
             processmap: processmap[0]||null
         }
