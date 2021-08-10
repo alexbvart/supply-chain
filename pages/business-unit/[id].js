@@ -28,16 +28,16 @@ const businessunit = ({
             <TabGroup numTabs={3} direction={TabGroup.direction.HORIZONTAL}>
             <div className={tab_group}>
                 <TabGroup.TabList>
-                    <TabGroup.Tab
-                        index={0}
+{/*                     <TabGroup.Tab
+                        index={1}
                         className={tab}
                         activeClassName={tab_active}
                         inactiveClassName=""
                     >
                         Cadena de Suministro
-                    </TabGroup.Tab>
+                    </TabGroup.Tab> */}
                     <TabGroup.Tab
-                        index={1}
+                        index={0}
                         className={tab}
                         activeClassName={tab_active}
                         inactiveClassName=""
@@ -48,8 +48,8 @@ const businessunit = ({
 
 					<section className={tab_panel}>
 
-                <TabGroup.TabPanel
-                    index={0}
+{/*                 <TabGroup.TabPanel
+                    index={1}
                     className={panel}
                     activeClassName={panel_active}
                     inactiveClassName={panel_inactive}
@@ -62,10 +62,10 @@ const businessunit = ({
                         </>
                     }
                     </div>
-                </TabGroup.TabPanel>
+                </TabGroup.TabPanel> */}
 
                 <TabGroup.TabPanel
-                    index={1}
+                    index={0}
                     className={`${panel} ${panel_flex}`}
                     activeClassName={panel_active}
                     inactiveClassName={panel_inactive}
@@ -128,7 +128,7 @@ export async function getServerSideProps(context) {
             businessunits: businessunits,
             bu: businessunit[0],
             supplychain: supplychain[0]||null,
-            processmap: processmap[0]||null
+            processmap: processmap[0]||{}
         }
     };
 }

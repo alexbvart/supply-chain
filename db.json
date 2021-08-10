@@ -836,7 +836,6 @@
     }
   ],
   "process-map": [
-
     {
       "business-unitId": 1,
       "strategic": {
@@ -845,11 +844,320 @@
         "nodeDataArray": [
           {
             "key": "610e55aee91a3d5a64e81055",
-            "text": "Atención al cliente"
+            "text": "Atención al cliente",
+            "group": -7
           },
           {
             "key": "610e55aee91a3d5a64e8104d",
-            "text": "Gestión de calidad"
+            "text": "Gestión de calidad",
+            "group": -4
+          },
+          {
+            "key": "610e55aee91a3d5a64e81050",
+            "text": "Seguimiento y monitoreo de pedidos",
+            "group": -4
+          },
+          {
+            "isGroup": true,
+            "text": "Group",
+            "horiz": false,
+            "key": -4
+          },
+          {
+            "isGroup": true,
+            "text": "Group",
+            "horiz": false,
+            "key": -7
+          }
+        ],
+        "linkDataArray": [
+          {
+            "from": "610e55aee91a3d5a64e8104d",
+            "to": "610e55aee91a3d5a64e81055",
+            "key": -1,
+            "pts": {
+              "v": true,
+              "j": [
+                {
+                  "class": "go.Point",
+                  "x": 6.000391398387261,
+                  "y": 55.07823680596948
+                },
+                {
+                  "class": "go.Point",
+                  "x": -49.45860265177137,
+                  "y": 57.27390438469983
+                }
+              ],
+              "Aa": 3,
+              "Ha": null,
+              "gh": null
+            }
+          }
+        ]
+      },
+      "primary": {
+        "class": "GraphLinksModel",
+        "linkKeyProperty": "key",
+        "nodeDataArray": [
+          {
+            "key": "610e55aee91a3d5a64e81052",
+            "text": "Marketing",
+            "group": -5
+          },
+          {
+            "key": "610e55aee91a3d5a64e81050",
+            "text": "Seguimiento y monitoreo de pedidos",
+            "group": -6
+          },
+          {
+            "key": "610e55aee91a3d5a64e8104d",
+            "text": "Gestión de calidad",
+            "group": -5
+          },
+          {
+            "key": "610e55aee91a3d5a64e81051",
+            "text": "Distribución de pedidos segun usuarios",
+            "group": -5
+          },
+          {
+            "isGroup": true,
+            "text": "Group",
+            "horiz": false,
+            "key": -5
+          },
+          {
+            "isGroup": true,
+            "text": "Group",
+            "horiz": false,
+            "key": -6
+          },
+          {
+            "key": "610e55aee91a3d5a64e810522",
+            "text": "Marketing",
+            "group": -6
+          },
+          {
+            "key": "610e55aee91a3d5a64e8104f",
+            "text": "Envío de pedidos a empresas aliadas"
+          },
+          {
+            "key": "610e55aee91a3d5a64e81053",
+            "text": "Tecnologías de la información"
+          }
+        ],
+        "linkDataArray": [
+          {
+            "from": "610e55aee91a3d5a64e81051",
+            "to": "610e55aee91a3d5a64e81050",
+            "key": -1,
+            "pts": {
+              "v": true,
+              "j": [
+                {
+                  "class": "go.Point",
+                  "x": 99.49101574423878,
+                  "y": 94.73487860797131
+                },
+                {
+                  "class": "go.Point",
+                  "x": 255.67479643987707,
+                  "y": 65.6018360778366
+                }
+              ],
+              "Aa": 3,
+              "Ha": null,
+              "gh": null
+            }
+          },
+          {
+            "from": "610e55aee91a3d5a64e81053",
+            "to": "610e55aee91a3d5a64e81050",
+            "key": -3,
+            "pts": {
+              "v": true,
+              "j": [
+                {
+                  "class": "go.Point",
+                  "x": 376.35433277337927,
+                  "y": 268.0125830475621
+                },
+                {
+                  "class": "go.Point",
+                  "x": 356.3621589402946,
+                  "y": 66.0077213240537
+                }
+              ],
+              "Aa": 3,
+              "Ha": null,
+              "gh": null
+            }
+          },
+          {
+            "from": "610e55aee91a3d5a64e81053",
+            "to": "610e55aee91a3d5a64e810522",
+            "key": -4,
+            "pts": {
+              "v": true,
+              "j": [
+                {
+                  "class": "go.Point",
+                  "x": 367.26813403571845,
+                  "y": 268.0782566088437
+                },
+                {
+                  "class": "go.Point",
+                  "x": 275.61046705295536,
+                  "y": 110.94204776277213
+                }
+              ],
+              "Aa": 3,
+              "Ha": null,
+              "gh": null
+            }
+          },
+          {
+            "from": "610e55aee91a3d5a64e8104f",
+            "to": "610e55aee91a3d5a64e81051",
+            "key": -5,
+            "pts": {
+              "v": true,
+              "j": [
+                {
+                  "class": "go.Point",
+                  "x": 14.468047461291945,
+                  "y": 250.01267532012054
+                },
+                {
+                  "class": "go.Point",
+                  "x": 2.567983630766008,
+                  "y": 132.00762905149531
+                }
+              ],
+              "Aa": 3,
+              "Ha": null,
+              "gh": null
+            }
+          }
+        ]
+      },
+      "support": {
+        "class": "GraphLinksModel",
+        "linkKeyProperty": "key",
+        "nodeDataArray": [
+          {
+            "key": "610e55aee91a3d5a64e81055",
+            "text": "Atención al cliente",
+            "group": -6
+          },
+          {
+            "key": "610e55aee91a3d5a64e81051",
+            "text": "Distribución de pedidos segun usuarios",
+            "group": -6
+          },
+          {
+            "key": "610e55aee91a3d5a64e8104e",
+            "text": "Gestión de pedidos"
+          },
+          {
+            "key": "610e55aee91a3d5a64e810552",
+            "text": "Atención al cliente",
+            "group": -5
+          },
+          {
+            "isGroup": true,
+            "text": "Group",
+            "horiz": false,
+            "key": -5
+          },
+          {
+            "isGroup": true,
+            "text": "Group",
+            "horiz": false,
+            "key": -6
+          }
+        ],
+        "linkDataArray": [
+          {
+            "from": "610e55aee91a3d5a64e8104e",
+            "to": "610e55aee91a3d5a64e810552",
+            "key": -1,
+            "pts": {
+              "v": true,
+              "j": [
+                {
+                  "class": "go.Point",
+                  "x": -149.65935242912343,
+                  "y": 114.93114005188717
+                },
+                {
+                  "class": "go.Point",
+                  "x": -74.31831194926094,
+                  "y": 118.37069746376015
+                }
+              ],
+              "Aa": 3,
+              "Ha": null,
+              "gh": null
+            }
+          },
+          {
+            "from": "610e55aee91a3d5a64e810552",
+            "to": "610e55aee91a3d5a64e81055",
+            "key": -2,
+            "pts": {
+              "v": true,
+              "j": [
+                {
+                  "class": "go.Point",
+                  "x": 71.8970512417979,
+                  "y": 113.32799315441129
+                },
+                {
+                  "class": "go.Point",
+                  "x": 125.80075312981795,
+                  "y": 107.14887371720457
+                }
+              ],
+              "Aa": 3,
+              "Ha": null,
+              "gh": null
+            }
+          }
+        ]
+      },
+      "id": 6
+    },
+    {
+      "business-unitId": 2,
+      "strategic": {
+        "class": "GraphLinksModel",
+        "linkKeyProperty": "key",
+        "nodeDataArray": [
+          {
+            "text": "Gestión de la dirección",
+            "color": "#96E3A3",
+            "key": -1
+          },
+          {
+            "text": "Gestión estratégica",
+            "color": "#96E3A3",
+            "key": -2
+          },
+          {
+            "text": "Gestión  financiera",
+            "color": "#96E3A3",
+            "key": -3
+          },
+          {
+            "text": "Gestión  comercial",
+            "color": "#96E3A3",
+            "key": -4
+          },
+          {
+            "text": "Gestión  legal",
+            "color": "#96E3A3",
+            "key": -5
           }
         ],
         "linkDataArray": []
@@ -859,32 +1167,351 @@
         "linkKeyProperty": "key",
         "nodeDataArray": [
           {
-            "key": "610e55aee91a3d5a64e8104d",
-            "text": "Gestión de calidad"
+            "text": "Gestión comercial",
+            "color": "#96E3A3",
+            "key": -8
           },
           {
-            "key": "610e55aee91a3d5a64e81052",
-            "text": "Marketing"
+            "text": "Planificación y\n control de la \nproducción",
+            "color": "#96E3A3",
+            "key": -2,
+            "group": -3
           },
           {
-            "key": "610e55aee91a3d5a64e81050",
-            "text": "Seguimiento y monitoreo de pedidos"
+            "isGroup": true,
+            "text": "Gestión de producción",
+            "horiz": false,
+            "key": -3
           },
           {
-            "key": "610e55aee91a3d5a64e81051",
-            "text": "Distribución de pedidos segun usuarios"
+            "text": "Investigación \ny desarrollo",
+            "color": "#96E3A3",
+            "key": -4,
+            "group": -3
+          },
+          {
+            "text": "Construcciones \nnavales",
+            "color": "#96E3A3",
+            "key": -7,
+            "group": -3
+          },
+          {
+            "text": "Estructuras \nmetal\nmecánicas",
+            "color": "#96E3A3",
+            "key": -9,
+            "group": -3
+          },
+          {
+            "text": "Maniobra de naves",
+            "color": "#96E3A3",
+            "key": -10,
+            "group": -3
+          },
+          {
+            "text": "Gestión comercial",
+            "color": "#96E3A3",
+            "key": -11
+          },
+          {
+            "text": "Diseño y \ndesarollo",
+            "color": "#96E3A3",
+            "key": -12,
+            "group": -3
+          },
+          {
+            "text": "Electrónica",
+            "color": "#96E3A3",
+            "key": -13,
+            "group": -3
           }
         ],
-        "linkDataArray": []
+        "linkDataArray": [
+          {
+            "from": -8,
+            "to": -2,
+            "key": -1,
+            "pts": {
+              "v": true,
+              "j": [
+                {
+                  "class": "go.Point",
+                  "x": -146.09910456632377,
+                  "y": 36.620517696636924
+                },
+                {
+                  "class": "go.Point",
+                  "x": -82.09738793706047,
+                  "y": 32.865564061628966
+                }
+              ],
+              "Aa": 3,
+              "Ha": null,
+              "gh": null
+            }
+          },
+          {
+            "from": -12,
+            "to": -9,
+            "key": -5,
+            "pts": {
+              "v": true,
+              "j": [
+                {
+                  "class": "go.Point",
+                  "x": 171.42480509158955,
+                  "y": 153.17223265317858
+                },
+                {
+                  "class": "go.Point",
+                  "x": 174.88695663056995,
+                  "y": 181.33537234174523
+                }
+              ],
+              "Aa": 3,
+              "Ha": null,
+              "gh": null
+            }
+          },
+          {
+            "from": -12,
+            "to": -4,
+            "key": -2,
+            "pts": {
+              "v": true,
+              "j": [
+                {
+                  "class": "go.Point",
+                  "x": 125.83841338673976,
+                  "y": 145.62444608128487
+                },
+                {
+                  "class": "go.Point",
+                  "x": 40.855175586864476,
+                  "y": 183.50202858331855
+                }
+              ],
+              "Aa": 3,
+              "Ha": null,
+              "gh": null
+            }
+          },
+          {
+            "from": -9,
+            "to": -11,
+            "key": -6,
+            "pts": {
+              "v": true,
+              "j": [
+                {
+                  "class": "go.Point",
+                  "x": 229.2312370074396,
+                  "y": 215.5554506403343
+                },
+                {
+                  "class": "go.Point",
+                  "x": 448.90175861248406,
+                  "y": 216.52441899495074
+                }
+              ],
+              "Aa": 3,
+              "Ha": null,
+              "gh": null
+            }
+          },
+          {
+            "from": -7,
+            "to": -10,
+            "key": -9,
+            "pts": {
+              "v": true,
+              "j": [
+                {
+                  "class": "go.Point",
+                  "x": 321.4504874151469,
+                  "y": 38.40889003239364
+                },
+                {
+                  "class": "go.Point",
+                  "x": 281.2688864562897,
+                  "y": 30.56827680248467
+                },
+                {
+                  "class": "go.Point",
+                  "x": 240.79499601220058,
+                  "y": 36.724612056329384
+                }
+              ],
+              "Aa": 4,
+              "Ha": null,
+              "gh": null
+            }
+          },
+          {
+            "from": -4,
+            "to": -13,
+            "key": -10,
+            "pts": {
+              "v": true,
+              "j": [
+                {
+                  "class": "go.Point",
+                  "x": -14.263670774334912,
+                  "y": 181.32674713773181
+                },
+                {
+                  "class": "go.Point",
+                  "x": -15.487813006951683,
+                  "y": 136.29473520517212
+                }
+              ],
+              "Aa": 2,
+              "Ha": null,
+              "gh": null
+            }
+          },
+          {
+            "from": -2,
+            "to": -10,
+            "key": -11,
+            "pts": {
+              "v": true,
+              "j": [
+                {
+                  "class": "go.Point",
+                  "x": 38.458540362819846,
+                  "y": 31.19965013995035
+                },
+                {
+                  "class": "go.Point",
+                  "x": 92.23148244291174,
+                  "y": 32.86832783330367
+                }
+              ],
+              "Aa": 3,
+              "Ha": null,
+              "gh": null
+            }
+          },
+          {
+            "from": -10,
+            "to": -7,
+            "key": -12,
+            "pts": {
+              "v": true,
+              "j": [
+                {
+                  "class": "go.Point",
+                  "x": 240.79499601220058,
+                  "y": 36.724612056329384
+                },
+                {
+                  "class": "go.Point",
+                  "x": 280.9765969710578,
+                  "y": 44.56522528623835
+                },
+                {
+                  "class": "go.Point",
+                  "x": 321.4504874151469,
+                  "y": 38.40889003239364
+                }
+              ],
+              "Aa": 4,
+              "Ha": null,
+              "gh": null
+            }
+          },
+          {
+            "from": -7,
+            "to": -11,
+            "key": -13,
+            "pts": {
+              "v": true,
+              "j": [
+                {
+                  "class": "go.Point",
+                  "x": 405.71118925916693,
+                  "y": 66.06827154703365
+                },
+                {
+                  "class": "go.Point",
+                  "x": 506.54205918535763,
+                  "y": 198.10262282627428
+                }
+              ],
+              "Aa": 3,
+              "Ha": null,
+              "gh": null
+            }
+          },
+          {
+            "from": -12,
+            "to": -10,
+            "key": -14,
+            "pts": {
+              "v": true,
+              "j": [
+                {
+                  "class": "go.Point",
+                  "x": 167.69706069916117,
+                  "y": 100.33171907219133
+                },
+                {
+                  "class": "go.Point",
+                  "x": 166.8555161205173,
+                  "y": 54.01514373523246
+                }
+              ],
+              "Aa": 3,
+              "Ha": null,
+              "gh": null
+            }
+          }
+        ]
       },
       "support": {
         "class": "GraphLinksModel",
         "linkKeyProperty": "key",
         "nodeDataArray": [
           {
-            "key": "610e55aee91a3d5a64e81055",
-            "text": "Atención al cliente"
+            "key": "610e55aee91a3d5a64e81054",
+            "text": "Gestión de\ndocumentos"
           },
+          {
+            "text": "Gestión del\npersonal",
+            "color": "#96E3A3",
+            "key": -2
+          },
+          {
+            "text": "Mantenimientos\ny servicios \nauxiliares",
+            "color": "#96E3A3",
+            "key": -3
+          },
+          {
+            "text": "Seguridad y \nsalud en el trabajo",
+            "color": "#96E3A3",
+            "key": -4
+          },
+          {
+            "text": "Gestión \nambiental",
+            "color": "#96E3A3",
+            "key": -5
+          },
+          {
+            "text": "Logística",
+            "color": "#96E3A3",
+            "key": -6
+          }
+        ],
+        "linkDataArray": []
+      },
+      "id": 7
+    },
+    {
+      "business-unitId": 3,
+      "strategic": {
+        "class": "GraphLinksModel",
+        "linkKeyProperty": "key",
+        "nodeDataArray": [
           {
             "key": "610e55aee91a3d5a64e81051",
             "text": "Distribución de pedidos segun usuarios"
@@ -896,7 +1523,82 @@
         ],
         "linkDataArray": []
       },
-      "id": 5
+      "primary": {
+        "class": "GraphLinksModel",
+        "linkKeyProperty": "key",
+        "nodeDataArray": [
+          {
+            "key": "610e55aee91a3d5a64e81052",
+            "text": "Marketing"
+          },
+          {
+            "key": "610e55aee91a3d5a64e81054",
+            "text": "Administracion de finanzas"
+          }
+        ],
+        "linkDataArray": []
+      },
+      "support": {
+        "class": "GraphLinksModel",
+        "linkKeyProperty": "key",
+        "nodeDataArray": [
+          {
+            "key": "610e55aee91a3d5a64e81054",
+            "text": "Administracion de finanzas"
+          },
+          {
+            "key": "610e55aee91a3d5a64e8104d",
+            "text": "Gestión de calidad"
+          }
+        ],
+        "linkDataArray": []
+      },
+      "id": 8
+    },
+    {
+      "business-unitId": 4,
+      "strategic": {
+        "class": "GraphLinksModel",
+        "linkKeyProperty": "key",
+        "nodeDataArray": [
+          {
+            "key": "610e55aee91a3d5a64e81051",
+            "text": "Distribución de pedidos segun usuarios"
+          }
+        ],
+        "linkDataArray": []
+      },
+      "primary": {
+        "class": "GraphLinksModel",
+        "linkKeyProperty": "key",
+        "nodeDataArray": [
+          {
+            "key": "610e55aee91a3d5a64e81052",
+            "text": "Marketing"
+          },
+          {
+            "key": "610e55aee91a3d5a64e81054",
+            "text": "Administracion de finanzas"
+          },
+          {
+            "key": "610e55aee91a3d5a64e81050",
+            "text": "Seguimiento y monitoreo de pedidos"
+          }
+        ],
+        "linkDataArray": []
+      },
+      "support": {
+        "class": "GraphLinksModel",
+        "linkKeyProperty": "key",
+        "nodeDataArray": [
+          {
+            "key": "610e55aee91a3d5a64e81054",
+            "text": "Administracion de finanzas"
+          }
+        ],
+        "linkDataArray": []
+      },
+      "id": 9
     }
   ],
   "activity-tracking": [
@@ -911,12 +1613,6 @@
           "activity": "operation"
         },
         {
-          "nameActivity": "Evaluación de la solicitud ",
-          "responsible": "Jefe TI",
-          "time": "40",
-          "activity": "transport"
-        },
-        {
           "nameActivity": "Respuesta de la solicitud.",
           "responsible": "Jefe TI",
           "time": "20",
@@ -927,6 +1623,12 @@
           "responsible": "Gerente general",
           "time": "45",
           "activity": "operation"
+        },
+        {
+          "nameActivity": "",
+          "responsible": "",
+          "time": "",
+          "activity": ""
         }
       ],
       "id": 1

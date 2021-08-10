@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+/*   width: 100%; */
   min-width: 120px;
   max-width: 252px;
   height: 48px;
@@ -14,6 +14,8 @@
   border: none;
   outline: none;
   cursor: pointer;
+  transition: all ease-in .35s;
+
 }
 
 .cta_button:hover{

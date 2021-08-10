@@ -5,12 +5,15 @@ import processS from './process.module.css'
 import * as go from 'gojs';
 import { ReactDiagram, ReactPalette } from 'gojs-react';
 import post from '../../../utils/post';
+import put from '../../../utils/put';
+import Button from '../Buton';
+import CtaButton from '../CtaButton';
 const ProcessMap = ({ processmap, processs, bu }) => {
 
-    console.log({ processmap })
     const diagramstrategicRef = useRef(null)
     const diagramprimaryRef = useRef(null)
     const diagramsupporttRef = useRef(null)
+    const diagramExportRef = useRef(null)
 
     function initDiagram() {
         const $ = go.GraphObject.make;
@@ -20,7 +23,7 @@ const ProcessMap = ({ processmap, processs, bu }) => {
                 {
                     'undoManager.isEnabled': true,  // must be set to allow for model change listening
                     // 'undoManager.maxHistoryLength': 0,  // uncomment disable undo/redo functionality
-                    'clickCreatingTool.archetypeNodeData': { text: 'new node', color: '#6462FC' },
+                    'clickCreatingTool.archetypeNodeData': { text: 'new process', color: '#96E3A3' },
                     model: $(go.GraphLinksModel,
                         {
                             linkKeyProperty: 'key',  // IMPORTANT! must be defined for merges and data sync when using GraphLinksModel
@@ -41,10 +44,10 @@ const ProcessMap = ({ processmap, processs, bu }) => {
                         }),
                     // when a drag-drop occurs in the Diagram's background, make it a top-level node
                     mouseDrop: function (e) { finishDrop(e, null); },
-                    layout:  // Diagram has simple horizontal layout
+/*                     layout:  
                         $(go.GridLayout,
-                            { wrappingWidth: Infinity, alignment: go.GridLayout.Position, cellSize: new go.Size(1, 1) }),
-                    "commandHandler.archetypeGroupData": { isGroup: true, text: "Group", horiz: false }
+                            { wrappingWidth: Infinity, alignment: go.GridLayout.Position, cellSize: new go.Size(1, 1) }), */
+                    "commandHandler.archetypeGroupData": { isGroup: true, text: "Group", horiz: true } //aqui puse en true el horiz para que no se reodene de forma horizontal
                 });
 
         /* links */
@@ -78,7 +81,7 @@ const ProcessMap = ({ processmap, processs, bu }) => {
         }
 
         function defaultColor(horiz) {  // a Binding conversion function
-            return horiz ? "#6462FC" : "#FAFAFC";
+            return horiz ? "#FAFAFC":"#6462FC" ;
         }
 
         function defaultFont(horiz) {  // a Binding conversion function
@@ -129,9 +132,9 @@ const ProcessMap = ({ processmap, processs, bu }) => {
                     mouseDrop: finishDrop,
                     handlesDragDropForMembers: true,  // don't need to define handlers on member Nodes and Links
                     // Groups containing Groups lay out their members horizontally
-                    layout: makeLayout(false)
+                    /* layout: makeLayout(false) */
                 },
-                new go.Binding("layout", "horiz", makeLayout),
+                /* new go.Binding("layout", "horiz", makeLayout), */
                 new go.Binding("background", "isHighlighted", function (h) {
                     return h ? "#6562fc44" : "transparent";
                 }).ofObject(),
@@ -172,7 +175,7 @@ const ProcessMap = ({ processmap, processs, bu }) => {
                 { locationSpot: go.Spot.Center },
                 $(go.Shape, "RoundedRectangle",
                     {
-                        fill: "#ACE600", stroke: null,
+                        fill: "#96E3A3", stroke: null,
                         portId: "", cursor: "pointer",  // the Shape is the port, not the whole Node
                         // allow all kinds of links from and to this port
                         fromLinkable: true, fromLinkableSelfNode: true, fromLinkableDuplicates: true,
@@ -182,7 +185,7 @@ const ProcessMap = ({ processmap, processs, bu }) => {
                 $(go.TextBlock,
                     {
                         margin: 8,
-                        editable: false,
+                        editable: true,
                         font: "bold 14px sans-serif",
                         opacity: 0.75,
                         stroke: "#1A1A1C"
@@ -190,7 +193,11 @@ const ProcessMap = ({ processmap, processs, bu }) => {
                     new go.Binding("text", "text").makeTwoWay())
             );
 
-        /* functions */
+        let slider = document.getElementById("levelSlider")
+        slider.addEventListener('change', reexpand);
+        slider.addEventListener('input', reexpand);
+
+
         function reexpand(e) {
             diagram.commit(function (diag) {
                 var level = parseInt(document.getElementById("levelSlider").value);
@@ -214,19 +221,29 @@ const ProcessMap = ({ processmap, processs, bu }) => {
         diagram.commandHandler.groupSelection();
 
 
-        if (theRef.current) {
-            const diagram = theRef.current.getDiagram();
-            if (diagram instanceof go.Diagram) {
-                diagram.commit(d => {
-                    d.grid.visible = model.showGrid;
-                }, "Update prop");
-            }
-        }
+        /*         if (theRef.current) {
+                    const diagram = theRef.current.getDiagram();
+                    if (diagram instanceof go.Diagram) {
+                        diagram.commit(d => {
+                            d.grid.visible = model.showGrid;
+                        }, "Update prop");
+                    }
+                } */
     }
 
     const initPalette = () => {
+
+        let diagram = initDiagram()
+        console.log("hola", { diagram })
+
         const $ = go.GraphObject.make;
-        const palette = $(go.Palette);
+
+        const palette = $(go.Palette,
+            {
+                nodeTemplateMap: diagram.nodeTemplateMap,
+                groupTemplateMap: diagram.groupTemplateMap
+            });
+        /* const palette = $(go.Palette); */
         return palette;
     };
 
@@ -243,14 +260,26 @@ const ProcessMap = ({ processmap, processs, bu }) => {
         console.log(MACRO_PROCESS)
     }
     const saveJsonDB = async () => {
-        const res = await post(`${process.env.NEXT_PUBLIC_SERVER_HOST}/process-map`, {
+
+        await saveJsonDiagram(diagramstrategicRef, "strategic")
+        await saveJsonDiagram(diagramprimaryRef, "primary")
+        await saveJsonDiagram(diagramsupporttRef, "support")
+
+        const postData = {
             name: bu.nombre,
             'business-unitId': bu.id,
             strategic: MACRO_PROCESS["strategic"],
             primary: MACRO_PROCESS["primary"],
             support: MACRO_PROCESS["support"]
-        })
-        console.log(res)
+        }
+        if (processmap.id) {
+            const res = await put(`${process.env.NEXT_PUBLIC_SERVER_HOST}/process-map`, processmap.id, postData)
+            console.log(res)
+        } else {
+            const res = await post(`${process.env.NEXT_PUBLIC_SERVER_HOST}/process-map`, postData)
+            console.log(res)
+        }
+        console.log({ processmap })
     }
     /**
      * This function handles any changes to the GoJS model.
@@ -295,45 +324,61 @@ const ProcessMap = ({ processmap, processs, bu }) => {
     return (
         <>
             <h1>Process map </h1>
-            <ReactToPrint
-                trigger={() => <button ><p> Export</p></button>}
-                content={() => strategicRef.current}
-            />
-            <section className={processS.process}>
+            <br/>
+            <section className={processS.process} ref={diagramExportRef}>
 
-                <div className={processS.first_col}><h2>Requerimiento del Cliente</h2> </div>
+                <div className={processS.first_col}>
+                    <h2>Requerimiento del Cliente</h2>
+                </div>
                 <div className={processS.process_item}>
                     <h3 className={processS.title}>Management processes</h3>
+                    {/* {processmap.strategic && */}
                     <ReactDiagram
                         ref={diagramstrategicRef}
                         initDiagram={initDiagram}
                         divClassName={processS.process_item}
-                        nodeDataArray={processmap.strategic.nodeDataArray}
-                        linkDataArray={processmap.strategic.linkDataArray}
+                        nodeDataArray={processmap.strategic.nodeDataArray.length > 0 ? processmap.strategic.nodeDataArray : []}
+                        linkDataArray={processmap.strategic.linkDataArray.length > 0 ? processmap.strategic.linkDataArray : []}
                         onModelChange={handleModelChange}
                     />
+                    {/* } */}
+                    <Button
+                        className={processS.float_left}
+                        onClick={() => groupSelection(diagramstrategicRef)}>Group</Button>
+
                 </div>
                 <div className={processS.process_item}>
                     <h2 className={processS.title}>Production processes</h2>
+                    {/* {processmap.primary && */}
                     <ReactDiagram
                         ref={diagramprimaryRef}
                         initDiagram={initDiagram}
                         divClassName={processS.process_item}
-                        nodeDataArray={processmap.primary.nodeDataArray}
-                        linkDataArray={processmap.primary.linkDataArray}
+                        nodeDataArray={processmap.primary.nodeDataArray.length > 0 ? processmap.primary.nodeDataArray : []}
+                        linkDataArray={processmap.primary.linkDataArray.length > 0 ? processmap.primary.linkDataArray : []}
                         onModelChange={handleModelChange}
-                    />
+                    />{/* } */}
+                    <Button
+                        className={processS.float_left}
+                        onClick={() => groupSelection(diagramprimaryRef)}>Group</Button>
+
                 </div>
                 <div className={processS.process_item}>
                     <h2 className={processS.title}>Support processess</h2>
+                    {/* {processmap.support && */}
                     <ReactDiagram
                         ref={diagramsupporttRef}
                         initDiagram={initDiagram}
                         divClassName={processS.process_item}
-                        nodeDataArray={processmap.support.nodeDataArray}
-                        linkDataArray={processmap.support.linkDataArray}
+                        nodeDataArray={processmap.support.nodeDataArray.length > 0 ? processmap.support.nodeDataArray : []}
+                        linkDataArray={processmap.support.linkDataArray.length > 0 ? processmap.support.linkDataArray : []}
                         onModelChange={handleModelChange}
                     />
+                    {/*  } */}
+                    <Button
+                        className={processS.float_left}
+                        onClick={() => groupSelection(diagramsupporttRef)}>Group</Button>
+
                 </div>
                 <div className={processS.palette}>
                     <ReactPalette
@@ -342,18 +387,18 @@ const ProcessMap = ({ processmap, processs, bu }) => {
                         nodeDataArray={processToPalette}
                     />
                 </div>
-                <div className={processS.third_col}> <h2>Staisfaccion del Cliente</h2> </div>
+                <div className={processS.third_col}>
+                    <h2>Staisfaccion del Cliente</h2>
+                </div>
             </section>
-
-            <button onClick={() => groupSelection(diagramstrategicRef)}>Group using diagramstrategicRef</button>
-            <button onClick={() => groupSelection(diagramprimaryRef)}>Group using diagramprimaryRef</button>
-            <button onClick={() => groupSelection(diagramsupporttRef)}>Group using diagramsupporttRef</button>
-            <br></br>-------
-            <button onClick={() => saveJsonDiagram(diagramstrategicRef, "strategic")}>Save diagram strategic</button>
-            <button onClick={() => saveJsonDiagram(diagramprimaryRef, "primary")}>Save diagram primary</button>
-            <button onClick={() => saveJsonDiagram(diagramsupporttRef, "support")}>Save diagram supportt</button>
-            <br></br>---------
-            <button onClick={() => saveJsonDB()}>Save in db</button>
+            <footer className={processS.footer}>
+                <input id="levelSlider" type="range" min="0" max="5" />
+                <ReactToPrint
+                    trigger={() => <CtaButton ><p> Export in PDF</p></CtaButton>}
+                    content={() => diagramExportRef.current}
+                />
+                <CtaButton onClick={() => saveJsonDB()}>Save</CtaButton>
+            </footer>
         </>
     );
 }
