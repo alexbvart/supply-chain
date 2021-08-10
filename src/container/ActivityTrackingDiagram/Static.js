@@ -56,14 +56,14 @@ const Static = ({ processId }) => {
             {/* table Node */}
             <Table
                 tableData={dataTableS}
-                headingColumns={["Actividad", "Rol", "Tiempo", "Flujo"]}
+                headingColumns={["Activity ", "Role", "Time (minutes)", "Flow"]}
                 title="Seguimiento a las Actividades"
             />
 
             <div className={grid_container}>
                 <Table
                     tableData={forActivity}
-                    headingColumns={["Actividad", "Tiempo", "%"]}
+                    headingColumns={["Activity", "Time (minutes)", "Percentage (%)"]}
                     title="Table by activity"
                 />
                 <ChartRC title="Donut chart by actrivities" data={forActivity} />
@@ -79,7 +79,7 @@ const Static = ({ processId }) => {
 
                 <Table
                     tableData={forRole}
-                    headingColumns={["Rol", "Tiempo", "%"]}
+                    headingColumns={["Role", "Time (minutes)", "Percentage (%)"]}
                     title="Table by roles"
                 />
                 <ChartRC title="Donut chart by roles" data={forRole} />

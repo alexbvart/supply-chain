@@ -177,7 +177,7 @@ const ActivityTrackingDesing = ({ processId }) => {
                                                         <option value="combinedActivity">combinedActivity</option>
                                                     </select>
 
-                                                    <Button onClick={handleAddFields} >Agregar</Button>
+                                                    <Button onClick={()=> handleAddFields()} >Agregar</Button>
                                                     <Button onClick={() => handleLessFields(index)} >Quitar</Button>
                                                 </li>
                                             )}

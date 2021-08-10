@@ -1513,12 +1513,28 @@
         "linkKeyProperty": "key",
         "nodeDataArray": [
           {
-            "key": "610e55aee91a3d5a64e81051",
-            "text": "Distribución de pedidos segun usuarios"
+            "key": "610e55aee91a3d5a64e8104e",
+            "text": "Gestión de \npedidos"
           },
           {
-            "key": "610e55aee91a3d5a64e8104e",
-            "text": "Gestión de pedidos"
+            "text": "Gestión \nlegal ",
+            "color": "#96E3A3",
+            "key": -2
+          },
+          {
+            "text": "Gestión de  \nmarketing y\npublicidad",
+            "color": "#96E3A3",
+            "key": -3
+          },
+          {
+            "text": "Gestión de \ncontabilidad\ny finanzas",
+            "color": "#96E3A3",
+            "key": -4
+          },
+          {
+            "text": "Mejoramiento\ncontinuo",
+            "color": "#96E3A3",
+            "key": -5
           }
         ],
         "linkDataArray": []
@@ -1529,14 +1545,197 @@
         "nodeDataArray": [
           {
             "key": "610e55aee91a3d5a64e81052",
-            "text": "Marketing"
+            "text": "Gestión \ncomercial",
+            "group": -4
           },
           {
-            "key": "610e55aee91a3d5a64e81054",
-            "text": "Administracion de finanzas"
+            "text": "Gestión de \ncompras",
+            "color": "#96E3A3",
+            "key": -2,
+            "group": -4
+          },
+          {
+            "text": "Proceso de\ninventario y\nalmacenes",
+            "color": "#96E3A3",
+            "key": -3,
+            "group": -4
+          },
+          {
+            "isGroup": true,
+            "text": "",
+            "horiz": true,
+            "key": -4
+          },
+          {
+            "text": "Reparación de \nestructuras\nmetálicas ",
+            "color": "#96E3A3",
+            "key": -5,
+            "group": -8
+          },
+          {
+            "text": "Proceso de\nmantenimiento\nde CPU`S",
+            "color": "#96E3A3",
+            "key": -6,
+            "group": -8
+          },
+          {
+            "text": "Instalación y\n reparación de \nredes de datos",
+            "color": "#96E3A3",
+            "key": -7,
+            "group": -8
+          },
+          {
+            "isGroup": true,
+            "text": "",
+            "horiz": true,
+            "key": -8
+          },
+          {
+            "text": "Gestión de \nventa y servicios",
+            "color": "#96E3A3",
+            "key": -9
           }
         ],
-        "linkDataArray": []
+        "linkDataArray": [
+          {
+            "from": -3,
+            "to": -2,
+            "key": -1,
+            "pts": {
+              "v": true,
+              "j": [
+                {
+                  "class": "go.Point",
+                  "x": 31,
+                  "y": 170.45058796959603
+                },
+                {
+                  "class": "go.Point",
+                  "x": 31,
+                  "y": 126.87529093665395
+                }
+              ],
+              "Aa": 3,
+              "Ha": null,
+              "gh": null
+            }
+          },
+          {
+            "from": "610e55aee91a3d5a64e81052",
+            "to": -2,
+            "key": -2,
+            "pts": {
+              "v": true,
+              "j": [
+                {
+                  "class": "go.Point",
+                  "x": 29.88215917007394,
+                  "y": 47.590411527527415
+                },
+                {
+                  "class": "go.Point",
+                  "x": 30.441276297830022,
+                  "y": 74.03107081537654
+                }
+              ],
+              "Aa": 3,
+              "Ha": null,
+              "gh": null
+            }
+          },
+          {
+            "from": -2,
+            "to": -5,
+            "key": -3,
+            "pts": {
+              "v": true,
+              "j": [
+                {
+                  "class": "go.Point",
+                  "x": 78.43357798870166,
+                  "y": 101.8251706443013
+                },
+                {
+                  "class": "go.Point",
+                  "x": 213.5009923237983,
+                  "y": 105.73207932341566
+                }
+              ],
+              "Aa": 3,
+              "Ha": null,
+              "gh": null
+            }
+          },
+          {
+            "from": -2,
+            "to": -7,
+            "key": -4,
+            "pts": {
+              "v": true,
+              "j": [
+                {
+                  "class": "go.Point",
+                  "x": 78.40634938649553,
+                  "y": 84.06574496516204
+                },
+                {
+                  "class": "go.Point",
+                  "x": 213.35927561350445,
+                  "y": 37.415350713850316
+                }
+              ],
+              "Aa": 3,
+              "Ha": null,
+              "gh": null
+            }
+          },
+          {
+            "from": -2,
+            "to": -6,
+            "key": -5,
+            "pts": {
+              "v": true,
+              "j": [
+                {
+                  "class": "go.Point",
+                  "x": 78.39895132413801,
+                  "y": 119.13735892445277
+                },
+                {
+                  "class": "go.Point",
+                  "x": 210.99069711336193,
+                  "y": 171.40381473348293
+                }
+              ],
+              "Aa": 3,
+              "Ha": null,
+              "gh": null
+            }
+          },
+          {
+            "from": -2,
+            "to": -9,
+            "key": -6,
+            "pts": {
+              "v": true,
+              "j": [
+                {
+                  "class": "go.Point",
+                  "x": 57.710665181790944,
+                  "y": 126.7259104247124
+                },
+                {
+                  "class": "go.Point",
+                  "x": 187.28933481820903,
+                  "y": 254.18033957528758
+                }
+              ],
+              "Aa": 3,
+              "Ha": null,
+              "gh": null
+            }
+          }
+        ]
       },
       "support": {
         "class": "GraphLinksModel",
@@ -1544,11 +1743,26 @@
         "nodeDataArray": [
           {
             "key": "610e55aee91a3d5a64e81054",
-            "text": "Administracion de finanzas"
+            "text": "Gestión \nde RR.HH."
           },
           {
             "key": "610e55aee91a3d5a64e8104d",
-            "text": "Gestión de calidad"
+            "text": "Gestión de logística"
+          },
+          {
+            "text": "Gestión de reclamos",
+            "color": "#96E3A3",
+            "key": -3
+          },
+          {
+            "text": "Gestión de  \ninfraestructura\ny recursos\nfísico",
+            "color": "#96E3A3",
+            "key": -4
+          },
+          {
+            "text": "Gestión de \nseguridad y\nmantenimiento",
+            "color": "#96E3A3",
+            "key": -5
           }
         ],
         "linkDataArray": []
@@ -1562,8 +1776,29 @@
         "linkKeyProperty": "key",
         "nodeDataArray": [
           {
-            "key": "610e55aee91a3d5a64e81051",
-            "text": "Distribución de pedidos segun usuarios"
+            "text": "Gestión\nfinanciera",
+            "color": "#96E3A3",
+            "key": -2
+          },
+          {
+            "text": "Gestión \nlegal",
+            "color": "#96E3A3",
+            "key": -3
+          },
+          {
+            "text": "Gestión de \nmarketing",
+            "color": "#96E3A3",
+            "key": -4
+          },
+          {
+            "text": "Gestión de\ncontrol y calidad",
+            "color": "#96E3A3",
+            "key": -5
+          },
+          {
+            "text": "Gestión de \ndirección",
+            "color": "#96E3A3",
+            "key": -1
           }
         ],
         "linkDataArray": []
@@ -1573,27 +1808,288 @@
         "linkKeyProperty": "key",
         "nodeDataArray": [
           {
-            "key": "610e55aee91a3d5a64e81052",
-            "text": "Marketing"
+            "text": "Gestión \ncomercial:\nPedidos y\nventas",
+            "color": "#96E3A3",
+            "key": -1
           },
           {
-            "key": "610e55aee91a3d5a64e81054",
-            "text": "Administracion de finanzas"
+            "text": "Gestión de marketing\nInvestigación y estudio\nde mercado",
+            "color": "#96E3A3",
+            "key": -2,
+            "group": -12
           },
           {
-            "key": "610e55aee91a3d5a64e81050",
-            "text": "Seguimiento y monitoreo de pedidos"
+            "text": "Planificación de\ncompras",
+            "color": "#96E3A3",
+            "key": -3,
+            "group": -11
+          },
+          {
+            "text": "Cotización y \ncontrol de \nprecios",
+            "color": "#96E3A3",
+            "key": -4,
+            "group": -11
+          },
+          {
+            "text": "Compras de\narticulos",
+            "color": "#96E3A3",
+            "key": -5,
+            "group": -11
+          },
+          {
+            "text": "Control de stock\ne inventario",
+            "color": "#96E3A3",
+            "key": -6,
+            "group": -10
+          },
+          {
+            "text": "Almacenamiento \nclasificado",
+            "color": "#96E3A3",
+            "key": -7,
+            "group": -10
+          },
+          {
+            "text": "Recepción y \nverificación",
+            "color": "#96E3A3",
+            "key": -8,
+            "group": -10
+          },
+          {
+            "text": "Gestión \ncomercial:\nDistribucion",
+            "color": "#96E3A3",
+            "key": -9
+          },
+          {
+            "isGroup": true,
+            "text": "Gestión Logística",
+            "horiz": true,
+            "key": -10,
+            "group": -12
+          },
+          {
+            "isGroup": true,
+            "text": "Gestión de compras",
+            "horiz": true,
+            "key": -11,
+            "group": -12
+          },
+          {
+            "isGroup": true,
+            "text": "Gestión de Compraventa",
+            "horiz": true,
+            "key": -12
           }
         ],
-        "linkDataArray": []
+        "linkDataArray": [
+          {
+            "from": -3,
+            "to": -4,
+            "key": -1,
+            "pts": {
+              "v": true,
+              "j": [
+                {
+                  "class": "go.Point",
+                  "x": 255.2539292531598,
+                  "y": 101.85742748150183
+                },
+                {
+                  "class": "go.Point",
+                  "x": 263.66355121559013,
+                  "y": 132.46845142474817
+                }
+              ],
+              "Aa": 2,
+              "Ha": null,
+              "gh": null
+            }
+          },
+          {
+            "from": -4,
+            "to": -5,
+            "key": -2,
+            "pts": {
+              "v": true,
+              "j": [
+                {
+                  "class": "go.Point",
+                  "x": 263.764934846193,
+                  "y": 200.43816476600955
+                },
+                {
+                  "class": "go.Point",
+                  "x": 255.17518170441832,
+                  "y": 232.04845632774044
+                }
+              ],
+              "Aa": 2,
+              "Ha": null,
+              "gh": null
+            }
+          },
+          {
+            "from": -5,
+            "to": -8,
+            "key": -3,
+            "pts": {
+              "v": true,
+              "j": [
+                {
+                  "class": "go.Point",
+                  "x": 299.7164710128139,
+                  "y": 257.8784975443021
+                },
+                {
+                  "class": "go.Point",
+                  "x": 465.50081414343606,
+                  "y": 256.03644928729517
+                }
+              ],
+              "Aa": 2,
+              "Ha": null,
+              "gh": null
+            }
+          },
+          {
+            "from": -8,
+            "to": -7,
+            "key": -4,
+            "pts": {
+              "v": true,
+              "j": [
+                {
+                  "class": "go.Point",
+                  "x": 511.9544383655642,
+                  "y": 229.04356628114883
+                },
+                {
+                  "class": "go.Point",
+                  "x": 505.0455616344358,
+                  "y": 198.86268371885117
+                }
+              ],
+              "Aa": 2,
+              "Ha": null,
+              "gh": null
+            }
+          },
+          {
+            "from": -7,
+            "to": -6,
+            "key": -5,
+            "pts": {
+              "v": true,
+              "j": [
+                {
+                  "class": "go.Point",
+                  "x": 504.0046490446475,
+                  "y": 146.0396994865827
+                },
+                {
+                  "class": "go.Point",
+                  "x": 511.9953509553525,
+                  "y": 103.8665505134173
+                }
+              ],
+              "Aa": 2,
+              "Ha": null,
+              "gh": null
+            }
+          },
+          {
+            "from": -6,
+            "to": -9,
+            "key": -6,
+            "pts": {
+              "v": true,
+              "j": [
+                {
+                  "class": "go.Point",
+                  "x": 583.488899163782,
+                  "y": 76.39213192823752
+                },
+                {
+                  "class": "go.Point",
+                  "x": 652.9041672424679,
+                  "y": 75.28444148017338
+                }
+              ],
+              "Aa": 3,
+              "Ha": null,
+              "gh": null
+            }
+          },
+          {
+            "from": -2,
+            "to": -4,
+            "key": -7,
+            "pts": {
+              "v": true,
+              "j": [
+                {
+                  "class": "go.Point",
+                  "x": 162.66765146278448,
+                  "y": 171.44303021022583
+                },
+                {
+                  "class": "go.Point",
+                  "x": 220.51154775596547,
+                  "y": 168.82697459897645
+                }
+              ],
+              "Aa": 2,
+              "Ha": null,
+              "gh": null
+            }
+          },
+          {
+            "from": -1,
+            "to": -3,
+            "key": -8,
+            "pts": {
+              "v": true,
+              "j": [
+                {
+                  "class": "go.Point",
+                  "x": -45.721505869627435,
+                  "y": 78.04478534590848
+                },
+                {
+                  "class": "go.Point",
+                  "x": 183.44562696337744,
+                  "y": 76.02272240914667
+                }
+              ],
+              "Aa": 3,
+              "Ha": null,
+              "gh": null
+            }
+          }
+        ]
       },
       "support": {
         "class": "GraphLinksModel",
         "linkKeyProperty": "key",
         "nodeDataArray": [
           {
-            "key": "610e55aee91a3d5a64e81054",
-            "text": "Administracion de finanzas"
+            "text": "Gestión de \npersonal",
+            "color": "#96E3A3",
+            "key": -1
+          },
+          {
+            "text": "Soporte\ntecnológico",
+            "color": "#96E3A3",
+            "key": -2
+          },
+          {
+            "text": "Almacén de\nreclamos",
+            "color": "#96E3A3",
+            "key": -3
+          },
+          {
+            "text": "Mantenimiento y\nservicios auxiliare",
+            "color": "#96E3A3",
+            "key": -4
           }
         ],
         "linkDataArray": []
@@ -1613,6 +2109,18 @@
           "activity": "operation"
         },
         {
+          "nameActivity": "Recepción de la solicitud",
+          "responsible": "Jefe TI",
+          "time": "3",
+          "activity": "operation"
+        },
+        {
+          "nameActivity": "Evaluación de la solicitud ",
+          "responsible": "Jefe TI",
+          "time": "40",
+          "activity": "inspection"
+        },
+        {
           "nameActivity": "Respuesta de la solicitud.",
           "responsible": "Jefe TI",
           "time": "20",
@@ -1623,12 +2131,6 @@
           "responsible": "Gerente general",
           "time": "45",
           "activity": "operation"
-        },
-        {
-          "nameActivity": "",
-          "responsible": "",
-          "time": "",
-          "activity": ""
         }
       ],
       "id": 1

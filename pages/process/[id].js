@@ -3,6 +3,7 @@ import DetailSideBar from '../../src/container/DetailSideBar';
 import ProcessFlowDiagram from '../../src/container/ProcessFlowDiagram';
 import { TabGroup } from '@statikly/funk'
 import {
+    main,
     tab_group,
     tab, tab_active,
     tab_panel,
@@ -17,6 +18,8 @@ const process = ({ process, processs }) => {
     return (
         <>
             <DetailSideBar title="processs" data={processs}></DetailSideBar>
+            <div className={main}>
+
             <TabGroup numTabs={3} direction={TabGroup.direction.HORIZONTAL}>
                 <div className={tab_group}>
                     <TabGroup.TabList>
@@ -84,6 +87,7 @@ const process = ({ process, processs }) => {
 
                 </div>
             </TabGroup>
+            </div>
 
         </>
     );
