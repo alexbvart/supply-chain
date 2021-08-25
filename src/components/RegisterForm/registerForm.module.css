@@ -9,12 +9,20 @@
 }
 
 .register_form{
+  width: 100%;
   background-color: var(--bg-card);
   padding: 3.2rem;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
+  border-radius: 12px;
+  /* border-top-right-radius: 12px; */
+  position: relative;
 }
-
+.grid_form{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+/*   display: grid;
+  grid-template-columns: repeat(6, 1fr ); */
+}
 .headline2{
   font-style: normal;
   font-size: 1.4rem;

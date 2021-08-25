@@ -14,12 +14,20 @@ const storage = typeof window !== 'undefined' ? localStorage : null;
 const UploadedFilesLogComponent = ({ processId, types, status }) => {
 
 	const [filesLogList, setFilesLogList] = useState([])
-
+	console.log("quien llega",{types})
 	const getFiles = async () => {
 		const res = await getAll(`${process.env.NEXT_PUBLIC_SERVER_HOST_}/uploads`)
 		if (res!==undefined) {
-			setFilesLogList(res)
+			/* setFilesLogList(res) */
+			if(processId){
+				let filteredFiles =await res.filter((r)=>r.type==types && r.process==processId)
+				setFilesLogList(filteredFiles)
+				console.log("f", {filesLogList},{processId}, {types}, {status})
+			}
 		}
+
+
+
 		/* await getAll(`${process.env.NEXT_PUBLIC_SERVER_HOST_}/uploads`)
         .then(respuesta => {
             setFilesLogList(respuesta)
@@ -30,9 +38,9 @@ const UploadedFilesLogComponent = ({ processId, types, status }) => {
 	}
 	useEffect(() => {
 		getFiles()
-/* 		console.log("f", filesLogList,processId, types, status) */
-	}, [processId, types, status])
 
+	}, [types])
+	
 	return (
 		<section className={log}>
 			<h2>Recorded files</h2>

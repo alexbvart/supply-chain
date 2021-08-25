@@ -10,6 +10,7 @@ import {
   print_button,
   delete_button
 } from './styles.module.css'
+/* import pdf_img from '../../../public/assets/icons/pdf_icon.png ' */
 
 const FilesLogTableRow = ({ fileName, fileId, pathDocument }) => {
 
@@ -21,7 +22,6 @@ const FilesLogTableRow = ({ fileName, fileId, pathDocument }) => {
     const res = await deleteById(`${url}/uploads`,fileId)
     console.log(res);
   }
-
   const triggerAlert = () => {
     swal({
       title:`Delete document this document `,
@@ -42,9 +42,9 @@ const FilesLogTableRow = ({ fileName, fileId, pathDocument }) => {
   return (
     <article className={row}>
       <div className={file_column}>
-        <picture className={file_icon}>
-          <img src="../assets/icons/pdf_icon.png" alt="file icon" />
-        </picture>
+        {/* <picture className={file_icon}>
+          <img src="../../../public/assets/icons/pdf_icon.png" alt="file icon" />
+        </picture> */}
         <p id="rowFileName">{fileName}</p>
       </div>
       <div className={actions_column}>

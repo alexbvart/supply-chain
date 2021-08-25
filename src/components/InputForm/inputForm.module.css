@@ -1,16 +1,26 @@
 .input_container{
-  border-bottom: 2px solid var(--txt-unactive);
+
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   padding: 10px 10px 0px 10px;
+  margin: 12px 0 18px 0;
 }
+.input_container label{
+  color: var(--txt-active);
 
+}
 .input{
-  width: 90%;
+  width: 100%;
   border: none;
+  height: 44px;
   background-color: transparent;
   color: var(--txt-unactive);
   font-size: 14px;
+  margin-top: 4px;
+  padding-left: 12px;
+  border-bottom: 2px solid var(--txt-unactive);
+ 
   /* background-color: rgba(251, 255, 0, 0.746); */
 }
 
@@ -22,6 +32,26 @@
 .input:focus{
   outline: none;
 }
+
+.span_6{
+  width: 100%;
+/*   background-color: red;
+  grid-column: 1 / span 3; */
+}
+.span_3{
+  width: 50%;
+}
+.span_2{
+  width: calc((100% / 6) * 2);
+}
+.span_1_5{
+  width: calc((100% / 6) * 1.5);
+}
+.span_1{
+  width: calc((100% / 6) * 1);
+}
+
+
 
 .right_side{
   display: flex;

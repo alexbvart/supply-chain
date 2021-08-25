@@ -8,11 +8,20 @@ import {
   visible,
   hidden,
 } from './inputForm.module.css'
+import { useForm } from "react-hook-form";
 
-
-const InputForm = ({ id, cssClass = input_container, type, name, placeholder, maxLength, pattern, title}) => {
+const InputForm = (
+  { id, 
+    cssClass = input_container, 
+    type="text", 
+    name, 
+    placeholder=name, 
+    maxLength="40", 
+    pattern='[a-z]', 
+    title=name, 
+    ...rest}) => {
   const [visibility , setVisibility ] = useState(false);
-  
+  const { handleSubmit, register } = useForm({ defaultValues });
   function toggleVisibility(){
     setVisibility(!visibility)
 
@@ -70,6 +79,7 @@ const InputForm = ({ id, cssClass = input_container, type, name, placeholder, ma
   return(
     <article className={cssClass}>
       <input
+      {...register(name)}
         className={input} 
         type={type}
         name={name} 

@@ -1,0 +1,23 @@
+.main_types{
+    overflow-y: scroll;
+    padding: 0 48px 24px 48px;
+}
+.header{
+    width: 100%;
+    height: 48px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 24px
+}
+.header a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.header a:hover{
+    background-color: var(--primary);
+    color: var(--txt-active);
+}

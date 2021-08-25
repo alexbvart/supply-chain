@@ -15,7 +15,7 @@ import {
 
 const UploadFile = ({ processId, types, status }) => {
 	const [file, setFile] = useState('12');
-
+console.log({types})
 	const uploadNewFile = async (file) => {
 
 		try {

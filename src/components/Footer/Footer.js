@@ -7,15 +7,21 @@ import {
 } from './footer.module.css';
 
 function Footer({ textContent }) {
+
+	const cancelForm = (e)=>{
+		e.preventDefault();
+		console.log("cancelar todo");
+	}
+
 	return (
 		<footer className={footer}>
 			<div className={footer_buttons}>
-				<button className={cancel_button}>
+				<button className={cancel_button} onClick={(e)=>cancelForm(e)}>
 					<p>Cancel</p>
+				</button><button className={register_button} >
+					<p>Registrar</p>
 				</button>
-				<button type="button" form="registerForm" className={register_button}>
-					<p>{textContent}</p>
-				</button>
+				
 			</div>
 		</footer>
 	);

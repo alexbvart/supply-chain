@@ -16,22 +16,31 @@ const UploadedFilesLog = dynamic(
   { ssr: false }
 )
  */
-const ProcessCatigorization = ({ processId }) => {
+
+
+const ProcessCatigorization = ({ processId,theType,status="610e55aee91a3d5a64e81049" }) => {
+
+  const title={
+    "610e55aee91a3d5a64e81056":"Process characterization",
+    "610e55aee91a3d5a64e81057": "Process flow diagram",
+}
+
+
   return (
     <div className={container}>
-      <h3 className="subtitle_section">Caracterización de procesos</h3>
+      <h2 className="subtitle_section">{`${title[theType]}`}</h2>
       <br></br>
       <UploadFile
         key={`CharacterizationCurrent${processId}Up`}
         processId={processId}
-        types="610e55aee91a3d5a64e81056"
-        status="610e55aee91a3d5a64e81049"
+        types={theType}
+        status={status}
       />
       <UploadedFilesLog
         key={`CharacterizationCurrent${processId}Log`}
         processId={processId}
-        types="610e55aee91a3d5a64e81056"
-        status="610e55aee91a3d5a64e81049" />
+        types={theType}
+        status={status} />
     </div>
   )
 }

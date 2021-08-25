@@ -55,13 +55,13 @@ const ProcessFlowDiagram = ({processId}) => {
                             <div className={wrapper}>
                                 <div className={container}>
                                     <UploadFile
-                                        key={`FlowCurrent${processId}`}
+                                        key={`FlowCurrent${processId}Up`}
                                         process={processId}
                                         types="610e55aee91a3d5a64e81057"
                                         status="610e55aee91a3d5a64e81049"
                                     />
                                     <UploadedFilesLog 
-                                        key={`ListFlowCurrent${processId}`}
+                                        key={`ListFlowCurrent${processId}Log`}
                                         process={processId}
                                         types="610e55aee91a3d5a64e81057"
                                         status="610e55aee91a3d5a64e81049"
@@ -81,13 +81,13 @@ const ProcessFlowDiagram = ({processId}) => {
                                 <div className={wrapper}>
                                     <div className={container}>
                                         <UploadFile 
-                                            key={`FlowRedesing${processId}`}
+                                            key={`FlowRedesing${processId}Up`}
                                             process={processId}
                                             types="610e55aee91a3d5a64e81057"
                                             status="610e55aee91a3d5a64e8104a"
                                         />
                                         <UploadedFilesLog 
-                                            key={`FlowRedesing${processId}`}
+                                            key={`FlowRedesing${processId}Log`}
                                             process={processId}
                                             types="610e55aee91a3d5a64e81057"
                                             status="610e55aee91a3d5a64e8104a"
