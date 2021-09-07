@@ -792,47 +792,102 @@
   "process": [
     {
       "id": "610e55aee91a3d5a64e8104b",
-      "name": "Investigacion y desarrollo"
+      "name": "Investigacion y desarrollo",
+      "caoe": "4",
+      "ieen": "4",
+      "ielcdsac": "5",
+      "ieecedle": "5",
+      "total": "85"
     },
     {
       "id": "610e55aee91a3d5a64e8104c",
-      "name": "Alianzas estratégicas"
+      "name": "Alianzas estratégicas",
+      "caoe": "4",
+      "ieen": "3",
+      "ielcdsac": "5",
+      "ieecedle": "5",
+      "total": "78"
     },
     {
       "id": "610e55aee91a3d5a64e8104d",
-      "name": "Gestión de calidad"
+      "name": "Gestión de calidad",
+      "caoe": "3",
+      "ieen": "4",
+      "ielcdsac": "5",
+      "ieecedle": "3",
+      "total": "68"
     },
     {
       "id": "610e55aee91a3d5a64e8104e",
-      "name": "Gestión de pedidos"
+      "name": "Gestión de pedidos",
+      "caoe": "4",
+      "ieen": "4",
+      "ielcdsac": "4",
+      "ieecedle": "5",
+      "total": "77"
     },
     {
       "id": "610e55aee91a3d5a64e8104f",
-      "name": "Envío de pedidos a empresas aliadas"
+      "name": "Envío de pedidos a empresas aliadas",
+      "caoe": "4",
+      "ieen": "2",
+      "ielcdsac": "4",
+      "ieecedle": "4",
+      "total": "64"
     },
     {
       "id": "610e55aee91a3d5a64e81050",
-      "name": "Seguimiento y monitoreo de pedidos"
+      "name": "Seguimiento y monitoreo de pedidos",
+      "caoe": "3",
+      "ieen": "4",
+      "ielcdsac": "4",
+      "ieecedle": "3",
+      "total": "63"
     },
     {
       "id": "610e55aee91a3d5a64e81051",
-      "name": "Distribución de pedidos segun usuarios"
+      "name": "Distribución de pedidos segun usuarios",
+      "caoe": "3",
+      "ieen": "4",
+      "ielcdsac": "5",
+      "ieecedle": "3",
+      "total": "68"
     },
     {
       "id": "610e55aee91a3d5a64e81052",
-      "name": "Marketing"
+      "name": "Marketing",
+      "caoe": "5",
+      "ieen": "4",
+      "ielcdsac": "3",
+      "ieecedle": "4",
+      "total": "64"
     },
     {
       "id": "610e55aee91a3d5a64e81053",
-      "name": "Tecnologías de la información"
+      "name": "Tecnologías de la información",
+      "caoe": "4",
+      "ieen": "4",
+      "ielcdsac": "3",
+      "ieecedle": "4",
+      "total": "62"
     },
     {
       "id": "610e55aee91a3d5a64e81054",
-      "name": "Administracion de finanzas"
+      "name": "Administracion de finanzas",
+      "caoe": "2",
+      "ieen": "4",
+      "ielcdsac": "1",
+      "ieecedle": "4",
+      "total": "49"
     },
     {
       "id": "610e55aee91a3d5a64e81055",
-      "name": "Atención al cliente"
+      "name": "Atención al cliente",
+      "caoe": "2",
+      "ieen": "4",
+      "ielcdsac": "1",
+      "ieecedle": "4",
+      "total": "49"
     }
   ],
   "process-map": [
@@ -2210,5 +2265,54 @@
       ],
       "id": 4
     }
-  ]
+  ],
+  "ratings": [
+    {
+      "rating": "Muy alto",
+      "points": "5"
+    },
+    {
+      "rating": "Alto",
+      "points": "4"
+    },
+    {
+      "rating": "Medio",
+      "points": "3"
+    },
+    {
+      "rating": "Bajo",
+      "points": "2"
+    },
+    {
+      "rating": "Muy bajo",
+      "points": "1"
+    }
+  ],
+  "objectives": [
+    {
+      "process": "Investigacion y desarrollo",
+      "name": "Incrementar en un 10% los proyectos de implementación ejecutados",
+      "description": "Incrementar en un 10% proyectos de implementación ejecutados",
+      "id": 1
+    },
+    {
+      "process": "Alianzas estratégicas",
+      "name": "Aumentar en un 20% el porcentaje de asociados afiliados ",
+      "description": "Aumentar en un 20% el porcentaje de asociados afiliados ",
+      "id": 2
+    },
+    {
+      "process": "Gestión de pedidos",
+      "name": "Aumentar en un 15% el porcentaje de pedidos generados",
+      "description": "Aumentar en un 15% el porcentaje de pedidos generados",
+      "id": 3
+    },
+    {
+      "process": "Gestión de calidad",
+      "name": "Determinar el porcentaje de corrección a fallos de procesos internos detectados",
+      "description": "Determinar el porcentaje de corrección a fallos de procesos internos detectados",
+      "id": 4
+    }
+  ],
+  "indicators": []
 }
