@@ -2266,6 +2266,11 @@
       "id": 4
     }
   ],
+  "responsible": [
+    "Gerente general",
+    "Área de logística",
+    "Jefe TI"
+  ],
   "ratings": [
     {
       "rating": "Muy alto",
@@ -2291,28 +2296,89 @@
   "objectives": [
     {
       "process": "Investigacion y desarrollo",
-      "name": "Incrementar en un 10% los proyectos de implementación ejecutados",
+      "name": "Superar el 75% de implementaciones semestral",
       "description": "Incrementar en un 10% proyectos de implementación ejecutados",
       "id": 1
     },
     {
       "process": "Alianzas estratégicas",
-      "name": "Aumentar en un 20% el porcentaje de asociados afiliados ",
+      "name": "Superar el 70% de asociados afiliados trimestralmente",
       "description": "Aumentar en un 20% el porcentaje de asociados afiliados ",
       "id": 2
     },
     {
       "process": "Gestión de pedidos",
-      "name": "Aumentar en un 15% el porcentaje de pedidos generados",
+      "name": "Superar el 85% de ordenes de compras generados",
       "description": "Aumentar en un 15% el porcentaje de pedidos generados",
       "id": 3
     },
     {
       "process": "Gestión de calidad",
-      "name": "Determinar el porcentaje de corrección a fallos de procesos internos detectados",
+      "name": "Corregir mas del 85% de fallos en los procesos internos",
       "description": "Determinar el porcentaje de corrección a fallos de procesos internos detectados",
       "id": 4
     }
   ],
-  "indicators": []
+  "indicators": [
+    {
+      "name": "Número de implementaciones semestral",
+      "process": "Investigacion y desarrollo",
+      "Objetivo": "Superar el 75% de implementaciones semestral",
+      "Responsable": "Jefe TI",
+      "Frecuencia": "Semestral",
+      "Base": "75",
+      "Meta": "100",
+      "Malo": "50",
+      "Regular": "60",
+      "Bueno": "75",
+      "Formula": "(Total de solicitudes/Total de solicitudes aprobadas) *100",
+      "Iniciativas": "- Eficiencia de implementaciones.\n- Aumentar implementaciones.",
+      "id": 1
+    },
+    {
+      "name": "Número de nuevas empresas afiliadas al bimestre ",
+      "process": "Alianzas estratégicas",
+      "Objetivo": "Superar el 70% de asociados afiliados trimestralmente",
+      "Responsable": "Gerente general",
+      "Frecuencia": "Trimestral",
+      "Base": "70",
+      "Meta": "80",
+      "Malo": "50",
+      "Regular": "60",
+      "Bueno": "70",
+      "Formula": "(Total de ofertas enviadas/Total de contratos realizados) *100 ",
+      "Iniciativas": "- Aumentar cobertura territorial\n- Aumentar catálogo de productos",
+      "id": 2
+    },
+    {
+      "name": "Número de órdenes de compras generada al mes",
+      "process": "Gestión de pedidos",
+      "Objetivo": "Superar el 85% de ordenes de compras generados",
+      "Responsable": "Área de logística",
+      "Frecuencia": "Mensual",
+      "Base": "85",
+      "Meta": "85",
+      "Malo": "60",
+      "Regular": "70",
+      "Bueno": "85",
+      "Formula": "(Total de pedidos realizados/Total de pedidos confirmados) *100",
+      "Iniciativas": "- Atención al cliente con rapidez\n- Precios competitivos.\n",
+      "id": 3
+    },
+    {
+      "name": "Número de soluciones a fallos bimestral",
+      "process": "Gestión de calidad",
+      "Objetivo": "Corregir mas del 85% de fallos en los procesos internos",
+      "Responsable": "Gerente general",
+      "Frecuencia": "Mensual",
+      "Base": "80",
+      "Meta": "85",
+      "Malo": "50",
+      "Regular": "60",
+      "Bueno": "80",
+      "Formula": "(Total de fallos detectados/Total de fallos solucionados) *100  ",
+      "Iniciativas": "- Elaborar el plan de mejoras ",
+      "id": 4
+    }
+  ]
 }

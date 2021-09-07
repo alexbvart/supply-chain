@@ -2,6 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "@styles/*": ["styles/*"],
       "@hooks/*": ["hooks/*"],
       "@services/*": ["services/*"],
       "@components/*": ["src/components/*"],

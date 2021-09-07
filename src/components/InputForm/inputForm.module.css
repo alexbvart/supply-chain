@@ -11,7 +11,7 @@
   color: var(--txt-active);
 }
 .input_container select{
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; */
   font-family: inherit;
   transition: all 150ms ease;
   outline: none;

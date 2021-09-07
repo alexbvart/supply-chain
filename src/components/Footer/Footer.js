@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import React from 'react';
 import {
 	footer,
@@ -7,10 +8,12 @@ import {
 } from './footer.module.css';
 
 function Footer({ textContent }) {
+	const router = useRouter()
 
 	const cancelForm = (e)=>{
 		e.preventDefault();
 		console.log("cancelar todo");
+		router.back()
 	}
 
 	return (

@@ -97,7 +97,14 @@ button{
   outline: none;
 }
 .main{
-  width: 100%;
+  width: 95%;
+  margin: 0 auto ;
+  height: 100%;
+}
+.main_container{
+  width: 95%;
+  margin: 0 auto ;
+  padding: 3rem 0;
   height: 100%;
 }
 .title_section{

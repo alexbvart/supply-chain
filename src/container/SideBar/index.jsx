@@ -42,6 +42,16 @@ const SideBar = () => {
                                 Customers
                             </Anchor>
                         </li>
+                        <li key="objective">
+                            <Anchor href="/objective/">
+                                Objectives
+                            </Anchor>
+                        </li>
+                        <li key="indicator">
+                            <Anchor href="/indicator/">
+                                Indicators
+                            </Anchor>
+                        </li>
                     </ul>
                 </nav>
             </section>
