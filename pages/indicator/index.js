@@ -45,6 +45,7 @@ const supplier = ({ indicators }) => {
         return orderedRow
     })
     const heading = ["# ", "Procesos", "Indicador ", "Formula", "Objetivo ", "Frecuencia", "Base", "Meta ", "Malo", "Regular ", "Bueno", "Acciones"]
+    
     return (
         <>
             <div className="main main_container">

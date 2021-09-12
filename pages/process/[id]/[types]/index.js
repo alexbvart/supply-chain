@@ -33,10 +33,6 @@ const index = ({processs,process,type,id}) => {
                     <ActivityTrackingDiagram processId={process.id} />
                     :<ProcessCatigorization processId={process.id} theType={theType}/>
                 }
-
-                
-
-                
             </div>
         </>
     );

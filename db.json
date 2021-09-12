@@ -2380,5 +2380,59 @@
       "Iniciativas": "- Elaborar el plan de mejoras ",
       "id": 4
     }
+  ],
+  "strategic-map": [
+    {
+      "processId": "610e55aee91a3d5a64e8104c",
+      "financial": {
+        "class": "GraphLinksModel",
+        "linkKeyProperty": "key",
+        "nodeDataArray": [
+          {
+            "key": -5,
+            "text": "Superar el 75% de implementaciones semestral",
+            "color": "#96E3A3"
+          }
+        ],
+        "linkDataArray": []
+      },
+      "client": {
+        "class": "GraphLinksModel",
+        "linkKeyProperty": "key",
+        "nodeDataArray": [
+          {
+            "key": -6,
+            "text": "Superar el 70% de asociados afiliados trimestralmente",
+            "color": "#FCDDEC"
+          }
+        ],
+        "linkDataArray": []
+      },
+      "processes": {
+        "class": "GraphLinksModel",
+        "linkKeyProperty": "key",
+        "nodeDataArray": [
+          {
+            "key": -7,
+            "text": "Superar el 85% de ordenes de compras generados",
+            "color": "#96E3A3"
+          }
+        ],
+        "linkDataArray": []
+      },
+      "learning": {
+        "class": "GraphLinksModel",
+        "linkKeyProperty": "key",
+        "nodeDataArray": [
+          {
+            "key": -8,
+            "text": "Corregir mas del 85% de fallos en los procesos internos",
+            "color": "#96E3A3"
+          }
+        ],
+        "linkDataArray": []
+      },
+      "id": 1
+    }
   ]
 }

@@ -1,5 +1,6 @@
 
 import DetailSideBar from '../../src/container/DetailSideBar';
+
 import { TabGroup } from '@statikly/funk'
 import {
     main,
@@ -9,7 +10,8 @@ import {
     panel, panel_flex, panel_active, panel_inactive
 } from '@styles/tab.module.css'
 import EnterpriseInfo from '../../src/container/EnterpriseInfo/EnterpriseInfo';
-const supplier = ({ indicators, process }) => {
+import ControlPanel from 'src/container/ControlPanel';
+const supplier = ({ indicators, indicator, process }) => {
 
     return (
         <>
@@ -45,6 +47,7 @@ const supplier = ({ indicators, process }) => {
                             inactiveClassName={panel_inactive}
                         >
                             <div className="main-full">
+                            <ControlPanel indicator={indicator} />
                             </div>
                         </TabGroup.TabPanel>
                         <TabGroup.TabPanel
@@ -67,6 +70,7 @@ export default supplier;
 
 export async function getServerSideProps(context) {
     const { params } = context;
+    const { id } = params;
 
     const SERVER_HOST = "http://localhost:3001";
     const ENTERPRISE_ID = 2;
@@ -75,11 +79,14 @@ export async function getServerSideProps(context) {
         .then(res => res.json())
     const process = await fetch(`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/process`)
         .then(res => res.json())
+    const indicator = await fetch(`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/indicators/?id=${id}`)
+        .then(res => res.json())
 
     return {
         props: {
             indicators: indicators,
             process: process,
+            indicator:indicator[0],
         }
     };
 

@@ -1,14 +1,24 @@
 import React, {useState} from 'react';
-import ProcessRegisterForm from '../../src/components/RegisterForm/ProcessRegisterForm';
-
+import { Input } from '@components/InputForm/Input';
 import DetailSideBar from '../../src/container/DetailSideBar';
+import Form from '@components/RegisterForm/Form';
+import Footer from '@components/Footer/Footer';
+import post from '@services/post'
+
 const process = ({processs}) => {
+
+    const onSubmit = async (data) => {
+        const res = await post({"src":"process","data":data})
+        console.log(res)
+    }
+
     return ( 
         <>
             <DetailSideBar title="processs" data={processs}></DetailSideBar>
-            <ProcessRegisterForm 
-                title="Register new process"
-            />
+            <Form onSubmit={onSubmit} title="Registra un nuevo proceso">
+                <Input name="name" label="Nombre del proceso" placeholder="Nombre" span="6" />
+                <Footer />
+            </Form>
         </>
     );
 }
