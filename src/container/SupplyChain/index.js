@@ -6,8 +6,8 @@ import Mermaid from '../../components/Mermeid';
 import PlusButton from '../../components/PlusButton/PlusButton';
 
 
-import updateById from '../../../utils/updateById';
-import getById from '../../../utils/getById';
+import updateById from '../../../module/updateById';
+import getById from '../../../module/getById';
 import { supply_chain, float_tr, float_br, plus_button } from './businnes.module.css'
 import { useRef, useEffect,useState } from 'react';
 

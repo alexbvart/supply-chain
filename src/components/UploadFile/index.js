@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import swal from 'sweetalert';
-import post from '../../../utils/post';
+import post from '../../../module/post';
 
 import {
 	upload,

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 // import FilesLogTableRow from '../FilesLogTableRow/index'
 import dynamic from 'next/dynamic';
 import { log, log_table, top_row } from './styles.module.css';
-import getAll from '../../../utils/getAll';
+import getAll from '../../../module/getAll';
 import FilesLogTableRow from '../FilesLogTableRow';
 
 const storage = typeof window !== 'undefined' ? localStorage : null;

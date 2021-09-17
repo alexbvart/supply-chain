@@ -1,5 +1,5 @@
 import React from 'react'
-import deleteById from '../../../utils/deleteById'
+import deleteById from '../../../module/deleteById'
 import swal from 'sweetalert';
 import {
   row,

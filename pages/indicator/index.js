@@ -3,7 +3,9 @@ import React, { useState } from 'react';
 import Link from 'next/link'
 import DetailSideBar from '../../src/container/DetailSideBar';
 import EnterpriseInfo from '../../src/container/EnterpriseInfo/EnterpriseInfo';
+import OptionCRUD from '@components/DropDown/optionsCRUD';
 import Button from '@components/Buton';
+
 
 const supplier = ({ indicators }) => {
 /*     const orderedRows = indicators.map((i) => {
@@ -26,7 +28,7 @@ const supplier = ({ indicators }) => {
     }) 
     const heading = ["# ", "Procesos", "Indicador ", "Formula", "Objetivo ", "Frecuencia", "Responsable", "Base", "Meta ", "Malo", "Regular ", "Bueno","Iniciativas", "Acciones"]
     */
-   
+
     const orderedRows = indicators.map((i) => {
         const orderedRow = {
             "id" : <Link href={`/indicator/${i.id}`}><a>{i.id}</a></Link>,
@@ -40,7 +42,7 @@ const supplier = ({ indicators }) => {
             "Malo" : i.Malo,
             "Regular" : i.Regular,
             "Bueno" : i.Bueno,
-            "action": <Link href={`/indicator/${i.id}`}><a> <Button>Visitar</Button></a></Link>
+            "action": <OptionCRUD />
         }
         return orderedRow
     })

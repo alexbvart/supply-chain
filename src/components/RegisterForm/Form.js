@@ -10,9 +10,7 @@ import {
 } from './registerForm.module.css';
 
 const Form = ({ defaultValues, children, onSubmit, title }) => {
-
   const { handleSubmit, register } = useForm({ defaultValues });
-
   return (
     <div className={wrapper}>
 

@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
 import Link from 'next/link'
 import Table from '@components/Table';
+import Button from '@components/Buton';
 
 const SpeedometerCs = dynamic(() => import('react-d3-speedometer'), { ssr: false });
 

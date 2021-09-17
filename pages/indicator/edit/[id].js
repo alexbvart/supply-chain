@@ -1,24 +1,25 @@
-import React, { useState } from 'react';
-import Form from '@components/RegisterForm/Form'
-import { useForm } from "react-hook-form";
-import { Input, Select, TextArea } from '@components/InputForm/Input';
-import DetailSideBar from '../../src/container/DetailSideBar';
-import Footer from '@components/Footer/Footer';
-import post from '@services/post'
+import Footer from "@components/Footer/Footer";
+import { Input, Select, TextArea } from "@components/InputForm/Input";
+import Form from "@components/RegisterForm/Form";
+import { useRouter } from 'next/router'
 
-const newIndicator  = ({ indicators, objectives, responsible,process }) => {
+import DetailSideBar from "src/container/DetailSideBar";
+import putRequest from "module/put";
 
-    const onSubmit = async (data,e) => {
-        const res = await post({ src: "indicators", "data": data })
-        if(res.status="200") e.target.reset()
+const indicatorEdit = ({ indicators,indicator, objectives, responsible }) => {
+    const router = useRouter()
+    const onSubmit = async (data) => {
+        const res = await putRequest({ "src": "indicators", "pup": data , "id":indicator.id})
+        if(res.status="200") router.push("/indicator")
     }
     const objectivesNames = objectives.map((p) => p.name)
 
     return (
         <>
-            <DetailSideBar title="Indicators" data={indicators}></DetailSideBar>
+            <DetailSideBar title="Indicators" data={indicators} defaultValues={indicator}></DetailSideBar>
 
-            <Form onSubmit={onSubmit} title="Registra Indicadores">
+            <section >
+                <Form onSubmit={onSubmit} title="Edita este indicador" defaultValues={indicator}>
                 <Input name="name" label="Nombre del indicador" span="6" />
                 <Select name="Objetivo" span="3" options={objectivesNames} />
                 <Select name="Responsable" span="3" options={responsible} />
@@ -32,10 +33,11 @@ const newIndicator  = ({ indicators, objectives, responsible,process }) => {
                 <TextArea name="Iniciativas" span="6" />
                 <Footer />
             </Form>
+            </section>
         </>
     );
 }
-export default newIndicator;
+export default indicatorEdit;
 
 export async function getServerSideProps(context) {
     const { params } = context;
@@ -45,9 +47,9 @@ export async function getServerSideProps(context) {
 
     const objectives = await fetch(`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/objectives`)
         .then(res => res.json())
-    const process = await fetch(`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/process`)
-        .then(res => res.json())
     const indicators = await fetch(`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/indicators`)
+        .then(res => res.json())
+    const indicator = await fetch(`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/indicators/?id=${params.id}`)
         .then(res => res.json())
     const responsible = await fetch(`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/responsible`)
         .then(res => res.json())
@@ -55,7 +57,7 @@ export async function getServerSideProps(context) {
     return {
         props: {
             objectives: objectives,
-            process: process,
+            indicator: indicator[0],
             indicators: indicators,
             responsible: responsible,
         }

@@ -10,11 +10,11 @@ import {
 } from '../../components/InputForm/inputForm.module.css'
 import { form,form_padding,FormRow, inputs, inputs__time,footer } from './desing.module.css'
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
-import post from '../../../utils/post';
-import get from '../../../utils/getAll';
+import post from '../../../module/post';
+import get from '../../../module/getAll';
 import Button from '../../components/Buton';
 import CtaButton from '../../components/CtaButton';
-import put from '../../../utils/put';
+import put from '../../../module/put';
 import swal from 'sweetalert';
 
 const ActivityTrackingDesing = ({ processId }) => {

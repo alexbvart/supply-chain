@@ -2,7 +2,7 @@ import Link from 'next/link'
 import {anchor} from './anchor.module.css'
 const Anchor = ({href,children, className=false}) => {
 
-    const styles = className ? `${className} ${anchor}` : {anchor}
+    const styles = className ? `${className} ${anchor}` : anchor
     return ( 
         <>
             <div className={styles}>

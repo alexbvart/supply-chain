@@ -2322,7 +2322,6 @@
   "indicators": [
     {
       "name": "Número de implementaciones semestral",
-      "process": "Investigacion y desarrollo",
       "Objetivo": "Superar el 75% de implementaciones semestral",
       "Responsable": "Jefe TI",
       "Frecuencia": "Semestral",
@@ -2333,6 +2332,7 @@
       "Bueno": "75",
       "Formula": "(Total de solicitudes/Total de solicitudes aprobadas) *100",
       "Iniciativas": "- Eficiencia de implementaciones.\n- Aumentar implementaciones.",
+      "process": "Investigacion y desarrollo",
       "id": 1
     },
     {
@@ -2379,6 +2379,20 @@
       "Formula": "(Total de fallos detectados/Total de fallos solucionados) *100  ",
       "Iniciativas": "- Elaborar el plan de mejoras ",
       "id": 4
+    },
+    {
+      "name": "Número de implementaciones ñ",
+      "Objetivo": "Superar el 85% de ordenes de compras generados",
+      "Responsable": "Jefe TI",
+      "Frecuencia": "Semanal",
+      "Base": "70",
+      "Meta": "90",
+      "Malo": "50",
+      "Regular": "60",
+      "Bueno": "70",
+      "Formula": "(Total de solicitudes/Total de solicitudes aprobadas) *100",
+      "Iniciativas": "",
+      "id": 5
     }
   ],
   "strategic-map": [

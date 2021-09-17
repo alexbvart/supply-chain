@@ -15,7 +15,7 @@ const supplier = ({ indicators, indicator, process }) => {
 
     return (
         <>
-            <DetailSideBar title="Indicators" data={indicators}></DetailSideBar>
+            {/* <DetailSideBar title="Indicators" data={indicators}></DetailSideBar> */}
             <TabGroup numTabs={3} direction={TabGroup.direction.HORIZONTAL}>
                 <div className={tab_group}>
                     <TabGroup.TabList>

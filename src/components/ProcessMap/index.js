@@ -4,8 +4,8 @@ import ReactToPrint from 'react-to-print';
 import processS from './process.module.css'
 import * as go from 'gojs';
 import { ReactDiagram, ReactPalette } from 'gojs-react';
-import post from '../../../utils/post';
-import put from '../../../utils/put';
+import post from '../../../module/post';
+import put from '../../../module/put';
 import Button from '../Buton';
 import CtaButton from '../CtaButton';
 const ProcessMap = ({ processmap, processs, bu }) => {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Table from '../../components/Table';
-import get from '../../../utils/getAll';
+import get from '../../../module/getAll';
 import Summary from '../../components/Summary';
 import { grid_container, summary_grid } from './static.module.css'
 

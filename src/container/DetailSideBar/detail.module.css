@@ -29,6 +29,7 @@
     padding-bottom: 48px;
     overflow-y: scroll;    
     scroll-snap-type: x mandatory;
+    grid-auto-rows: minmax(52px, 70px);
 }
 .sidebar nav ul::-webkit-scrollbar {
     width: 0;

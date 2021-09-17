@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Footer from '../Footer/Footer';
 import axios from 'axios';
-import capitalizeFirstLetterOfAString from '../../../utils/capitalizeFirstLetterOfAString';
+import capitalizeFirstLetterOfAString from '../../../module/capitalizeFirstLetterOfAString';
 
 import {
 	container,
