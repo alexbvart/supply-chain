@@ -42,7 +42,7 @@ const supplier = ({ indicators }) => {
             "Malo" : i.Malo,
             "Regular" : i.Regular,
             "Bueno" : i.Bueno,
-            "action": <OptionCRUD />
+            "action": <OptionCRUD src="indicator" id={i.id} />
         }
         return orderedRow
     })

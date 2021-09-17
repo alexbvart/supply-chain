@@ -98,6 +98,8 @@ const SideBar = ({sizeSideBar,isExpand,setIsExpand}) => {
                     background: rgba(37, 35, 46, 0.2);
                     backdrop-filter: blur(20px);
                     -webkit-backdrop-filter: blur(20px);
+                    position: sticky;
+                    top:0;
                 }
                 span{
                     display: ${isExpand ? "block" :"none"}

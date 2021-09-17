@@ -2,11 +2,13 @@
     display: grid;
     grid-template-columns: 112px 1fr;
     height: 100vh;
+    position: relative;
 }
 
 .main{
     width: 100% ;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
     display: flex;
     position: relative;
 }
