@@ -75,11 +75,11 @@ export async function getServerSideProps(context) {
     const SERVER_HOST = "http://localhost:3001";
     const ENTERPRISE_ID = 2;
 
-    const indicators = await fetch(`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/indicators`)
+    const indicators = await fetch(`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/indicator`)
         .then(res => res.json())
     const process = await fetch(`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/process`)
         .then(res => res.json())
-    const indicator = await fetch(`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/indicators/?id=${id}`)
+    const indicator = await fetch(`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/indicator/?id=${id}`)
         .then(res => res.json())
 
     return {

@@ -1,15 +1,26 @@
 
-import DetailSideBar from '../../src/container/DetailSideBar';
-import EnterpriseInfo from '../../src/container/EnterpriseInfo/EnterpriseInfo';
-const supplier = ({indicators,objectives,process}) => {
+import Table from '@components/Table';
+
+const ObjetiveID = ({objectives}) => {
+    const orderedRow = {
+        "id": <Link href={`/objectives/${objectives.id}`}><a>{objectives.id}</a></Link>,
+        "process": objectives.process,
+        "name": objectives.name,
+        "description": objectives.description
+    }
+    const heading = ["# ", "Procesos", "Objetivo ", "Descripción"]
 
     return ( 
         <>
-
+            <Table
+                tableData={[orderedRow]}
+                headingColumns={heading}
+                title="Objetivo"
+            />
         </>
     );
 }
-export default supplier;
+export default ObjetiveID;
 
 export async function getServerSideProps(context) {
     const { params } = context;

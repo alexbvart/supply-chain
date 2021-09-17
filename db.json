@@ -2293,7 +2293,7 @@
       "points": "1"
     }
   ],
-  "objectives": [
+  "objective": [
     {
       "process": "Investigacion y desarrollo",
       "name": "Superar el 75% de implementaciones semestral",
@@ -2319,7 +2319,7 @@
       "id": 4
     }
   ],
-  "indicators": [
+  "indicator": [
     {
       "name": "Número de implementaciones semestral",
       "Objetivo": "Superar el 75% de implementaciones semestral",
@@ -2367,32 +2367,32 @@
     },
     {
       "name": "Número de soluciones a fallos bimestral",
-      "process": "Gestión de calidad",
       "Objetivo": "Corregir mas del 85% de fallos en los procesos internos",
       "Responsable": "Gerente general",
       "Frecuencia": "Mensual",
       "Base": "80",
-      "Meta": "85",
+      "Meta": "86",
       "Malo": "50",
       "Regular": "60",
       "Bueno": "80",
       "Formula": "(Total de fallos detectados/Total de fallos solucionados) *100  ",
       "Iniciativas": "- Elaborar el plan de mejoras ",
+      "process": "Gestión de calidad",
       "id": 4
     },
     {
-      "name": "Número de implementaciones ñ",
-      "Objetivo": "Superar el 85% de ordenes de compras generados",
-      "Responsable": "Jefe TI",
-      "Frecuencia": "Semanal",
-      "Base": "70",
-      "Meta": "90",
+      "name": "Número de implementaciones semestral",
+      "Objetivo": "Corregir mas del 85% de fallos en los procesos internos",
+      "Responsable": "Área de logística",
+      "Frecuencia": "Mensual",
+      "Base": "85",
+      "Meta": "8",
       "Malo": "50",
       "Regular": "60",
       "Bueno": "70",
-      "Formula": "(Total de solicitudes/Total de solicitudes aprobadas) *100",
+      "Formula": "Total/aprobados",
       "Iniciativas": "",
-      "id": 5
+      "id": 6
     }
   ],
   "strategic-map": [

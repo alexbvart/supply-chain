@@ -7,7 +7,7 @@ import OptionCRUD from '@components/DropDown/optionsCRUD';
 import Button from '@components/Buton';
 
 
-const supplier = ({ indicators }) => {
+const indicator = ({ indicators }) => {
 /*     const orderedRows = indicators.map((i) => {
         const orderedRow = {
             "id" : i.id,
@@ -65,7 +65,7 @@ const supplier = ({ indicators }) => {
         </>
     );
 }
-export default supplier;
+export default indicator;
 
 export async function getServerSideProps(context) {
     const { params } = context;
@@ -74,7 +74,7 @@ export async function getServerSideProps(context) {
     const SERVER_HOST = "http://localhost:3001";
     const ENTERPRISE_ID = 2;
 
-    const indicators = await fetch(`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/indicators`)
+    const indicators = await fetch(`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/indicator`)
         .then(res => res.json())
 
     return {

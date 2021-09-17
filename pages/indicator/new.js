@@ -9,7 +9,7 @@ import post from '@services/post'
 const newIndicator  = ({ indicators, objectives, responsible,process }) => {
 
     const onSubmit = async (data,e) => {
-        const res = await post({ src: "indicators", "data": data })
+        const res = await post({ src: "indicator", "data": data })
         if(res.status="200") e.target.reset()
     }
     const objectivesNames = objectives.map((p) => p.name)
@@ -43,11 +43,11 @@ export async function getServerSideProps(context) {
     const SERVER_HOST = "http://localhost:3001";
     const ENTERPRISE_ID = 2;
 
-    const objectives = await fetch(`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/objectives`)
+    const objectives = await fetch(`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/objective`)
         .then(res => res.json())
     const process = await fetch(`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/process`)
         .then(res => res.json())
-    const indicators = await fetch(`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/indicators`)
+    const indicators = await fetch(`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/indicator`)
         .then(res => res.json())
     const responsible = await fetch(`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/responsible`)
         .then(res => res.json())

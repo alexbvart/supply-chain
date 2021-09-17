@@ -9,16 +9,15 @@ import post from '@services/post'
 
 const newSupplier = ({ objectives,process }) => {
 
-    const onSubmit = async (data) => {
-        const res = await post({src:"objectives","data":data})
-        console.log("res",res);
+    const onSubmit = async (data,e) => {
+        const res = await post({src:"objective","data":data})
+        if(res.status="201") e.target.reset()
     }
     const processNames = process.map((p)=>p.name)
 
     return (
         <>
-            <DetailSideBar title="Objectives" data={objectives}></DetailSideBar>
-            <Form onSubmit={onSubmit} title="Registra Indicadores">
+            <Form onSubmit={onSubmit} title="Registra objetivos">
                 <Select name="process" span="6"  options={processNames} span="6" />
                 <Input name="name" span="6"  />
                 <TextArea name="description" span="6" />
@@ -35,7 +34,7 @@ export async function getServerSideProps(context) {
     const SERVER_HOST = "http://localhost:3001";
     const ENTERPRISE_ID = 2;
 
-    const objectives = await fetch(`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/objectives`)
+    const objectives = await fetch(`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/objective`)
     .then(res => res.json())
     const process = await fetch(`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/process`)
     .then(res => res.json())

@@ -10,7 +10,6 @@ const SpeedometerCs = dynamic(() => import('react-d3-speedometer'), { ssr: false
 
 const ControlPanel = ({ indicator }) => {
 
-    console.log(indicator)
     const orderedRow = {
         "id": <Link href={`/indicator/${indicator.id}`}><a>{indicator.id}</a></Link>,
         "process": indicator.process,
