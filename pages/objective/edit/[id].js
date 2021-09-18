@@ -6,17 +6,17 @@ import { useRouter } from 'next/router'
 import DetailSideBar from "src/container/DetailSideBar";
 import putRequest from "module/put";
 
-const indicatorEdit = ({ objectives,objective, process }) => {
+const objectivesEdit = ({ objectives,objective, process }) => {
     const router = useRouter()
     const onSubmit = async (data) => {
-        const res = await putRequest({ "src": "objective", "pup": data , "id":indicator.id})
+        const res = await putRequest({ "src": "objective", "pup": data , "id":objective.id})
         if(res.status="200") router.push("/objective")
     }
     const processNames = process.map((p)=>p.name)
 
     return (
         <>
-            <DetailSideBar title="Indicators" data={objectives}></DetailSideBar>
+            <DetailSideBar title="Objectives" data={objectives}></DetailSideBar>
 
             <section >
             <Form onSubmit={onSubmit} title="Actualiza el objetivo"  defaultValues={objective}>
@@ -29,7 +29,7 @@ const indicatorEdit = ({ objectives,objective, process }) => {
         </>
     );
 }
-export default indicatorEdit;
+export default objectivesEdit;
 
 export async function getServerSideProps(context) {
     const { params } = context;
