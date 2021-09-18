@@ -2296,25 +2296,25 @@
   "objective": [
     {
       "process": "Investigacion y desarrollo",
-      "name": "Superar el 75% de implementaciones semestral",
+      "name": "Eficiencia de implementaciones",
       "description": "Incrementar en un 10% proyectos de implementación ejecutados",
       "id": 1
     },
     {
       "process": "Alianzas estratégicas",
-      "name": "Superar el 70% de asociados afiliados trimestralmente",
-      "description": "Aumentar en un 20% el porcentaje de asociados afiliados ",
+      "name": "Eficiencia de asociados",
+      "description": "Superar el 70% de asociados afiliados trimestralmente ",
       "id": 2
     },
     {
       "process": "Gestión de pedidos",
-      "name": "Superar el 85% de ordenes de compras generados",
+      "name": "Eficiencia de pedidos",
       "description": "Aumentar en un 15% el porcentaje de pedidos generados",
       "id": 3
     },
     {
       "process": "Gestión de calidad",
-      "name": "Corregir mas del 85% de fallos en los procesos internos",
+      "name": "Eficiencia de calidad",
       "description": "Determinar el porcentaje de corrección a fallos de procesos internos detectados",
       "id": 4
     }
@@ -2379,20 +2379,6 @@
       "Iniciativas": "- Elaborar el plan de mejoras ",
       "process": "Gestión de calidad",
       "id": 4
-    },
-    {
-      "name": "Número de implementaciones semestral",
-      "Objetivo": "Corregir mas del 85% de fallos en los procesos internos",
-      "Responsable": "Área de logística",
-      "Frecuencia": "Mensual",
-      "Base": "85",
-      "Meta": "8",
-      "Malo": "50",
-      "Regular": "60",
-      "Bueno": "70",
-      "Formula": "Total/aprobados",
-      "Iniciativas": "",
-      "id": 6
     }
   ],
   "strategic-map": [
@@ -2447,6 +2433,16 @@
         "linkDataArray": []
       },
       "id": 1
+    }
+  ],
+  "sourcedata":[
+    {
+      "id":1,
+      "indicatorId": 1,
+      "responsible": "Jefe TI",
+      "supplier": 1,
+      "date": "3333",
+      "status":true
     }
   ]
 }

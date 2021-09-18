@@ -24,7 +24,7 @@ const process = ({ process, processs, strategicmap, objectives, resolvedUrl, id 
     return (
         <>
             {/* <DetailSideBar title="processs" data={processs}></DetailSideBar> */}
-            <TabGroup numTabs={3} direction={TabGroup.direction.HORIZONTAL}>
+            <TabGroup numTabs={2} direction={TabGroup.direction.HORIZONTAL}>
                 <div className={tab_group}>
                     <TabGroup.TabList>
                         <TabGroup.Tab
@@ -78,7 +78,7 @@ export async function getServerSideProps(context) {
     const SERVER_HOST_ = "http://localhost:3001";
     const ENTERPRISE_ID = 2;
 
-    const objectives = await fetch(`${SERVER_HOST_}/enterprise/${ENTERPRISE_ID}/objectives`)
+    const objectives = await fetch(`${SERVER_HOST_}/enterprise/${ENTERPRISE_ID}/objective`)
         .then(res => res.json())
     const strategicmap = await fetch(`${SERVER_HOST_}/strategic-map?processId=${id}`).then((res) => res.json());
 

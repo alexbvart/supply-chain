@@ -11,12 +11,13 @@ import {
 } from '@styles/tab.module.css'
 import EnterpriseInfo from '../../src/container/EnterpriseInfo/EnterpriseInfo';
 import ControlPanel from 'src/container/ControlPanel';
-const supplier = ({ indicators, indicator, process }) => {
+import Datafuente from 'src/container/Datafuente';
+const supplier = ({ indicators, indicator, process,sourcedata }) => {
 
     return (
         <>
             {/* <DetailSideBar title="Indicators" data={indicators}></DetailSideBar> */}
-            <TabGroup numTabs={3} direction={TabGroup.direction.HORIZONTAL}>
+            <TabGroup numTabs={2} direction={TabGroup.direction.HORIZONTAL}>
                 <div className={tab_group}>
                     <TabGroup.TabList>
                         <TabGroup.Tab
@@ -51,13 +52,13 @@ const supplier = ({ indicators, indicator, process }) => {
                             </div>
                         </TabGroup.TabPanel>
                         <TabGroup.TabPanel
-                            index={2}
+                            index={1}
                             className={panel}
                             activeClassName={panel_active}
                             inactiveClassName={panel_inactive}
                         >
                             <div className="main-full">
-
+                                <Datafuente sourcedata={sourcedata} indicator={indicator}/>
                             </div>
                         </TabGroup.TabPanel>
                     </section>
@@ -81,12 +82,14 @@ export async function getServerSideProps(context) {
         .then(res => res.json())
     const indicator = await fetch(`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/indicator/?id=${id}`)
         .then(res => res.json())
-
+    const sourcedata = await fetch(`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/sourcedata/?indicatorId=${id}`)
+        .then(res => res.json())
     return {
         props: {
             indicators: indicators,
             process: process,
             indicator:indicator[0],
+            sourcedata:sourcedata
         }
     };
 
