@@ -75,7 +75,7 @@
     },
     {
       "DNI": "71602398",
-      "FULL_NAME": "Loayza Hernandez Jose Luis",
+      "COMPANY_NAME": "Loayza Hernandez Jose Luis",
       "TELEPHONE": "932359499",
       "ADDRESS": "Cal. Nestor Martos Mza. a Lote. 30",
       "LEGAL_PERSON": false,
@@ -2321,10 +2321,10 @@
   ],
   "indicator": [
     {
-      "name": "Número de implementaciones semestral",
+      "name": "Número de implementaciones mensual",
       "Objetivo": "Superar el 75% de implementaciones semestral",
       "Responsable": "Jefe TI",
-      "Frecuencia": "Semestral",
+      "Frecuencia": "Mensual",
       "Base": "75",
       "Meta": "100",
       "Malo": "50",
@@ -2336,11 +2336,11 @@
       "id": 1
     },
     {
-      "name": "Número de nuevas empresas afiliadas al bimestre ",
+      "name": "Número de nuevas empresas afiliadas al mes ",
       "process": "Alianzas estratégicas",
       "Objetivo": "Superar el 70% de asociados afiliados trimestralmente",
       "Responsable": "Gerente general",
-      "Frecuencia": "Trimestral",
+      "Frecuencia": "Mensual",
       "Base": "70",
       "Meta": "80",
       "Malo": "50",
@@ -2366,7 +2366,7 @@
       "id": 3
     },
     {
-      "name": "Número de soluciones a fallos bimestral",
+      "name": "Número de soluciones a fallos mensual",
       "Objetivo": "Corregir mas del 85% de fallos en los procesos internos",
       "Responsable": "Gerente general",
       "Frecuencia": "Mensual",
@@ -2435,14 +2435,190 @@
       "id": 1
     }
   ],
-  "sourcedata":[
+  "sourcedataindicator": [
     {
-      "id":1,
-      "indicatorId": 1,
+      "indicatorId": "3",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-12",
+      "status": "true",
+      "id": 2
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-12",
+      "status": "true",
+      "id": 3
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-13",
+      "status": "true",
+      "id": 4
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-14",
+      "status": "true",
+      "id": 5
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-15",
+      "status": "true",
+      "id": 6
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "SCANIA SERVICES DEL PERU S.A",
+      "date": "2021-09-12",
+      "status": "true",
+      "id": 7
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "IMPORTACIONES NAKAMINE E.I.R.L.",
+      "date": "2021-09-12",
+      "status": "false",
+      "id": 8
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "IMPORTACIONES NAKAMINE E.I.R.L.",
+      "date": "2021-09-16",
+      "status": "false",
+      "id": 9
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "REPSOL COMERCIAL SAC",
+      "date": "2021-09-17",
+      "status": "false",
+      "id": 10
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "MARCO PERUANA SA",
+      "date": "2021-09-19",
+      "status": "true",
+      "id": 11
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "MARCO PERUANA SA",
+      "date": "2021-09-05",
+      "status": "true",
+      "id": 12
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "MARCO PERUANA SA",
+      "date": "2021-09-09",
+      "status": "true",
+      "id": 13
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "Kinedyne LLC",
+      "date": "2021-09-09",
+      "status": "true",
+      "id": 14
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "Kinedyne LLC",
+      "date": "2021-09-11",
+      "status": "true",
+      "id": 15
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "IMPLEMENTOS PERU S.A.C.",
+      "date": "2021-09-11",
+      "status": "true",
+      "id": 16
+    },
+    {
+      "indicatorId": "1",
       "responsible": "Jefe TI",
-      "supplier": 1,
-      "date": "3333",
-      "status":true
+      "supplier": "IMPLEMENTOS PERU S.A.C.",
+      "date": "2021-09-11",
+      "status": "true",
+      "id": 17
+    },
+    {
+      "indicatorId": "1",
+      "responsible": "Jefe TI",
+      "supplier": "IMPLEMENTOS PERU S.A.C.",
+      "date": "2021-09-03",
+      "status": "true",
+      "id": 18
+    },
+    {
+      "indicatorId": "1",
+      "responsible": "Jefe TI",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-04",
+      "status": "true",
+      "id": 19
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-04",
+      "status": "true",
+      "id": 20
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-04",
+      "status": "true",
+      "id": 21
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-02",
+      "status": "true",
+      "id": 22
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-01",
+      "status": "true",
+      "id": 23
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-18",
+      "status": "true",
+      "id": 24
     }
   ]
 }

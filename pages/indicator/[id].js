@@ -82,7 +82,7 @@ export async function getServerSideProps(context) {
         .then(res => res.json())
     const indicator = await fetch(`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/indicator/?id=${id}`)
         .then(res => res.json())
-    const sourcedata = await fetch(`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/sourcedata/?indicatorId=${id}`)
+    const sourcedata = await fetch(`${SERVER_HOST}/enterprise/${ENTERPRISE_ID}/sourcedataindicator/?indicatorId=${id}`)
         .then(res => res.json())
     return {
         props: {
