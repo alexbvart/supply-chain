@@ -58,3 +58,18 @@ export function Select({ register, options, name, label = name, span = "3", plac
 
     );
 }
+export function SelectKeyValue({ register, options, name, label = name, span = "3", placeholder = label, className = "", ...rest  }) {
+    return (
+        <article className={`${input_container} ${spanGrid[span]} ${className}`}>
+            <label>{label}</label>
+            <select {...register(name)} {...rest} className={input}>
+                {options.map(({key,value},index) => (
+                    <option key={index} value={key}>
+                        {value}
+                    </option>
+                ))}
+            </select>
+        </article>
+
+    );
+}
