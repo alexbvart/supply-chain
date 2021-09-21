@@ -9,6 +9,8 @@ import post from '../../../module/post';
 import put from '../../../module/put';
 import Button from '../Buton';
 import CtaButton from '../CtaButton';
+import {flex_beetween} from './process.module.css'
+
 const StrategicMap = ({ strategicmap, process, objectives }) => {
     console.log({ process })
     const diagramExportRef = useRef(null)
@@ -325,7 +327,11 @@ const StrategicMap = ({ strategicmap, process, objectives }) => {
 
     return (
         <>
-            <h1>Process map </h1>
+            <div className={flex_beetween}>
+            <h1>Strategic map </h1>
+            <h2>Objectives</h2>
+            </div>
+
             <br />
             <section className={processS.process} ref={diagramExportRef}>
 
@@ -333,7 +339,7 @@ const StrategicMap = ({ strategicmap, process, objectives }) => {
                     <h2>Mapa estratégico de {process.name}</h2>
                 </div> */}
                 <div className={processS.process_item}>
-                    <h3 className={processS.title}>Management processes</h3>
+                    <h3 className={processS.title}>FINANCIERA</h3>
                     <ReactDiagram
                         ref={diagramFINANCIALRef}
                         initDiagram={initDiagram}
@@ -344,8 +350,7 @@ const StrategicMap = ({ strategicmap, process, objectives }) => {
                     />
                 </div>
                 <div className={processS.process_item}>
-                    <h3 className={processS.title}>Management processes</h3>
-
+                    <h3 className={processS.title}>CLIENTE</h3>
                     <ReactDiagram
                         ref={diagramCLIENTRef}
                         initDiagram={initDiagram}
@@ -356,8 +361,7 @@ const StrategicMap = ({ strategicmap, process, objectives }) => {
                     />
                 </div>
                 <div className={processS.process_item}>
-                    <h3 className={processS.title}>Management processes</h3>
-
+                    <h3 className={processS.title}>PROCESOS</h3>
                     <ReactDiagram
                         ref={diagramPROCESSESRef}
                         initDiagram={initDiagram}
@@ -368,8 +372,7 @@ const StrategicMap = ({ strategicmap, process, objectives }) => {
                     />
                 </div>
                 <div className={processS.process_item}>
-                    <h3 className={processS.title}>Management processes</h3>
-
+                    <h3 className={processS.title}>APRENDIZAJE</h3>
                     <ReactDiagram
                         ref={diagramLEARNINGRef}
                         initDiagram={initDiagram}

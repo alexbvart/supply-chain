@@ -2,6 +2,11 @@
     width: 100%;
     height: calc(100% - 24px);
 }
+.flex_beetween{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
 
 .process{
     width: 100%;
