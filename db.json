@@ -2619,6 +2619,1485 @@
       "date": "2021-09-18",
       "status": "true",
       "id": 24
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "DISTRIBUCIONES DIESEL PERU S.A.C.",
+      "date": "2021-08-20",
+      "status": "true",
+      "id": 25
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "DISTRIBUCIONES DIESEL PERU S.A.C.",
+      "date": "2021-08-13",
+      "status": "true",
+      "id": 26
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "DISTRIBUCIONES DIESEL PERU S.A.C.",
+      "date": "2021-08-13",
+      "status": "true",
+      "id": 27
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "IMPORTACIONES NAKAMINE E.I.R.L.",
+      "date": "2021-08-13",
+      "status": "true",
+      "id": 28
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "IMPORTACIONES NAKAMINE E.I.R.L.",
+      "date": "2021-08-12",
+      "status": "true",
+      "id": 29
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "REPSOL COMERCIAL SAC",
+      "date": "2021-08-12",
+      "status": "true",
+      "id": 30
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "REPSOL COMERCIAL SAC",
+      "date": "2021-08-11",
+      "status": "true",
+      "id": 31
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "IMPLEMENTOS PERU S.A.C.",
+      "date": "2021-08-11",
+      "status": "true",
+      "id": 32
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "IMPLEMENTOS PERU S.A.C.",
+      "date": "2021-08-10",
+      "status": "false",
+      "id": 33
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "REPSOL COMERCIAL SAC",
+      "date": "2021-08-10",
+      "status": "true",
+      "id": 34
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "REPSOL COMERCIAL SAC",
+      "date": "2021-08-09",
+      "status": "true",
+      "id": 35
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-08-09",
+      "status": "false",
+      "id": 36
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-08-08",
+      "status": "false",
+      "id": 37
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "Kinedyne LLC",
+      "date": "2021-08-07",
+      "status": "true",
+      "id": 38
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "Kinedyne LLC",
+      "date": "2021-08-06",
+      "status": "true",
+      "id": 39
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "Loayza Hernandez Jose Luis",
+      "date": "2021-08-06",
+      "status": "true",
+      "id": 40
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "Loayza Hernandez Jose Luis",
+      "date": "2021-08-05",
+      "status": "true",
+      "id": 41
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "Loayza Hernandez Jose Luis",
+      "date": "2021-08-04",
+      "status": "true",
+      "id": 42
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "Loayza Hernandez Jose Luis",
+      "date": "2021-08-01",
+      "status": "true",
+      "id": 43
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "SCANIA SERVICES DEL PERU S.A",
+      "date": "2021-08-01",
+      "status": "true",
+      "id": 44
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "REPSOL COMERCIAL SAC",
+      "date": "2021-08-01",
+      "status": "true",
+      "id": 45
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "REPSOL COMERCIAL SAC",
+      "date": "2021-07-01",
+      "status": "true",
+      "id": 46
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "REPSOL COMERCIAL SAC",
+      "date": "2021-07-02",
+      "status": "true",
+      "id": 47
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "REPSOL COMERCIAL SAC",
+      "date": "2021-07-02",
+      "status": "true",
+      "id": 48
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "REPSOL COMERCIAL SAC",
+      "date": "2021-07-02",
+      "status": "true",
+      "id": 49
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "REPSOL COMERCIAL SAC",
+      "date": "2021-07-02",
+      "status": "true",
+      "id": 50
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "REPSOL COMERCIAL SAC",
+      "date": "2021-07-02",
+      "status": "true",
+      "id": 51
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "REPSOL COMERCIAL SAC",
+      "date": "2021-07-02",
+      "status": "true",
+      "id": 52
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "REPSOL COMERCIAL SAC",
+      "date": "2021-07-02",
+      "status": "true",
+      "id": 53
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "REPSOL COMERCIAL SAC",
+      "date": "2021-07-02",
+      "status": "true",
+      "id": 54
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "REPSOL COMERCIAL SAC",
+      "date": "2021-07-02",
+      "status": "true",
+      "id": 55
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "SERVICIOS GENERALES THERMO KING EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA",
+      "date": "2021-07-20",
+      "status": "true",
+      "id": 56
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "SERVICIOS GENERALES THERMO KING EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA",
+      "date": "2021-07-19",
+      "status": "true",
+      "id": 57
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "SERVICIOS GENERALES THERMO KING EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA",
+      "date": "2021-07-18",
+      "status": "true",
+      "id": 58
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "SERVICIOS GENERALES THERMO KING EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA",
+      "date": "2021-07-16",
+      "status": "true",
+      "id": 59
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "SERVICIOS GENERALES THERMO KING EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA",
+      "date": "2021-07-15",
+      "status": "true",
+      "id": 60
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "SERVICIOS GENERALES THERMO KING EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA",
+      "date": "2021-07-14",
+      "status": "true",
+      "id": 61
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "SERVICIOS GENERALES THERMO KING EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA",
+      "date": "2021-07-13",
+      "status": "true",
+      "id": 62
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "SERVICIOS GENERALES THERMO KING EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA",
+      "date": "2021-07-12",
+      "status": "true",
+      "id": 63
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "SERVICIOS GENERALES THERMO KING EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA",
+      "date": "2021-07-11",
+      "status": "true",
+      "id": 64
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-07-10",
+      "status": "true",
+      "id": 65
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "SERVICIOS GENERALES THERMO KING EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA",
+      "date": "2021-07-10",
+      "status": "true",
+      "id": 66
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "IMPLEMENTOS PERU S.A.C.",
+      "date": "2021-07-09",
+      "status": "true",
+      "id": 67
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "IMPLEMENTOS PERU S.A.C.",
+      "date": "2021-07-08",
+      "status": "true",
+      "id": 68
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "DISTRIBUCIONES DIESEL PERU S.A.C.",
+      "date": "2021-07-07",
+      "status": "true",
+      "id": 69
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "DISTRIBUCIONES DIESEL PERU S.A.C.",
+      "date": "2021-07-06",
+      "status": "true",
+      "id": 70
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "SCANIA SERVICES DEL PERU S.A",
+      "date": "2021-07-05",
+      "status": "true",
+      "id": 71
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "SCANIA SERVICES DEL PERU S.A",
+      "date": "2021-07-04",
+      "status": "true",
+      "id": 72
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "SCANIA SERVICES DEL PERU S.A",
+      "date": "2021-07-04",
+      "status": "false",
+      "id": 73
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "IMPLEMENTOS PERU S.A.C.",
+      "date": "2021-07-03",
+      "status": "false",
+      "id": 74
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "SCANIA SERVICES DEL PERU S.A",
+      "date": "2021-06-25",
+      "status": "false",
+      "id": 75
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "REPSOL COMERCIAL SAC",
+      "date": "2021-06-25",
+      "status": "true",
+      "id": 76
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "REPSOL COMERCIAL SAC",
+      "date": "2021-06-24",
+      "status": "true",
+      "id": 77
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "REPSOL COMERCIAL SAC",
+      "date": "2021-06-23",
+      "status": "true",
+      "id": 78
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-06-22",
+      "status": "true",
+      "id": 79
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "MARCO PERUANA SA",
+      "date": "2021-06-22",
+      "status": "true",
+      "id": 80
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-06-21",
+      "status": "true",
+      "id": 81
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "SCANIA SERVICES DEL PERU S.A",
+      "date": "2021-06-20",
+      "status": "true",
+      "id": 82
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "SCANIA SERVICES DEL PERU S.A",
+      "date": "2021-06-19",
+      "status": "true",
+      "id": 83
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "DISTRIBUCIONES DIESEL PERU S.A.C.",
+      "date": "2021-06-18",
+      "status": "true",
+      "id": 84
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "DISTRIBUCIONES DIESEL PERU S.A.C.",
+      "date": "2021-06-17",
+      "status": "true",
+      "id": 85
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "DISTRIBUCIONES DIESEL PERU S.A.C.",
+      "date": "2021-06-16",
+      "status": "false",
+      "id": 86
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "DISTRIBUCIONES DIESEL PERU S.A.C.",
+      "date": "2021-06-14",
+      "status": "true",
+      "id": 87
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "Kinedyne LLC",
+      "date": "2021-06-13",
+      "status": "true",
+      "id": 88
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "IMPLEMENTOS PERU S.A.C.",
+      "date": "2021-06-13",
+      "status": "false",
+      "id": 89
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "IMPLEMENTOS PERU S.A.C.",
+      "date": "2021-06-12",
+      "status": "false",
+      "id": 90
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "IMPLEMENTOS PERU S.A.C.",
+      "date": "2021-06-11",
+      "status": "false",
+      "id": 91
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "MARCO PERUANA SA",
+      "date": "2021-06-10",
+      "status": "false",
+      "id": 92
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "MARCO PERUANA SA",
+      "date": "2021-06-09",
+      "status": "false",
+      "id": 93
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "SCANIA SERVICES DEL PERU S.A",
+      "date": "2021-06-08",
+      "status": "false",
+      "id": 94
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "IMPORTACIONES NAKAMINE E.I.R.L.",
+      "date": "2021-06-07",
+      "status": "false",
+      "id": 95
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "SCANIA SERVICES DEL PERU S.A",
+      "date": "2021-06-07",
+      "status": "false",
+      "id": 96
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "SCANIA SERVICES DEL PERU S.A",
+      "date": "2021-06-04",
+      "status": "true",
+      "id": 97
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "SCANIA SERVICES DEL PERU S.A",
+      "date": "2021-06-03",
+      "status": "true",
+      "id": 98
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "IMPLEMENTOS PERU S.A.C.",
+      "date": "2021-06-02",
+      "status": "true",
+      "id": 99
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "IMPLEMENTOS PERU S.A.C.",
+      "date": "2021-05-31",
+      "status": "true",
+      "id": 100
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "DISTRIBUCIONES DIESEL PERU S.A.C.",
+      "date": "2021-05-31",
+      "status": "false",
+      "id": 101
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "DISTRIBUCIONES DIESEL PERU S.A.C.",
+      "date": "2021-05-29",
+      "status": "false",
+      "id": 102
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "Loayza Hernandez Jose Luis",
+      "date": "2021-05-28",
+      "status": "true",
+      "id": 103
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "Loayza Hernandez Jose Luis",
+      "date": "2021-05-27",
+      "status": "true",
+      "id": 104
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "DISTRIBUCIONES DIESEL PERU S.A.C.",
+      "date": "2021-05-27",
+      "status": "false",
+      "id": 105
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "DISTRIBUCIONES DIESEL PERU S.A.C.",
+      "date": "2021-05-26",
+      "status": "false",
+      "id": 106
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "SERVICIOS GENERALES THERMO KING EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA",
+      "date": "2021-05-25",
+      "status": "false",
+      "id": 107
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "SERVICIOS GENERALES THERMO KING EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA",
+      "date": "2021-05-24",
+      "status": "true",
+      "id": 108
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "SERVICIOS GENERALES THERMO KING EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA",
+      "date": "2021-05-21",
+      "status": "true",
+      "id": 109
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "Loayza Hernandez Jose Luis",
+      "date": "2021-05-21",
+      "status": "true",
+      "id": 110
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "Loayza Hernandez Jose Luis",
+      "date": "2021-05-24",
+      "status": "true",
+      "id": 111
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "SCANIA SERVICES DEL PERU S.A",
+      "date": "2021-05-24",
+      "status": "false",
+      "id": 112
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-05-24",
+      "status": "false",
+      "id": 113
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "IMPORTACIONES NAKAMINE E.I.R.L.",
+      "date": "2021-05-20",
+      "status": "false",
+      "id": 114
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "IMPORTACIONES NAKAMINE E.I.R.L.",
+      "date": "2021-05-19",
+      "status": "false",
+      "id": 115
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "IMPORTACIONES NAKAMINE E.I.R.L.",
+      "date": "2021-05-18",
+      "status": "false",
+      "id": 116
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "IMPORTACIONES NAKAMINE E.I.R.L.",
+      "date": "2021-05-17",
+      "status": "true",
+      "id": 117
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "IMPORTACIONES NAKAMINE E.I.R.L.",
+      "date": "2021-05-14",
+      "status": "true",
+      "id": 118
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "IMPORTACIONES NAKAMINE E.I.R.L.",
+      "date": "2021-05-13",
+      "status": "false",
+      "id": 119
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "Kinedyne LLC",
+      "date": "2021-05-11",
+      "status": "true",
+      "id": 120
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "Kinedyne LLC",
+      "date": "2021-05-10",
+      "status": "true",
+      "id": 121
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "Kinedyne LLC",
+      "date": "2021-05-07",
+      "status": "false",
+      "id": 122
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "SCANIA SERVICES DEL PERU S.A",
+      "date": "2021-05-07",
+      "status": "false",
+      "id": 123
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "SCANIA SERVICES DEL PERU S.A",
+      "date": "2021-05-06",
+      "status": "true",
+      "id": 124
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "Loayza Hernandez Jose Luis",
+      "date": "2021-05-05",
+      "status": "true",
+      "id": 125
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "IMPLEMENTOS PERU S.A.C.",
+      "date": "2021-05-04",
+      "status": "true",
+      "id": 126
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "IMPLEMENTOS PERU S.A.C.",
+      "date": "2021-05-04",
+      "status": "true",
+      "id": 127
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "IMPLEMENTOS PERU S.A.C.",
+      "date": "2021-04-30",
+      "status": "true",
+      "id": 128
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "IMPORTACIONES NAKAMINE E.I.R.L.",
+      "date": "2021-04-29",
+      "status": "false",
+      "id": 129
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "IMPORTACIONES NAKAMINE E.I.R.L.",
+      "date": "2021-04-28",
+      "status": "false",
+      "id": 130
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "IMPORTACIONES NAKAMINE E.I.R.L.",
+      "date": "2021-04-27",
+      "status": "false",
+      "id": 131
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "Kinedyne LLC",
+      "date": "2021-04-26",
+      "status": "false",
+      "id": 132
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "Kinedyne LLC",
+      "date": "2021-04-23",
+      "status": "true",
+      "id": 133
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "REPSOL COMERCIAL SAC",
+      "date": "2021-04-23",
+      "status": "true",
+      "id": 134
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "REPSOL COMERCIAL SAC",
+      "date": "2021-04-22",
+      "status": "true",
+      "id": 135
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "Kinedyne LLC",
+      "date": "2021-04-21",
+      "status": "true",
+      "id": 136
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "Kinedyne LLC",
+      "date": "2021-04-20",
+      "status": "true",
+      "id": 137
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "Kinedyne LLC",
+      "date": "2021-04-19",
+      "status": "true",
+      "id": 138
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "DISTRIBUCIONES DIESEL PERU S.A.C.",
+      "date": "2021-04-16",
+      "status": "true",
+      "id": 139
+    },
+    {
+      "indicatorId": "3",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-12",
+      "status": "true",
+      "id": 140
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-12",
+      "status": "true",
+      "id": 141
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-12",
+      "status": "true",
+      "id": 142
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-12",
+      "status": "true",
+      "id": 143
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-13",
+      "status": "true",
+      "id": 144
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-14",
+      "status": "true",
+      "id": 145
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-15",
+      "status": "true",
+      "id": 146
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "SCANIA SERVICES DEL PERU S.A",
+      "date": "2021-09-12",
+      "status": "true",
+      "id": 147
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "IMPORTACIONES NAKAMINE E.I.R.L.",
+      "date": "2021-09-12",
+      "status": "false",
+      "id": 148
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "IMPORTACIONES NAKAMINE E.I.R.L.",
+      "date": "2021-09-16",
+      "status": "false",
+      "id": 149
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "REPSOL COMERCIAL SAC",
+      "date": "2021-09-17",
+      "status": "false",
+      "id": 150
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "MARCO PERUANA SA",
+      "date": "2021-09-19",
+      "status": "true",
+      "id": 151
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "MARCO PERUANA SA",
+      "date": "2021-09-05",
+      "status": "true",
+      "id": 152
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "MARCO PERUANA SA",
+      "date": "2021-09-09",
+      "status": "true",
+      "id": 153
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "Kinedyne LLC",
+      "date": "2021-09-09",
+      "status": "true",
+      "id": 154
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "Kinedyne LLC",
+      "date": "2021-09-11",
+      "status": "true",
+      "id": 155
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "IMPLEMENTOS PERU S.A.C.",
+      "date": "2021-09-11",
+      "status": "true",
+      "id": 156
+    },
+    {
+      "indicatorId": "1",
+      "responsible": "Jefe TI",
+      "supplier": "IMPLEMENTOS PERU S.A.C.",
+      "date": "2021-09-11",
+      "status": "true",
+      "id": 157
+    },
+    {
+      "indicatorId": "1",
+      "responsible": "Jefe TI",
+      "supplier": "IMPLEMENTOS PERU S.A.C.",
+      "date": "2021-09-03",
+      "status": "true",
+      "id": 158
+    },
+    {
+      "indicatorId": "1",
+      "responsible": "Jefe TI",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-04",
+      "status": "true",
+      "id": 159
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-04",
+      "status": "true",
+      "id": 160
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-04",
+      "status": "true",
+      "id": 161
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-02",
+      "status": "true",
+      "id": 162
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-01",
+      "status": "true",
+      "id": 163
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-13",
+      "status": "true",
+      "id": 144
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-14",
+      "status": "true",
+      "id": 145
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-15",
+      "status": "true",
+      "id": 146
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "SCANIA SERVICES DEL PERU S.A",
+      "date": "2021-09-12",
+      "status": "true",
+      "id": 147
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "IMPORTACIONES NAKAMINE E.I.R.L.",
+      "date": "2021-09-12",
+      "status": "false",
+      "id": 148
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "IMPORTACIONES NAKAMINE E.I.R.L.",
+      "date": "2021-09-16",
+      "status": "false",
+      "id": 149
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "REPSOL COMERCIAL SAC",
+      "date": "2021-09-17",
+      "status": "false",
+      "id": 150
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "MARCO PERUANA SA",
+      "date": "2021-09-19",
+      "status": "true",
+      "id": 151
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "MARCO PERUANA SA",
+      "date": "2021-09-05",
+      "status": "true",
+      "id": 152
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "MARCO PERUANA SA",
+      "date": "2021-09-09",
+      "status": "true",
+      "id": 153
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "Kinedyne LLC",
+      "date": "2021-09-09",
+      "status": "true",
+      "id": 154
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "Kinedyne LLC",
+      "date": "2021-09-11",
+      "status": "true",
+      "id": 155
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "IMPLEMENTOS PERU S.A.C.",
+      "date": "2021-09-11",
+      "status": "true",
+      "id": 156
+    },
+    {
+      "indicatorId": "1",
+      "responsible": "Jefe TI",
+      "supplier": "IMPLEMENTOS PERU S.A.C.",
+      "date": "2021-09-11",
+      "status": "true",
+      "id": 157
+    },
+    {
+      "indicatorId": "1",
+      "responsible": "Jefe TI",
+      "supplier": "IMPLEMENTOS PERU S.A.C.",
+      "date": "2021-09-03",
+      "status": "true",
+      "id": 158
+    },
+    {
+      "indicatorId": "1",
+      "responsible": "Jefe TI",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-04",
+      "status": "true",
+      "id": 159
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-04",
+      "status": "true",
+      "id": 160
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-04",
+      "status": "true",
+      "id": 161
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-02",
+      "status": "true",
+      "id": 162
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-01",
+      "status": "true",
+      "id": 163
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-13",
+      "status": "true",
+      "id": 164
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-14",
+      "status": "true",
+      "id": 165
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-15",
+      "status": "true",
+      "id": 166
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "SCANIA SERVICES DEL PERU S.A",
+      "date": "2021-09-12",
+      "status": "true",
+      "id": 167
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "IMPORTACIONES NAKAMINE E.I.R.L.",
+      "date": "2021-09-12",
+      "status": "false",
+      "id": 168
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "IMPORTACIONES NAKAMINE E.I.R.L.",
+      "date": "2021-09-16",
+      "status": "false",
+      "id": 169
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "REPSOL COMERCIAL SAC",
+      "date": "2021-09-17",
+      "status": "false",
+      "id": 170
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "MARCO PERUANA SA",
+      "date": "2021-09-19",
+      "status": "true",
+      "id": 171
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "MARCO PERUANA SA",
+      "date": "2021-09-05",
+      "status": "true",
+      "id": 172
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "MARCO PERUANA SA",
+      "date": "2021-09-09",
+      "status": "true",
+      "id": 173
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "Kinedyne LLC",
+      "date": "2021-09-09",
+      "status": "true",
+      "id": 174
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "Kinedyne LLC",
+      "date": "2021-09-11",
+      "status": "true",
+      "id": 175
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "IMPLEMENTOS PERU S.A.C.",
+      "date": "2021-09-11",
+      "status": "true",
+      "id": 176
+    },
+    {
+      "indicatorId": "1",
+      "responsible": "Jefe TI",
+      "supplier": "IMPLEMENTOS PERU S.A.C.",
+      "date": "2021-09-11",
+      "status": "true",
+      "id": 177
+    },
+    {
+      "indicatorId": "1",
+      "responsible": "Jefe TI",
+      "supplier": "IMPLEMENTOS PERU S.A.C.",
+      "date": "2021-09-03",
+      "status": "true",
+      "id": 178
+    },
+    {
+      "indicatorId": "1",
+      "responsible": "Jefe TI",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-04",
+      "status": "true",
+      "id": 179
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-04",
+      "status": "true",
+      "id": 180
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-04",
+      "status": "true",
+      "id": 181
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-02",
+      "status": "true",
+      "id": 182
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-01",
+      "status": "true",
+      "id": 183
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-18",
+      "status": "true",
+      "id": 184
+    },    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-04",
+      "status": "true",
+      "id": 185
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-04",
+      "status": "true",
+      "id": 186
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-02",
+      "status": "true",
+      "id": 187
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-01",
+      "status": "true",
+      "id": 188
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Área de logística",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-18",
+      "status": "true",
+      "id": 189
     }
   ]
 }

@@ -26,7 +26,8 @@ const dateToSpanish = (fecha) => {
 
     console.log({fechaobj, DAY_OF_WEEK, DAY_OF_MONTH,MONTH,YEAR,HOUR,MINUTES,SECONDS});
 
-    return `${DAY_OF_WEEK} ${DAY_OF_MONTH} / ${MONTH} / ${YEAR} a ${HOUR}:${MINUTES}:${SECONDS}`;
+    /* return `${DAY_OF_WEEK} ${DAY_OF_MONTH} / ${MONTH} / ${YEAR} a ${HOUR}:${MINUTES}:${SECONDS}`; */
+    return `${DAY_OF_WEEK} ${DAY_OF_MONTH} / ${MONTH} / ${YEAR} `;
 
 }
 export default dateToSpanish;

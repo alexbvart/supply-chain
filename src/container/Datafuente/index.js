@@ -13,7 +13,7 @@ const Datafuente = ({ sourcedata, indicator }) => {
         }
         return orderedRow
     })
-    console.log(sourcedata, indicator,orderedRows)
+    /* console.log(sourcedata, indicator,orderedRows) */
     const heading = ["# ", "Responsable ", "Cliente", "Fecha ", "Estado"]
 
 

@@ -1,4 +1,7 @@
 
+.table {
+  padding-bottom: 12px;
+}
 .table h2 {
     margin-bottom: 2rem;
 }
@@ -9,6 +12,7 @@
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
+    margin-bottom: 12px;
   }
 .table   th,
 .table   td {

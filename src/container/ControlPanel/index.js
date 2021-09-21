@@ -4,12 +4,13 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link'
 import Table from '@components/Table';
 import Button from '@components/Buton';
+import dateToSpanish from '@module/dateToSpanish';
 
 const SpeedometerCs = dynamic(() => import('react-d3-speedometer'), { ssr: false });
 
 
-const ControlPanel = ({ indicator }) => {
-
+const ControlPanel = ({ indicator,currentvalue }) => {
+    const currentDate= dateToSpanish(new Date())
     const orderedRow = {
         "id": <Link href={`/indicator/${indicator.id}`}><a>{indicator.id}</a></Link>,
         "process": indicator.process,
@@ -30,16 +31,17 @@ const ControlPanel = ({ indicator }) => {
             <Table
                 tableData={[orderedRow]}
                 headingColumns={heading}
-                title="MATRIZ DE INDICADORES DE PROCESOS"
+                title={`Tablero del indicador: ${indicator.name}`}
             />
             <br />
+            <h1>Valor para el {currentDate} </h1>
             <SpeedometerCs
                 width={500}
                 needleHeightRatio={0.7}
-                value={`${indicator.Base}0`}
+                value={`${currentvalue}0`}
                 customSegmentStops={[0,`${indicator.Malo}0`, `${indicator.Bueno}0`, 1000]}
                 segmentColors={['#FF471A', '#ECDB23', '#6AD72D']}
-                currentValueText={`${indicator.Base}`}
+                currentValueText={`Valor: ${currentvalue}%`}
                 customSegmentLabels={[
                     {
                         text: 'Malo',
