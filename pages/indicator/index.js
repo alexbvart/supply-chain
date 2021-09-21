@@ -39,9 +39,9 @@ const indicator = ({ indicators }) => {
             "Frecuencia" : i.Frecuencia,
             "Base" : i.Base,
             "Meta" : i.Meta,
-            "Malo" : i.Malo,
-            "Regular" : i.Regular,
-            "Bueno" : i.Bueno,
+            "Malo": <p className="malo-value"> {i.Malo}</p>,
+            "Regular": <p className="regular-value">{i.Regular}</p>,
+            "Bueno": <p className="bueno-value">{i.Bueno}</p>,
             "action": <OptionCRUD src="indicator" id={i.id} />
         }
         return orderedRow

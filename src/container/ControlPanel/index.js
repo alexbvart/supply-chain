@@ -21,9 +21,9 @@ const ControlPanel = ({ indicator, currentvalue,lastmonths }) => {
         "Frecuencia": indicator.Frecuencia,
         "Base": indicator.Base,
         "Meta": indicator.Meta,
-        "Malo": indicator.Malo,
-        "Regular": indicator.Regular,
-        "Bueno": indicator.Bueno,
+        "Malo": <p className="malo-value"> {indicator.Malo}</p>,
+        "Regular": <p className="regular-value">{indicator.Regular}</p>,
+        "Bueno": <p className="bueno-value">{indicator.Bueno}</p>,
     }
     const heading = ["# ", "Procesos", "Indicador ", "Formula", "Objetivo ", "Frecuencia", "Base", "Meta ", "Malo", "Regular ", "Bueno"]
 

@@ -4059,7 +4059,8 @@
       "date": "2021-09-18",
       "status": "true",
       "id": 184
-    },    {
+    },
+    {
       "indicatorId": "2",
       "responsible": "Área de logística",
       "supplier": "MADIC S.A.C.",
@@ -4098,6 +4099,46 @@
       "date": "2021-09-18",
       "status": "true",
       "id": 189
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-09-22",
+      "status": "false",
+      "id": 190
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "MADIC S.A.C.",
+      "date": "2021-08-13",
+      "status": "false",
+      "id": 191
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "IMPORTACIONES NAKAMINE E.I.R.L.",
+      "date": "2021-08-17",
+      "status": "false",
+      "id": 192
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "IMPORTACIONES NAKAMINE E.I.R.L.",
+      "date": "2021-08-15",
+      "status": "false",
+      "id": 193
+    },
+    {
+      "indicatorId": "2",
+      "responsible": "Gerente general",
+      "supplier": "SCANIA SERVICES DEL PERU S.A",
+      "date": "2021-08-20",
+      "status": "false",
+      "id": 194
     }
   ]
 }
