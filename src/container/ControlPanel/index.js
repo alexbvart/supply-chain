@@ -5,12 +5,13 @@ import Link from 'next/link'
 import Table from '@components/Table';
 import Button from '@components/Buton';
 import dateToSpanish from '@module/dateToSpanish';
-
+import ChartBar from '@components/ChartRC/bar';
+import { dashboard } from './styles.module.css'
 const SpeedometerCs = dynamic(() => import('react-d3-speedometer'), { ssr: false });
 
 
-const ControlPanel = ({ indicator,currentvalue }) => {
-    const currentDate= dateToSpanish(new Date())
+const ControlPanel = ({ indicator, currentvalue,lastmonths }) => {
+    const currentDate = dateToSpanish(new Date())
     const orderedRow = {
         "id": <Link href={`/indicator/${indicator.id}`}><a>{indicator.id}</a></Link>,
         "process": indicator.process,
@@ -34,37 +35,46 @@ const ControlPanel = ({ indicator,currentvalue }) => {
                 title={`Tablero del indicador: ${indicator.name}`}
             />
             <br />
-            <h1>Valor para el {currentDate} </h1>
-            <SpeedometerCs
-                width={500}
-                needleHeightRatio={0.7}
-                value={`${currentvalue}0`}
-                customSegmentStops={[0,`${indicator.Malo}0`, `${indicator.Bueno}0`, 1000]}
-                segmentColors={['#FF471A', '#ECDB23', '#6AD72D']}
-                currentValueText={`Valor: ${currentvalue}%`}
-                customSegmentLabels={[
-                    {
-                        text: 'Malo',
-                        position: 'OUTSIDE',
-                        color: '#d8dee9',
-                    },
-                    {
-                        text: 'Regular',
-                        position: 'OUTSIDE',
-                        color: '#d8dee9',
-                    },
-                    {
-                        text: 'Bueno',
-                        position: 'OUTSIDE',
-                        color: '#d8dee9',
-                    },
-                ]}
-                ringWidth={47}
-                needleTransitionDuration={3333}
-                needleTransition="easeElastic"
-                needleColor={'#a7ff83'}
-                textColor={'#d8dee9'}
-            />
+            <div className={dashboard}>
+                <div>
+                    <h1 className="subtitle_section">Valor para el {currentDate} </h1>
+                    <br />
+                    <br />
+                    <br />
+                    <SpeedometerCs
+                        width={500}
+                        needleHeightRatio={0.7}
+                        value={`${currentvalue}0`}
+                        customSegmentStops={[0, `${indicator.Malo}0`, `${indicator.Bueno}0`, 1000]}
+                        segmentColors={['#FF471A', '#ECDB23', '#6AD72D']}
+                        currentValueText={`Valor: ${currentvalue}%`}
+                        customSegmentLabels={[
+                            {
+                                text: 'Malo',
+                                position: 'OUTSIDE',
+                                color: '#d8dee9',
+                            },
+                            {
+                                text: 'Regular',
+                                position: 'OUTSIDE',
+                                color: '#d8dee9',
+                            },
+                            {
+                                text: 'Bueno',
+                                position: 'OUTSIDE',
+                                color: '#d8dee9',
+                            },
+                        ]}
+                        ringWidth={47}
+                        needleTransitionDuration={3333}
+                        needleTransition="easeElastic"
+                        needleColor={'#a7ff83'}
+                        textColor={'#d8dee9'}
+                    /></div>
+                <div>
+                    <ChartBar labels={["Julio", "Agosto", "Septiembre"]} values={lastmonths} title="Valores en los últimos 3 meses" />
+                </div>
+            </div>
         </>
     );
 }

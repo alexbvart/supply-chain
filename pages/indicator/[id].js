@@ -12,8 +12,8 @@ import {
 import EnterpriseInfo from '../../src/container/EnterpriseInfo/EnterpriseInfo';
 import ControlPanel from 'src/container/ControlPanel';
 import Datafuente from 'src/container/Datafuente';
-import { currentValue } from '@services/report';
-const supplier = ({ indicators, indicator, process,sourcedata,currentvalue }) => {
+import { currentValue, lastMonths } from '@services/report';
+const supplier = ({ indicators, indicator, process,sourcedata,currentvalue,lastmonths }) => {
 
     return (
         <>
@@ -49,7 +49,7 @@ const supplier = ({ indicators, indicator, process,sourcedata,currentvalue }) =>
                             inactiveClassName={panel_inactive}
                         >
                             <div className="main-full">
-                            <ControlPanel indicator={indicator} currentvalue={currentvalue}/>
+                            <ControlPanel indicator={indicator} currentvalue={currentvalue} lastmonths={lastmonths}/>
                             </div>
                         </TabGroup.TabPanel>
                         <TabGroup.TabPanel
@@ -87,14 +87,16 @@ export async function getServerSideProps(context) {
         .then(res => res.json())
 
         const currentvalue = currentValue({data:sourcedata})
-        console.log("--",currentvalue)
+        const lastmonths = lastMonths({data:sourcedata})
+        console.log("--",currentvalue,lastmonths)
     return {
         props: {
             indicators: indicators,
             process: process,
             indicator:indicator[0],
             sourcedata:sourcedata,
-            currentvalue:currentvalue
+            currentvalue:currentvalue,
+            lastmonths:lastmonths
         }
     };
 
